@@ -25,7 +25,7 @@ export default function Button({
     children,
     className = "",
     type = "button",
-    variant = "default",
+    variant = "outline",
     Icon,
     iconClassName = "",
 }: ButtonProps) {
@@ -39,7 +39,7 @@ export default function Button({
             )}
         >
             {variant === "outline" && (
-                <span className="absolute inset-0 translate-y-full bg-pb-theme-primary transition-transform duration-500 ease-in-out group-hover:-translate-y-0" />
+                <span className="absolute inset-0 translate-y-full bg-pb-theme-primary transition-transform duration-500 ease-in-out group-hover:translate-y-0" />
             )}
 
             <span className="relative z-20">{children}</span>
