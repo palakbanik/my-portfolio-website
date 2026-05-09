@@ -70,3 +70,32 @@ body {
     color: var(--pb-white);
     font-family: var(--font-sora);
 }
+
+@layer utilities {
+    .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: linear-gradient(
+            to right,
+            var(--color-pb-theme-primary),
+            var(--color-pb-theme-secondary)
+        );
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.4s ease;
+    }
+
+    .nav-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    .nav-link-active::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
