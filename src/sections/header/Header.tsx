@@ -1,39 +1,118 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Container from "@/components/shared/Container";
 import { navLinks } from "@/data/data";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
+import { usePathname } from "next/navigation";
+import { TbMenu3 } from "react-icons/tb";
+import { MdOutlineCloseFullscreen } from "react-icons/md";
 
 export default function HeaderSection() {
+    const pathname = usePathname();
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const [hidden, setHidden] = useState(false);
+    const [lastY, setLastY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentY = window.scrollY;
+
+            setScrolled(currentY > 50);
+
+            if (currentY > lastY && currentY > 100) {
+                setHidden(true);
+            } else {
+                setHidden(false);
+            }
+            setLastY(currentY);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [lastY]);
+
     return (
-        <header className="w-full fixed top-0 left-0 z-999">
+        <header
+            className={`w-full fixed top-0 left-0 z-999 transition-all duration-500 ${
+                scrolled
+                    ? "bg-pb-body backdrop-blur-md shadow-[0_4px_30px_rgba(135,80,247,0.2)]"
+                    : "bg-transparent"
+            }
+        ${hidden ? "translate-y-[-120%]" : "translate-y-0"}`}
+        >
             <Container>
-                <div className="flex items-center justify-between py-7">
-                    {/* logo */}
-                    <div className="font-luckiest-guy select-none">
-                        <Link href={"/"}>
-                            <h1 className="leading-normal tracking-wider text-4xl">
-                                {"<PB/>"}
-                            </h1>
-                        </Link>
+                <div className="relative">
+                    <div className="flex items-center justify-between py-2.5 md:py-4">
+                        {/* logo */}
+                        <div className="font-luckiest-guy select-none">
+                            <Link href={"/"}>
+                                <h1 className="leading-normal tracking-wider text-[36px] md:text-4xl">
+                                    {"<PB/>"}
+                                </h1>
+                            </Link>
+                        </div>
+
+                        {/* nav links */}
+                        <div className="flex items-center gap-4 md:gap-10">
+                            <ul className="hidden md:flex items-center md:gap-6 xl:gap-10">
+                                {navLinks.map((link) => {
+                                    const { id, href, title } = link;
+                                    const isActive = pathname === href;
+                                    return (
+                                        <Link
+                                            href={href}
+                                            key={id}
+                                            className={`relative capitalize text-sm nav-link ${isActive ? "nav-link-active" : ""}`}
+                                        >
+                                            <li>{title}</li>
+                                        </Link>
+                                    );
+                                })}
+                            </ul>
+
+                            {/* button */}
+                            <Link href={"/"}>
+                                <Button className="lg:px-8 lg:py-3">
+                                    hire me!
+                                </Button>
+                            </Link>
+
+                            {/* hamburger button */}
+                            <button
+                                type="button"
+                                onClick={() => setMenuOpen(!menuOpen)}
+                                className="inline md:hidden"
+                            >
+                                {menuOpen ? (
+                                    <MdOutlineCloseFullscreen size={30} />
+                                ) : (
+                                    <TbMenu3 size={30} />
+                                )}
+                            </button>
+                        </div>
                     </div>
-
-                    {/* nav links */}
-                    <div className="flex items-center gap-10">
-                        <ul className="flex items-center lg:gap-10">
-                            {navLinks.map((link) => (
-                                <Link href={link.href} key={link.id}>
-                                    <li>{link.title}</li>
-                                </Link>
-                            ))}
+                    {/* mobile links */}
+                    <div
+                        className={`md:hidden min-h-[60vh] w-full bg-pb-theme-secondary/30 backdrop-blur-2xl rounded-lg absolute top-20 ${menuOpen ? "left-0" : "left-[-120%]"} duration-500 transition-all`}
+                    >
+                        <ul className="md:hidden flex flex-col items-start gap-6 px-7 py-10">
+                            {navLinks.map((link) => {
+                                const { id, href, title } = link;
+                                const isActive = pathname === href;
+                                return (
+                                    <Link
+                                        href={href}
+                                        key={id}
+                                        onClick={() => setMenuOpen(false)}
+                                        className={`relative uppercase nav-link text-base ${isActive ? "nav-link-active" : ""}`}
+                                    >
+                                        <li>{title}</li>
+                                    </Link>
+                                );
+                            })}
                         </ul>
-
-                        {/* button */}
-                        <Link href={"/"}>
-                            <Button className="lg:px-8 lg:py-3 ">
-                                hire me!
-                            </Button>
-                        </Link>
                     </div>
                 </div>
             </Container>

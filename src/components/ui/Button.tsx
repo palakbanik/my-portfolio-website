@@ -9,7 +9,7 @@ const btnVariants: Record<BtnVariant, string> = {
     default:
         "text-pb-white bg-linear-to-r from-pb-theme-primary to-pb-theme-secondary hover:from-pb-theme-secondary hover:to-pb-theme-primary transition-colors",
 
-    outline: "border border-pb-theme-primary text-pb-white",
+    outline: "border border-pb-theme-primary text-pb-white transition-colors",
 };
 
 interface ButtonProps {
@@ -25,7 +25,7 @@ export default function Button({
     children,
     className = "",
     type = "button",
-    variant = "outline",
+    variant = "default",
     Icon,
     iconClassName = "",
 }: ButtonProps) {
@@ -33,7 +33,7 @@ export default function Button({
         <button
             type={type}
             className={cn(
-                "group relative overflow-hidden rounded-full font-bold text-sm leading-normal tracking-wide capitalize cursor-pointer transition-all duration-500 px-6 py-3 inline-flex items-center justify-center gap-2",
+                "group relative overflow-hidden rounded-full font-bold text-sm leading-normal tracking-wide capitalize cursor-pointer duration-500 px-7 py-2.5 md:py-3 inline-flex items-center justify-center gap-2",
                 btnVariants[variant],
                 className,
             )}
