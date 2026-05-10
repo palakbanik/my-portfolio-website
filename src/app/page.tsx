@@ -9,6 +9,7 @@ import Image from "next/image";
 import palakProfile from "@/public/palak-profile.jpg";
 import { socialLinks } from "@/data/data";
 import Link from "next/link";
+import ServicesSection from "@/components/home/services/Services";
 
 export default function Home() {
     return (
@@ -87,6 +88,9 @@ export default function Home() {
                         />
                     </div>
                 </div>
+
+                {/* services */}
+                <ServicesSection />
             </Container>
         </section>
     );

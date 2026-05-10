@@ -71,6 +71,19 @@ body {
     font-family: var(--font-sora);
 }
 
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-pb-theme-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--color-pb-theme-primary), var(--color-pb-border-1));
+    border-radius: 999px;
+}
+
 @layer utilities {
     /* nav links underline */
     .nav-link::after {
