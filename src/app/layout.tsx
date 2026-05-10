@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Sora, Russo_One, Luckiest_Guy } from "next/font/google";
 import "./globals.css";
-import HeaderSection from "@/sections/header/Header";
+import HeaderSection from "@/layout/header/Header";
 
 const sora = Sora({
     variable: "--font-sora",

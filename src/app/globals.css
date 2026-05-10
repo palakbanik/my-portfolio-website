@@ -72,6 +72,7 @@ body {
 }
 
 @layer utilities {
+    /* nav links underline */
     .nav-link::after {
         content: "";
         position: absolute;
@@ -97,5 +98,22 @@ body {
     .nav-link-active::after {
         transform: scaleX(1);
         transform-origin: left;
+    }
+
+    /* gradient text */
+    .text-gradient {
+        background: linear-gradient(
+            90deg,
+            var(--color-pb-theme-primary),
+            var(--color-pb-white)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .text-outline {
+        -webkit-text-stroke: 1px var(--pb-theme-secondary);
+        color: transparent;
     }
 }

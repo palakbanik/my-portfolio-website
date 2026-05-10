@@ -31,3 +31,32 @@ export const navLinks = [
         href: "/contact",
     },
 ];
+
+// main page hero section data
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+
+export const socialLinks = [
+    {
+        id: 1,
+        icon: FaLinkedinIn,
+        href: "https://www.linkedin.com/in/polok-banik-184121308/",
+    },
+    {
+        id: 2,
+        icon: FaGithub,
+        href: "https://github.com/palakbanik",
+    },
+    {
+        id: 3,
+        icon: FaFacebookF,
+        href: "https://facebook.com/",
+    },
+    {
+        id: 4,
+        icon: FaInstagram,
+        href: "https://instagram.com/",
+    },
+];
