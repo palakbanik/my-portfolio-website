@@ -71,7 +71,25 @@ body {
     font-family: var(--font-sora);
 }
 
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-pb-theme-accent-1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        to bottom,
+        var(--color-pb-theme-primary),
+        var(--color-pb-border-1)
+    );
+    border-radius: 999px;
+}
+
 @layer utilities {
+    /* nav links underline */
     .nav-link::after {
         content: "";
         position: absolute;
@@ -97,5 +115,23 @@ body {
     .nav-link-active::after {
         transform: scaleX(1);
         transform-origin: left;
+    }
+
+    /* gradient text */
+    .text-gradient {
+        background: linear-gradient(
+            to right,
+            var(--pb-theme-primary) 0%,
+            var(--pb-white) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    /* stroke text */
+    .text-outline {
+        -webkit-text-stroke: 1px var(--pb-theme-secondary);
+        color: transparent;
     }
 }

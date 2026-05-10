@@ -9,7 +9,8 @@ const btnVariants: Record<BtnVariant, string> = {
     default:
         "text-pb-white bg-linear-to-r from-pb-theme-primary to-pb-theme-secondary hover:from-pb-theme-secondary hover:to-pb-theme-primary transition-colors",
 
-    outline: "border border-pb-theme-primary text-pb-white transition-colors",
+    outline:
+        "border border-pb-theme-primary transition-colors text-pb-theme-primary hover:text-pb-white",
 };
 
 interface ButtonProps {
@@ -46,7 +47,7 @@ export default function Button({
 
             {Icon && (
                 <span className={cn("relative z-20", iconClassName)}>
-                    <Icon />
+                    <Icon size={18} />
                 </span>
             )}
         </button>

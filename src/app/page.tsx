@@ -1,12 +1,12 @@
 import React from "react";
-import Container from "@/components/shared/Container";
+import HeroSection from "./../components/home/hero/HeroSection";
+import SkillsSections from "@/components/home/skills/Skills";
 
 export default function Home() {
     return (
-        <section className="min-h-[800vh]">
-            <Container>
-                <h1>Home</h1>
-            </Container>
-        </section>
+        <div>
+            <HeroSection />
+            <SkillsSections />
+        </div>
     );
 }
