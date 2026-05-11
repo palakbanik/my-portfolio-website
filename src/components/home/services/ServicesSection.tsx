@@ -1,5 +1,3 @@
-"use client";
-
 import Container from "@/components/shared/Container";
 import SectionTitle from "@/components/shared/SectionTitle";
 import ParaText from "@/components/shared/texts-type/ParaText";
