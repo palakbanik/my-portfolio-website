@@ -9,7 +9,7 @@ import Image from "next/image";
 import palakProfile from "@/public/palak-profile.jpg";
 import { socialLinks } from "@/data/data";
 import Link from "next/link";
-import ServicesSection from "@/components/home/services/Services";
+import ServicesSection from "../StatsSection/StatsSection";
 
 export default function HeroSection() {
     return (
