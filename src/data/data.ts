@@ -56,6 +56,34 @@ export const socialLinks = [
     },
 ];
 
+// services data
+export const serviceSectionData = [
+    {
+        id: "01",
+        title: "Responsive Design",
+        description:
+            "Ensure your website looks great on any device, with layouts that adapt to different screen sizes seamlessly.",
+    },
+    {
+        id: "02",
+        title: "Performance Optimization",
+        description:
+            "Optimize website speed, loading time, and overall performance to ensure smooth and fast user experiences.",
+    },
+    {
+        id: "03",
+        title: "API Integrations",
+        description:
+            "Build and integrate APIs to connect websites with third-party applications, enhancing functionality and performance.",
+    },
+    {
+        id: "04",
+        title: "Website Redesign",
+        description:
+            "Refresh outdated websites with modern, appealing designs that align with current brand goals and user expectations.",
+    },
+];
+
 // skills data
 import javascript from "@/public/skills-logo/javascript-icon.svg";
 import typescript from "@/public/skills-logo/typescript-icon.svg";
