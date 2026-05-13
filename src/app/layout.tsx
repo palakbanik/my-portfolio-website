@@ -3,6 +3,7 @@ import { Sora, Russo_One, Luckiest_Guy } from "next/font/google";
 import "./globals.css";
 import HeaderSection from "@/layout/header/Header";
 import FooterSection from "@/layout/footer/Footer";
+import LenisProvider from "@/components/shared/lenis-provider/LenisProvider";
 
 const sora = Sora({
     variable: "--font-sora",
@@ -38,7 +39,9 @@ export default function RootLayout({
         >
             <body className="min-h-full flex flex-col">
                 <HeaderSection />
-                <main>{children}</main>
+                <main>
+                    <LenisProvider>{children}</LenisProvider>
+                </main>
                 <FooterSection />
             </body>
         </html>
