@@ -15,7 +15,7 @@ export default function SkillCard({ skill }: SkillCardProps) {
     const { title, icon, percentage } = skill;
     return (
         <div className="flex flex-col items-center gap-5 text-center group">
-            <div className="w-full max-w-[160px] lg:max-w-[180px] aspect-square border border-transparent hover:border-pb-theme-primary hover:bg-pb-theme-primary/20 flex flex-col items-center justify-center gap-2 sm:gap-5 rounded-4xl duration-500 transition-all ease-in bg-pb-grey-2/50">
+            <div className="w-full max-w-[160px] lg:max-w-[180px] aspect-square border border-transparent hover:border-pb-theme-primary hover:bg-pb-theme-primary/20 flex flex-col items-center justify-center gap-2 sm:gap-5 rounded-4xl duration-500 transition-all ease-in bg-pb-grey-2/50 cursor-default">
                 <Image
                     src={icon}
                     alt={title}
