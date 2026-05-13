@@ -1,13 +1,14 @@
+import React from "react";
 import Container from "@/components/shared/Container";
 import { footerLinks } from "@/data/data";
 import Link from "next/link";
-import React from "react";
+import ParaText from "@/components/shared/texts-type/ParaText";
 
 export default function FooterSection() {
     return (
-        <footer className="w-full bg-pb-theme-accent-1 ">
-            <Container className="lg:pt-14 lg:pb-6 ">
-                <div className="flex flex-col items-center justify-center lg:gap-5">
+        <footer className="w-full bg-pb-theme-accent-1">
+            <Container className="pt-12 sm:pt-14 pb-6 ">
+                <div className="flex flex-col items-center justify-center gap-3 lg:gap-5">
                     {/* logo */}
                     <div className="font-luckiest-guy select-none">
                         <Link href={"/"}>
@@ -18,14 +19,18 @@ export default function FooterSection() {
                     </div>
 
                     {/* links */}
-                    <ul className="hidden md:flex items-center md:gap-6 xl:gap-8">
+                    <ul className="flex items-center gap-3 md:gap-6 xl:gap-8">
                         {footerLinks.map((link) => (
                             <Link
                                 href={link.href}
                                 key={link.id}
-                                className={`relative capitalize text-sm nav-link`}
+                                className="relative capitalize text-sm nav-link"
                             >
-                                <li>{link.title}</li>
+                                <li>
+                                    <ParaText className="font-medium">
+                                        {link.title}
+                                    </ParaText>
+                                </li>
                             </Link>
                         ))}
                     </ul>

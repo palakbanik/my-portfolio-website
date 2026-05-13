@@ -11,7 +11,6 @@ export default function Dropdown({
     data: string[];
     className?: string;
 }) {
-    console.log(data);
     const [isOpen, setIsOpen] = useState(false);
 
     return (

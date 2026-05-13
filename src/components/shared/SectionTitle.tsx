@@ -11,7 +11,7 @@ export default function SectionTitle({
     return (
         <h1
             className={cn(
-                "text-gradient font-bold text-center lg:text-[45px] capitalize",
+                "text-gradient font-bold text-center text-[30px] lg:text-[45px] capitalize",
                 className,
             )}
         >

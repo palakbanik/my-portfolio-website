@@ -4,40 +4,56 @@ import Button from "@/components/ui/Button";
 import { HiOutlineDownload } from "react-icons/hi";
 import Image from "next/image";
 
-// social icons
-
 import palakProfile from "@/public/palak-profile.jpg";
 import { socialLinks } from "@/data/data";
 import Link from "next/link";
 import ServicesSection from "../StatsSection/StatsSection";
+import ArticleText from "@/components/shared/texts-type/ArticleText";
 
 export default function HeroSection() {
     return (
         <section className="min-h-screen bg-pb-theme-accent-1 relative overflow-x-hidden">
             {/* hi text */}
-            <h1 className="text-outline font-russo-one text-[200px] lg:text-[350px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse">
+            <h1 className="hidden md:block text-outline font-russo-one text-[200px] lg:text-[350px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse">
                 HI
             </h1>
 
             {/* blob */}
-            <div className="w-[322px] h-[308px] bg-pb-theme-primary/40 rounded-full blur-[150px] absolute -right-20 -top-20 animate-pulse" />
+            <div className="w-[322px] h-[308px] bg-pb-theme-primary/50 rounded-full blur-[150px] absolute -right-20 -top-20 animate-pulse" />
             {/* blob */}
-            <div className="w-[322px] h-[308px] bg-pb-theme-primary/30 rounded-full blur-[150px] absolute top-1/2 left-1/2 animate-pulse" />
+            <div className="w-[322px] h-[308px] bg-pb-theme-primary/40 rounded-full blur-[150px] absolute top-1/4  md:top-1/2 md:left-1/2 animate-pulse" />
 
-            <Container className="pt-30 md:pt-40 ">
+            <Container className="pt-26 md:pt-40 ">
                 {/* main content */}
-                <div className="flex items-center justify-between lg:gap-30 xl:gap-40 relative z-10">
+                <div className="flex items-center justify-between gap-10 lg:gap-30 xl:gap-40 relative z-10">
                     {/* left text content */}
                     <div className="flex-1 w-full max-w-[580px]">
-                        <div className="lg:space-y-3">
-                            {/* articles */}
-                            <h3 className="lg:text-4xl font-semibold">
-                                I am Palak
-                            </h3>
-                            <h2 className="text-gradient lg:text-[65px] font-bold leading-none capitalize ">
-                                frontend web developer.
-                            </h2>
-                            <article className="text-sm md:text-base tracking-wide leading-normal lg:leading-relaxed">
+                        <div className="space-y-8 sm:space-y-5 md:space-y-3">
+                            {/* header text */}
+                            <div className="space-y-1 lg:space-y-3">
+                                <h3 className="text-[22px] sm:text-[25px] lg:text-4xl font-semibold">
+                                    I am Palak
+                                </h3>
+                                <h2 className="text-gradient text-[35px] sm:text-[38px] lg:text-[65px] font-bold leading-none capitalize ">
+                                    frontend web developer.
+                                </h2>
+                            </div>
+
+                            {/* mobile img content */}
+                            <div className="sm:hidden flex items-center justify-center">
+                                <div className="relative border-2 border-pb-theme-primary/50 hover:border-pb-theme-primary duration-300 inline-block rounded-4xl overflow-hidden transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
+                                    <Image
+                                        src={palakProfile}
+                                        alt="palak's profile"
+                                        width={400}
+                                        height={400}
+                                        priority
+                                        className="object-cover w-[300px] h-[370px]"
+                                    />
+                                </div>
+                            </div>
+
+                            <ArticleText>
                                 I&apos;m a passionate Frontend Development
                                 currently working with (Next.js) to build
                                 modern, interactive, and user-friendly web
@@ -45,16 +61,27 @@ export default function HeroSection() {
                                 is on mastering frontend development, I&apos;m
                                 also preparing myself to become a Full Stack
                                 Developer in the future. 😊
-                            </article>
+                            </ArticleText>
                         </div>
 
                         {/* social links */}
-                        <div className="lg:mt-10 flex items-center gap-6">
-                            <Button variant="outline" Icon={HiOutlineDownload}>
-                                Download CV
-                            </Button>
+                        <div className="mt-6 lg:mt-10 flex flex-col lg:flex-row items-start lg:items-center gap-5 md:gap-6">
+                            <Link
+                                href={
+                                    "/src/public/cv/Polok_Banik_Frontend_Intern.pdf"
+                                }
+                                download
+                                target="_blank"
+                            >
+                                <Button
+                                    variant="outline"
+                                    Icon={HiOutlineDownload}
+                                >
+                                    Download CV
+                                </Button>
+                            </Link>
 
-                            <ul className="flex items-center gap-6">
+                            <ul className="flex items-center gap-4 lg:gap-6">
                                 {socialLinks.map((socialLink) => {
                                     const { id, href, icon } = socialLink;
                                     const Icon = icon;
@@ -64,6 +91,7 @@ export default function HeroSection() {
                                             href={href}
                                             key={id}
                                             className="group relative"
+                                            target="_blank"
                                         >
                                             <li className="border border-pb-theme-primary text-pb-theme-primary hover:text-pb-white p-2.5 rounded-full group-hover:-translate-y-1 overflow-hidden transition-all duration-300 ease-in-out">
                                                 <span className="w-full h-full absolute inset-0 scale-0 group-hover:scale-100 bg-pb-theme-primary  rounded-full transition-all duration-300 ease-in-out" />
@@ -76,15 +104,15 @@ export default function HeroSection() {
                         </div>
                     </div>
 
-                    {/* right img content */}
-                    <div className="relative border-2 border-pb-theme-primary/50 hover:border-pb-theme-primary duration-300 inline-block rounded-4xl transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
+                    {/* desktop right img content */}
+                    <div className="hidden relative border-2 border-pb-theme-primary/50 hover:border-pb-theme-primary duration-300 sm:inline-block rounded-4xl transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
                         <Image
                             src={palakProfile}
                             alt="palak's profile"
                             width={437}
                             height={475}
                             priority
-                            className="object-cover w-[437px] h-[500px] rounded-4xl"
+                            className="object-cover w-[300px] h-[390px] md:w-[380px] md:h-[440px] xl:w-[437px] xl:h-[500px] rounded-4xl"
                         />
                     </div>
                 </div>
