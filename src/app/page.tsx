@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import HeroSection from "./../components/home/hero/HeroSection";
 import SkillsSections from "@/components/home/skills/Skills";
