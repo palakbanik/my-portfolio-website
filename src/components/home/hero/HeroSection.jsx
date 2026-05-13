@@ -19,9 +19,9 @@ export default function HeroSection() {
             </h1>
 
             {/* blob */}
-            <div className="w-[322px] h-[308px] bg-pb-theme-primary/40 rounded-full blur-[150px] absolute -right-20 -top-20 animate-pulse" />
+            <div className="w-[322px] h-[308px] bg-pb-theme-primary/50 rounded-full blur-[150px] absolute -right-20 -top-20 animate-pulse" />
             {/* blob */}
-            <div className="w-[322px] h-[308px] bg-pb-theme-primary/30 rounded-full blur-[150px] absolute top-1/4  md:top-1/2 md:left-1/2 animate-pulse" />
+            <div className="w-[322px] h-[308px] bg-pb-theme-primary/40 rounded-full blur-[150px] absolute top-1/4  md:top-1/2 md:left-1/2 animate-pulse" />
 
             <Container className="pt-26 md:pt-40 ">
                 {/* main content */}
