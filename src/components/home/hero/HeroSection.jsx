@@ -25,22 +25,22 @@ export default function HeroSection() {
 
             <Container className="pt-26 md:pt-40 ">
                 {/* main content */}
-                <div className="flex items-center justify-between lg:gap-30 xl:gap-40 relative z-10">
+                <div className="flex items-center justify-between gap-10 lg:gap-30 xl:gap-40 relative z-10">
+                    {/* left text content */}
                     <div className="flex-1 w-full max-w-[580px]">
-                        {/* left text content */}
-                        <div className="space-y-8 lg:space-y-3">
-                            {/* articles */}
+                        <div className="space-y-8 sm:space-y-5 md:space-y-3">
+                            {/* header text */}
                             <div className="space-y-1 lg:space-y-3">
-                                <h3 className="text-[22px] lg:text-4xl font-semibold">
+                                <h3 className="text-[22px] sm:text-[25px] lg:text-4xl font-semibold">
                                     I am Palak
                                 </h3>
-                                <h2 className="text-gradient text-[35px] lg:text-[65px] font-bold leading-none capitalize ">
+                                <h2 className="text-gradient text-[35px] sm:text-[38px] lg:text-[65px] font-bold leading-none capitalize ">
                                     frontend web developer.
                                 </h2>
                             </div>
 
                             {/* mobile img content */}
-                            <div className="md:hidden flex items-center justify-center">
+                            <div className="sm:hidden flex items-center justify-center">
                                 <div className="relative border-2 border-pb-theme-primary/50 hover:border-pb-theme-primary duration-300 inline-block rounded-4xl overflow-hidden transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
                                     <Image
                                         src={palakProfile}
@@ -65,7 +65,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* social links */}
-                        <div className="mt-6 lg:mt-10 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
+                        <div className="mt-6 lg:mt-10 flex flex-col lg:flex-row items-start lg:items-center gap-5 md:gap-6">
                             <Link
                                 href={
                                     "/src/public/cv/Polok_Banik_Frontend_Intern.pdf"
@@ -81,7 +81,7 @@ export default function HeroSection() {
                                 </Button>
                             </Link>
 
-                            <ul className="flex items-center gap-4 md:gap-6">
+                            <ul className="flex items-center gap-4 lg:gap-6">
                                 {socialLinks.map((socialLink) => {
                                     const { id, href, icon } = socialLink;
                                     const Icon = icon;
@@ -105,14 +105,14 @@ export default function HeroSection() {
                     </div>
 
                     {/* desktop right img content */}
-                    <div className="hidden relative border-2 border-pb-theme-primary/50 hover:border-pb-theme-primary duration-300 md:inline-block rounded-4xl transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
+                    <div className="hidden relative border-2 border-pb-theme-primary/50 hover:border-pb-theme-primary duration-300 sm:inline-block rounded-4xl transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
                         <Image
                             src={palakProfile}
                             alt="palak's profile"
                             width={437}
                             height={475}
                             priority
-                            className="object-cover w-[437px] h-[500px] rounded-4xl"
+                            className="object-cover w-[300px] h-[390px] md:w-[380px] md:h-[440px] xl:w-[437px] xl:h-[500px] rounded-4xl"
                         />
                     </div>
                 </div>
