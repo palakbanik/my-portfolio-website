@@ -11,7 +11,7 @@ export default function ArticleText({
     return (
         <article
             className={cn(
-                "lg:text-[16px] font-normal leading-normal tracking-wide text-pb-white",
+                "text-[16px] sm:text-[18px] font-light md:font-normal leading-normal md:leading-relaxed tracking-normal md:tracking-wide text-pb-white/80",
                 className,
             )}
         >

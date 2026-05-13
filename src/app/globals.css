@@ -69,6 +69,7 @@ body {
     background-color: var(--pb-body);
     color: var(--pb-white);
     font-family: var(--font-sora);
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
