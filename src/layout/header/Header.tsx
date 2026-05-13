@@ -95,7 +95,7 @@ export default function HeaderSection() {
                     </div>
                     {/* mobile links */}
                     <div
-                        className={`md:hidden min-h-[60vh] w-full bg-pb-theme-secondary/30 backdrop-blur-2xl rounded-lg absolute top-20 ${menuOpen ? "left-0" : "left-[-120%]"} duration-500 transition-all`}
+                        className={`md:hidden min-h-[60vh] w-full bg-pb-theme-secondary/30 backdrop-blur-2xl rounded-lg fixed top-20 ${menuOpen ? "left-0" : "left-[-120%]"} duration-500 transition-all`}
                     >
                         <ul className="md:hidden flex flex-col items-start gap-6 px-7 py-10">
                             {navLinks.map((link) => {
