@@ -5,21 +5,20 @@ import Input from "@/components/shared/Input";
 import Textarea from "@/components/shared/Textarea";
 import Button from "@/components/ui/Button";
 import Dropdown from "@/components/shared/Dropdown";
-import { PiPhoneCallThin } from "react-icons/pi";
 import {
     contactDropdownOptions,
     contactSectionPersonalContacts,
 } from "@/data/data";
 import Link from "next/link";
-import { ipcForbiddenHeaders } from "next/dist/server/lib/server-ipc/utils";
+import SubText from "@/components/shared/texts-type/SubText";
 
 export default function ContactSection() {
     return (
         <section className="relative ">
             <Container className="py-10 md:py-20 lg:py-26">
-                <div className="relative grid items-center gap-10 lg:grid-cols-[620px_1fr] lg:gap-28">
-                    {/* Left card */}
-                    <div className="rounded-2xl border border-white/5 bg-pb-theme-accent-2 p-6 sm:p-10">
+                <div className="relative grid items-center gap-10 md:grid-cols-[500px_1fr] lg:grid-cols-[620px_1fr] lg:gap-28">
+                    {/* left form */}
+                    <div className="order-2 md:order-1 rounded-2xl border border-pb-white/5 bg-pb-theme-accent-2 px-2 py-6 sm:p-10">
                         {/* text content */}
                         <div className="space-y-2">
                             <SectionTitle
@@ -71,13 +70,13 @@ export default function ContactSection() {
                     </div>
 
                     {/* right contact info */}
-                    <div className="space-y-4 md:space-y-8">
+                    <div className="order-1 md:order-2 space-y-8">
                         {contactSectionPersonalContacts.map((info) => {
                             const Icon = info.icon;
                             return (
                                 <div
                                     key={info.id}
-                                    className="flex items-center gap-6"
+                                    className="flex items-center gap-4 sm:gap-6"
                                 >
                                     {/* icon */}
                                     <div className="p-2.5 rounded-full bg-linear-to-tl from-pb-theme-primary to-pb-theme-secondary">
@@ -86,13 +85,13 @@ export default function ContactSection() {
 
                                     {/* text content */}
                                     <div>
-                                        <span className="text-[16px] font-normal capitalize text-pb-white/70">
+                                        <ParaText className="capitalize text-pb-white/70">
                                             {info.contactType}
-                                        </span>
+                                        </ParaText>
                                         <Link href={info.href}>
-                                            <h5 className="text-[22px] font-medium hover:text-pb-theme-primary duration-500 ease transition-colors">
+                                            <SubText className="font-medium hover:text-pb-theme-primary duration-500 ease transition-colors">
                                                 {info.contactTypeValue}
-                                            </h5>
+                                            </SubText>
                                         </Link>
                                     </div>
                                 </div>
