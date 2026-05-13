@@ -66,10 +66,9 @@ export default function HeroSection() {
 
                         {/* social links */}
                         <div className="mt-6 lg:mt-10 flex flex-col lg:flex-row items-start lg:items-center gap-5 md:gap-6">
-                            <Link
-                                href={
-                                    "/src/public/cv/Polok_Banik_Frontend_Intern.pdf"
-                                }
+                            {/* my cv */}
+                            <a
+                                href={"/cv/polok-banik-frontend-intern.pdf"}
                                 download
                                 target="_blank"
                             >
@@ -79,7 +78,7 @@ export default function HeroSection() {
                                 >
                                     Download CV
                                 </Button>
-                            </Link>
+                            </a>
 
                             <ul className="flex items-center gap-4 lg:gap-6">
                                 {socialLinks.map((socialLink) => {

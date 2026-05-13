@@ -89,6 +89,11 @@ body {
     border-radius: 999px;
 }
 
+::selection {
+    background-color: var(--pb-theme-primary);
+    color: var(--pb-white);
+}
+
 @layer utilities {
     /* nav links underline */
     .nav-link::after {
