@@ -6,7 +6,16 @@ export default function SubText({
     className,
 }: {
     children: ReactNode;
-    className: string;
+    className?: string;
 }) {
-    return <h3 className={cn("", className)}>{children}</h3>;
+    return (
+        <h3
+            className={cn(
+                "text-[18px] sm:text-[20px] md:text-[25px] font-bold leading-[1.2] text-pb-white",
+                className,
+            )}
+        >
+            {children}
+        </h3>
+    );
 }

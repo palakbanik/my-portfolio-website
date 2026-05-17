@@ -135,6 +135,15 @@ body {
         background-clip: text;
     }
 
+    /* background gradient */
+    .background-gradient {
+        background: linear-gradient(
+            to right,
+            var(--pb-theme-primary),
+            var(--pb-theme-secondary)
+        );
+    }
+
     /* stroke text */
     .text-outline {
         -webkit-text-stroke: 1px var(--pb-theme-secondary);
