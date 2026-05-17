@@ -1,3 +1,27 @@
+// skills data
+import javascript from "@/public/skills-logo/javascript-icon.svg";
+import typescript from "@/public/skills-logo/typescript-icon.svg";
+import react from "@/public/skills-logo/react-icon.svg";
+import framerMotion from "@/public/skills-logo/framer-motion-icon.png";
+import gsap from "@/public/skills-logo/gsap-icon.jpg";
+import nextjs from "@/public/skills-logo/nextjs-icon.svg";
+import git from "@/public/skills-logo/git-icon.svg";
+import github from "@/public/skills-logo/github-icon.png";
+import tailwindcss from "@/public/skills-logo/tailwindcss-icon.svg";
+import figma from "@/public/skills-logo/figma-icon.svg";
+import adobeXd from "@/public/skills-logo/adobe-xd-icon.svg";
+import html from "@/public/skills-logo/html-icon.svg";
+import css from "@/public/skills-logo/css-icon.svg";
+
+// contact section dropdown data
+import { PiPhoneCallLight } from "react-icons/pi";
+import { IoMailUnreadOutline } from "react-icons/io5";
+import { CiLocationOn } from "react-icons/ci";
+
+// resume data
+import type { IconType } from "react-icons";
+import { SlGraduation } from "react-icons/sl";
+
 // header data
 export const navLinks = [
     {
@@ -32,6 +56,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
+import { SiOpenbadges } from "react-icons/si";
 
 export const socialLinks = [
     {
@@ -84,20 +109,90 @@ export const serviceSectionData = [
     },
 ];
 
+// resume data
+
+export type TimelineItem = {
+    id: number;
+    period: string;
+    title: string;
+    subtitle: string;
+    featured?: boolean;
+};
+
+export type ColumnData = {
+    id: string;
+    icon: IconType;
+    heading: string;
+    items: TimelineItem[];
+};
+
+export const columns: ColumnData[] = [
+    {
+        id: "experience",
+        icon: SiOpenbadges,
+        heading: "My Experience",
+        items: [
+            {
+                id: 1,
+                period: "2022 - Present",
+                title: "PROGRAMMING COURSE",
+                subtitle: "Blockdots, London",
+            },
+            {
+                id: 2,
+                period: "2021 - 2022",
+                title: "CMS COURSE",
+                subtitle: "Parsons, The New School",
+            },
+            {
+                id: 3,
+                period: "2020 - 2021",
+                title: "WEB DESIGN COURSE",
+                subtitle: "House of Life, Leeds",
+            },
+            {
+                id: 4,
+                period: "2018 - 2020",
+                title: "PARSONS, THE NEW SCHOOL",
+                subtitle: "Theme Junction, Bursa",
+            },
+        ],
+    },
+    {
+        id: "education",
+        icon: SlGraduation,
+        heading: "My Education",
+        items: [
+            {
+                id: 1,
+                period: "2020 - 2023",
+                title: "BLOCKDOTS",
+                subtitle: "Harverd University",
+            },
+            {
+                id: 2,
+                period: "2016 - 2020",
+                title: "PARSONS, THE NEW SCHOOL",
+                subtitle: "University of Denmark",
+            },
+            {
+                id: 3,
+                period: "2012 - 2015",
+                title: "IDEO",
+                subtitle: "University of California",
+                featured: true,
+            },
+            {
+                id: 4,
+                period: "2010 - 2011",
+                title: "PARSONS, THE NEW SCHOOL",
+                subtitle: "Parsons, The New School",
+            },
+        ],
+    },
+];
+
 // skills data
-import javascript from "@/public/skills-logo/javascript-icon.svg";
-import typescript from "@/public/skills-logo/typescript-icon.svg";
-import react from "@/public/skills-logo/react-icon.svg";
-import framerMotion from "@/public/skills-logo/framer-motion-icon.png";
-import gsap from "@/public/skills-logo/gsap-icon.jpg";
-import nextjs from "@/public/skills-logo/nextjs-icon.svg";
-import git from "@/public/skills-logo/git-icon.svg";
-import github from "@/public/skills-logo/github-icon.png";
-import tailwindcss from "@/public/skills-logo/tailwindcss-icon.svg";
-import figma from "@/public/skills-logo/figma-icon.svg";
-import adobeXd from "@/public/skills-logo/adobe-xd-icon.svg";
-import html from "@/public/skills-logo/html-icon.svg";
-import css from "@/public/skills-logo/css-icon.svg";
 
 export const skillsData = [
     {
@@ -188,10 +283,6 @@ export const contactDropdownOptions = [
     "API Integrations",
     "Website Redesign",
 ];
-
-import { PiPhoneCallLight } from "react-icons/pi";
-import { IoMailUnreadOutline } from "react-icons/io5";
-import { CiLocationOn } from "react-icons/ci";
 
 export const contactSectionPersonalContacts = [
     {
