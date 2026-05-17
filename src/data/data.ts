@@ -111,7 +111,7 @@ export const serviceSectionData = [
 
 // resume data
 
-export type TimelineItem = {
+export type ResumeSectionTimelineItem = {
     id: number;
     period: string;
     title: string;
@@ -119,14 +119,14 @@ export type TimelineItem = {
     featured?: boolean;
 };
 
-export type ColumnData = {
+export type ResumeSectionDataProps = {
     id: string;
     icon: IconType;
     heading: string;
-    items: TimelineItem[];
+    items: ResumeSectionTimelineItem[];
 };
 
-export const columns: ColumnData[] = [
+export const resumeSectionData: ResumeSectionDataProps[] = [
     {
         id: "experience",
         icon: SiOpenbadges,
