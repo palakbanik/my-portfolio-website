@@ -3,12 +3,11 @@ import Container from "@/components/shared/Container";
 import Button from "@/components/ui/Button";
 import { HiOutlineDownload } from "react-icons/hi";
 import Image from "next/image";
-
 import palakProfile from "@/public/palak-profile.jpg";
 import { socialLinks } from "@/data/data";
 import Link from "next/link";
-import ServicesSection from "../StatsSection/StatsSection";
 import ArticleText from "@/components/shared/texts-type/ArticleText";
+import StatsSection from "../stats-section/StatsSection";
 
 export default function HeroSection() {
     return (
@@ -117,7 +116,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* services */}
-                <ServicesSection />
+                <StatsSection />
             </Container>
         </section>
     );

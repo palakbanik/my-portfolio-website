@@ -6,7 +6,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import SubText from "@/components/shared/texts-type/SubText";
 import { serviceSectionData } from "@/data/data";
 
-export default function StatsSection() {
+export default function ServicesSection() {
     return (
         <section>
             <Container className="py-12 md:py-20 lg:py-26">

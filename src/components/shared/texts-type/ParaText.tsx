@@ -11,7 +11,7 @@ export default function ParaText({
     return (
         <p
             className={cn(
-                "text-[16px] sm:text-[18px] font-light md:font-normal leading-normal md:leading-relaxed tracking-normal md:tracking-wide  text-pb-white",
+                "text-[14px] sm:text-[16px] font-light md:font-normal leading-normal md:leading-relaxed tracking-normal md:tracking-wide  text-pb-white",
                 className,
             )}
         >
