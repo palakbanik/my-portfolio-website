@@ -30,7 +30,7 @@ export default function PortfolioCategories({
             {activeCategory === name && (
                 <motion.div
                     layoutId="active-pill"
-                    className="absolute inset-0 bg-linear-to-r from-pb-theme-primary to-pb-theme-secondary rounded-full -z-10"
+                    className="absolute inset-0 background-gradient rounded-full -z-10 outline-none"
                     transition={{
                         type: "spring",
                         stiffness: 500,
