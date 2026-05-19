@@ -1,15 +1,15 @@
 import React from "react";
 import Container from "@/components/shared/Container";
-import { columns } from "@/data/data";
 import ParaText from "@/components/shared/texts-type/ParaText";
 import SubText from "@/components/shared/texts-type/SubText";
+import { resumeSectionData } from "@/data/data";
 
 export default function ResumeSection() {
     return (
         <section>
             <Container className="py-12 md:py-20 lg:py-26">
                 <div className="grid gap-10 sm:grid-cols-2 lg:gap-16">
-                    {columns.map((col) => {
+                    {resumeSectionData.map((col) => {
                         const Icon = col.icon;
                         return (
                             <div key={col.id}>

@@ -1,3 +1,5 @@
+"use client";
+
 import Container from "@/components/shared/Container";
 import SectionTitle from "@/components/shared/SectionTitle";
 import ParaText from "@/components/shared/texts-type/ParaText";
@@ -5,8 +7,14 @@ import ArticleText from "@/components/shared/texts-type/ArticleText";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import SubText from "@/components/shared/texts-type/SubText";
 import { serviceSectionData } from "@/data/data";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
-export default function StatsSection() {
+export default function ServicesSection() {
+    const [activeService, setActiveService] = useState(0);
+    const handleServiceHover = (index: number) => {
+        setActiveService(index);
+    };
     return (
         <section>
             <Container className="py-12 md:py-20 lg:py-26">
@@ -21,15 +29,28 @@ export default function StatsSection() {
 
                 {/* services content */}
                 <div className="mt-4 lg:mt-8">
-                    {serviceSectionData.map((service) => {
+                    {serviceSectionData.map((service, idx) => {
                         const { id, title, description } = service;
+                        const isActive = activeService === idx;
                         return (
-                            <div
+                            <motion.div
+                                layout
                                 key={service.id}
-                                className={`flex flex-col sm:flex-row items-center md:justify-center p-4 md:py-6 border-b border-pb-theme-secondary cursor-default group relative overflow-hidden gap-3`}
+                                onMouseEnter={() => handleServiceHover(idx)}
+                                className="flex flex-col sm:flex-row items-center md:justify-center p-4 md:py-6 border-b border-pb-theme-secondary cursor-default group relative overflow-hidden gap-3"
                             >
                                 {/* bg animation */}
-                                <div className="absolute inset-0 bg-linear-to-r from-pb-theme-primary to-pb-theme-secondary translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-in-out -z-10 pointer-events-none" />
+                                {isActive && (
+                                    <motion.div
+                                        layoutId="service-bg"
+                                        className="absolute inset-0 background-gradient -z-10 pointer-events-none"
+                                        transition={{
+                                            type: "tween",
+                                            stiffness: 300,
+                                            damping: 30,
+                                        }}
+                                    />
+                                )}
 
                                 {/* service type & number */}
                                 <div className="flex items-start sm:items-center justify-between md:gap-[20px] w-full sm:w-[calc(40%-10px)]">
@@ -56,7 +77,7 @@ export default function StatsSection() {
                                 <span className="hidden sm:block">
                                     <IoIosArrowRoundForward className="w-12 h-12 ml-10 rotate-45 group-hover:-rotate-45 ease-in-out transition-all duration-500 text-pb-theme-primary group-hover:text-pb-white" />
                                 </span>
-                            </div>
+                            </motion.div>
                         );
                     })}
                 </div>
