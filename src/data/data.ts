@@ -1,17 +1,17 @@
 // skills data
-import javascript from "@/public/skills-logo/javascript-icon.svg";
-import typescript from "@/public/skills-logo/typescript-icon.svg";
-import react from "@/public/skills-logo/react-icon.svg";
-import framerMotion from "@/public/skills-logo/framer-motion-icon.png";
-import gsap from "@/public/skills-logo/gsap-icon.jpg";
-import nextjs from "@/public/skills-logo/nextjs-icon.svg";
-import git from "@/public/skills-logo/git-icon.svg";
-import github from "@/public/skills-logo/github-icon.png";
-import tailwindcss from "@/public/skills-logo/tailwindcss-icon.svg";
-import figma from "@/public/skills-logo/figma-icon.svg";
-import adobeXd from "@/public/skills-logo/adobe-xd-icon.svg";
-import html from "@/public/skills-logo/html-icon.svg";
-import css from "@/public/skills-logo/css-icon.svg";
+import javascript from "@/assets/skills-logo/javascript-icon.svg";
+import typescript from "@/assets/skills-logo/typescript-icon.svg";
+import react from "@/assets/skills-logo/react-icon.svg";
+import framerMotion from "@/assets/skills-logo/framer-motion-icon.png";
+import gsap from "@/assets/skills-logo/gsap-icon.jpg";
+import nextjs from "@/assets/skills-logo/nextjs-icon.svg";
+import git from "@/assets/skills-logo/git-icon.svg";
+import github from "@/assets/skills-logo/github-icon.png";
+import tailwindcss from "@/assets/skills-logo/tailwindcss-icon.svg";
+import figma from "@/assets/skills-logo/figma-icon.svg";
+import adobeXd from "@/assets/skills-logo/adobe-xd-icon.svg";
+import html from "@/assets/skills-logo/html-icon.svg";
+import css from "@/assets/skills-logo/css-icon.svg";
 
 // contact section dropdown data
 import { PiPhoneCallLight } from "react-icons/pi";
