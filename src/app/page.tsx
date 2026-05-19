@@ -9,13 +9,13 @@ import PortfolioSection from "@/components/home/portfolio-section/PortfolioSecti
 
 export default function Home() {
     return (
-        <div>
+        <>
             <HeroSection />
             <ServicesSection />
             <PortfolioSection />
             <ResumeSection />
             <SkillsSections />
             <ContactSection />
-        </div>
+        </>
     );
 }

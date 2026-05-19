@@ -60,11 +60,13 @@ export default function PortfolioSection() {
                         </div>
 
                         {/* portfolio cards */}
-                        <div className="grid  grid-cols-1 sm:grid-cols-2 gap-10">
-                            <PortfolioCard />
-                            <PortfolioCard />
-                            <PortfolioCard />
-                            <PortfolioCard />
+                        <div className="mt-10">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                                <PortfolioCard />
+                                <PortfolioCard />
+                                <PortfolioCard />
+                                <PortfolioCard />
+                            </div>
                         </div>
                     </div>
                 </div>
