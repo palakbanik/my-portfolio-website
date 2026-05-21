@@ -149,4 +149,13 @@ body {
         -webkit-text-stroke: 1px var(--pb-theme-secondary);
         color: transparent;
     }
+
+    /* card 3d rotate */
+    .transform-style-preserve-3d {
+        transform-style: preserve-3d;
+    }
+
+    .backface-hidden {
+        backface-visibility: hidden;
+    }
 }

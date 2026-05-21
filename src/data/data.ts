@@ -36,16 +36,11 @@ export const navLinks = [
     },
     {
         id: 3,
-        title: "Projects",
-        href: "/projects",
+        title: "Portfolio",
+        href: "/portfolio",
     },
     {
         id: 4,
-        title: "Testimonial",
-        href: "/testimonial",
-    },
-    {
-        id: 5,
         title: "Contact",
         href: "/contact",
     },
@@ -78,6 +73,30 @@ export const socialLinks = [
         id: 4,
         icon: FaInstagram,
         href: "https://instagram.com/",
+    },
+];
+
+// main page stats section data
+export const statsData = [
+    {
+        id: 1,
+        value: "0.6",
+        title: "Years of Experience",
+    },
+    {
+        id: 2,
+        value: "10+",
+        title: "Project Completed",
+    },
+    {
+        id: 3,
+        value: "05",
+        title: "Happy Clients",
+    },
+    {
+        id: 4,
+        value: "0.6",
+        title: "Years of Experience",
     },
 ];
 
