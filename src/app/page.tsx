@@ -9,6 +9,7 @@ import PortfolioSection from "@/components/home/portfolio-section/PortfolioSecti
 import {
     portfolioCategories,
     portfolioData,
+    resumeSectionData,
     serviceSectionData,
 } from "@/data/data";
 
@@ -28,7 +29,7 @@ export default function Home() {
             />
 
             {/* resume section */}
-            <ResumeSection />
+            <ResumeSection resumeData={resumeSectionData} />
 
             {/* skills section */}
             <SkillsSections />

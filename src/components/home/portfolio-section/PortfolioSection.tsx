@@ -42,18 +42,21 @@ export default function PortfolioSection({
             {/* main content */}
             <Container className="py-12 md:py-20 lg:py-26">
                 <div>
-                    {/* section header content */}
-                    <div className="text-center space-y-1 sm:space-y-2">
+                    {/* header content */}
+                    <div className="text-center space-y-1 sm:space-y-2 max-w-[675px] mx-auto ">
                         <SectionTitle text="My Recent Works" />
                         <ParaText>
-                            Some of the noteworthy projects I have built:
+                            A collection of projects that highlight my passion
+                            for frontend development, combining modern design,
+                            smooth interactions, and responsive user
+                            experiences.
                         </ParaText>
                     </div>
 
                     {/* show project */}
                     <div className="mt-10">
                         {/* category filters */}
-                        <div className="flex items-center justify-between bg-pb-body w-full max-w-[400px] mx-auto rounded-full overflow-hidden duration-500 transition-all">
+                        <div className="flex items-center justify-between bg-pb-body w-full max-w-[480px] mx-auto rounded-full overflow-hidden duration-500 transition-all">
                             {portfolioCategoriesData.map((category) => (
                                 <PortfolioCategories
                                     key={category.id}

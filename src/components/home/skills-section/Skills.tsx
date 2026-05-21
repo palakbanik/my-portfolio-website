@@ -11,8 +11,9 @@ export default function SkillsSections() {
             <Container className="py-12 md:py-20 lg:py-[120px]">
                 <div className="space-y-2 sm:space-y-3">
                     <SectionTitle text="my skills" />
-                    <ParaText className="text-center e">
-                        The skills, tools and technologies I am really good at:
+                    <ParaText className="text-center max-w-[675px] mx-auto">
+                        The technologies, tools, and frameworks I use to create
+                        modern, responsive, and user-focused web applications.
                     </ParaText>
                 </div>
 

@@ -151,8 +151,8 @@ export const portfolioCategories = [
     },
     {
         id: 4,
-        categoryName: "Apps",
-        categoryType: "apps",
+        categoryName: "ECommerce",
+        categoryType: "e-commerce",
     },
 ];
 
@@ -230,82 +230,55 @@ export const portfolioData = [
 ];
 
 // resume data
-export type ResumeSectionTimelineItem = {
-    id: number;
-    period: string;
-    title: string;
-    subtitle: string;
-    featured?: boolean;
-};
 
-export type ResumeSectionDataProps = {
-    id: string;
-    icon: IconType;
-    heading: string;
-    items: ResumeSectionTimelineItem[];
-};
-
-export const resumeSectionData: ResumeSectionDataProps[] = [
+export const resumeSectionData = [
     {
-        id: "experience",
+        id: 1,
         icon: SiOpenbadges,
         heading: "My Experience",
         items: [
             {
                 id: 1,
-                period: "2022 - Present",
+                period: "2025 - Present",
                 title: "PROGRAMMING COURSE",
-                subtitle: "Blockdots, London",
+                subtitle: "Self Learning",
             },
             {
                 id: 2,
                 period: "2021 - 2022",
-                title: "CMS COURSE",
-                subtitle: "Parsons, The New School",
+                title: "Front End COURSE",
+                subtitle: "Self Learning",
             },
             {
                 id: 3,
                 period: "2020 - 2021",
                 title: "WEB DESIGN COURSE",
-                subtitle: "House of Life, Leeds",
-            },
-            {
-                id: 4,
-                period: "2018 - 2020",
-                title: "PARSONS, THE NEW SCHOOL",
-                subtitle: "Theme Junction, Bursa",
+                subtitle: "Self Learning",
             },
         ],
     },
     {
-        id: "education",
+        id: 2,
         icon: SlGraduation,
         heading: "My Education",
         items: [
             {
                 id: 1,
-                period: "2020 - 2023",
-                title: "BLOCKDOTS",
-                subtitle: "Harverd University",
+                period: "2022 - 2025",
+                title: "DIPLOMA IN TEXTILE ENGINEERING",
+                subtitle: "Institute of Science Trade and Technology (ISTT)",
             },
             {
                 id: 2,
-                period: "2016 - 2020",
-                title: "PARSONS, THE NEW SCHOOL",
-                subtitle: "University of Denmark",
+                period: "2019 - 2021",
+                title: "HSC",
+                subtitle: "Gridakalindia Hazera Hasmat University College",
             },
             {
                 id: 3,
-                period: "2012 - 2015",
-                title: "IDEO",
-                subtitle: "University of California",
-                featured: true,
-            },
-            {
-                id: 4,
-                period: "2010 - 2011",
-                title: "PARSONS, THE NEW SCHOOL",
-                subtitle: "Parsons, The New School",
+                period: "2017 - 2019",
+                title: "SSC",
+                subtitle: "Ramganj M.U Govt. High School",
             },
         ],
     },

@@ -2,19 +2,36 @@ import React from "react";
 import Container from "@/components/shared/Container";
 import ParaText from "@/components/shared/texts-type/ParaText";
 import SubText from "@/components/shared/texts-type/SubText";
-import { resumeSectionData } from "@/data/data";
+import { IconType } from "react-icons";
 
-export default function ResumeSection() {
+interface ResumeItemProps {
+    id: number;
+    period: string;
+    title: string;
+    subtitle: string;
+    featured?: boolean;
+}
+
+interface ResumeSectionProps {
+    resumeData: {
+        id: number;
+        icon: IconType;
+        heading: string;
+        items: ResumeItemProps[];
+    }[];
+}
+
+export default function ResumeSection({ resumeData }: ResumeSectionProps) {
     return (
         <section>
             <Container className="py-12 md:py-20 lg:py-26">
                 <div className="grid gap-10 sm:grid-cols-2 lg:gap-16">
-                    {resumeSectionData.map((col) => {
+                    {resumeData.map((col) => {
                         const Icon = col.icon;
                         return (
                             <div key={col.id}>
                                 {/* title */}
-                                <div className="flex items-center gap-[15px] ">
+                                <div className="flex items-center gap-[15px]">
                                     <Icon className="text-[30px] md:text-[45px] text-pb-theme-primary" />
                                     <h2 className="text-[30px] sm:text-[35px] md:text-[45px] font-bold leading-[1.2] tracking-[-0.02em] text-gradient">
                                         {col.heading}
