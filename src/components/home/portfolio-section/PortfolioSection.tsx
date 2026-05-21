@@ -6,27 +6,32 @@ import SectionTitle from "@/components/shared/SectionTitle";
 import ParaText from "@/components/shared/texts-type/ParaText";
 import PortfolioCard from "./components/shared/PortfolioCard";
 import PortfolioCategories from "./components/shared/PortfolioCategories";
+import { StaticImageData } from "next/image";
 
-const portfolioCategories = [
-    {
-        id: 1,
-        name: "All",
-    },
-    {
-        id: 2,
-        name: "UX/UI",
-    },
-    {
-        id: 3,
-        name: "Branding",
-    },
-    {
-        id: 4,
-        name: "Apps",
-    },
-];
+export interface PortfolioProps {
+    id: number;
+    title: string;
+    description: string;
+    categoryType: string;
+    imageUrl: StaticImageData | string;
+    href: string;
+    projectTools: string[];
+}
 
-export default function PortfolioSection() {
+interface PortfolioSectionProps {
+    portfolioCategoriesData: {
+        id: number;
+        categoryName: string;
+        categoryType: string;
+    }[];
+
+    portfolioData: PortfolioProps[];
+}
+
+export default function PortfolioSection({
+    portfolioCategoriesData,
+    portfolioData,
+}: PortfolioSectionProps) {
     const [activeCategory, setActiveCategory] = useState("All");
 
     return (
@@ -49,7 +54,7 @@ export default function PortfolioSection() {
                     <div className="mt-10">
                         {/* category filters */}
                         <div className="flex items-center justify-between bg-pb-body w-full max-w-[400px] mx-auto rounded-full overflow-hidden duration-500 transition-all">
-                            {portfolioCategories.map((category) => (
+                            {portfolioCategoriesData.map((category) => (
                                 <PortfolioCategories
                                     key={category.id}
                                     category={category}
@@ -62,10 +67,12 @@ export default function PortfolioSection() {
                         {/* portfolio cards */}
                         <div className="mt-10">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-                                <PortfolioCard />
-                                <PortfolioCard />
-                                <PortfolioCard />
-                                <PortfolioCard />
+                                {portfolioData.map((project) => (
+                                    <PortfolioCard
+                                        key={project.id}
+                                        project={project}
+                                    />
+                                ))}
                             </div>
                         </div>
                     </div>

@@ -107,33 +107,129 @@ export const statsData = [
 // services data
 export const serviceSectionData = [
     {
-        id: "01",
+        id: 1,
         title: "Responsive Design",
         description:
             "Ensure your website looks great on any device, with layouts that adapt to different screen sizes seamlessly.",
     },
     {
-        id: "02",
-        title: "Performance Optimization",
+        id: 2,
+        title: "API Integration",
         description:
-            "Optimize website speed, loading time, and overall performance to ensure smooth and fast user experiences.",
+            "Fetching and displaying data from third-party REST APIs using Axios and Fetch, with proper loading and error state handling.",
     },
     {
-        id: "03",
-        title: "API Integrations",
+        id: 3,
+        title: "Web Animation",
         description:
-            "Build and integrate APIs to connect websites with third-party applications, enhancing functionality and performance.",
+            "Creating smooth, interactive animations using GSAP and Framer Motion to deliver engaging and modern user experiences.",
     },
     {
-        id: "04",
+        id: 4,
         title: "Website Redesign",
         description:
             "Refresh outdated websites with modern, appealing designs that align with current brand goals and user expectations.",
     },
 ];
 
-// resume data
+// portfolio section categories
+export const portfolioCategories = [
+    {
+        id: 1,
+        categoryName: "All",
+        categoryType: "all",
+    },
+    {
+        id: 2,
+        categoryName: "UX/UI",
+        categoryType: "ux-ui",
+    },
+    {
+        id: 3,
+        categoryName: "Animated",
+        categoryType: "animated",
+    },
+    {
+        id: 4,
+        categoryName: "Apps",
+        categoryType: "apps",
+    },
+];
 
+// portfolio section portfolio data
+
+import dummy from "@/assets/portfolio-projects/dummy.jpg";
+export const portfolioData = [
+    {
+        id: 1,
+        title: "Agency Company Website",
+        description:
+            "I designed and developed a modern multi-page agency website with a strong focus on smooth user experience and engaging interactions. This project showcases my ability to build scalable and responsive layouts using Next.js and Tailwind CSS, while implementing smooth scroll-based animations with GSAP and Lenis. The final result is a visually appealing, highly interactive, and performance-optimized website.",
+        categoryType: "animated",
+        imageUrl: dummy,
+        alt: "Agency Company Website",
+        href: "https://animated-agency-website-sigma.vercel.app/",
+        projectTools: [
+            "Next.js",
+            "Tailwind CSS",
+            "GSAP",
+            "Lenis",
+            "JavaScript",
+            "React Icons",
+        ],
+    },
+
+    {
+        id: 2,
+        title: "Insurance Company Website",
+        description:
+            "I designed and developed a multi-page insurance company website focusing on a clean UI, intuitive navigation, and responsive layouts. This project demonstrates my skills in building structured multi-page applications with modern web technologies while ensuring a smooth and user-friendly experience. The final result is a visually appealing and responsive insurance company website that effectively showcases the company's services.",
+        categoryType: "ui-ux",
+        imageUrl: dummy,
+        alt: "Insurance Company Website",
+        href: "https://amynta-insurance-company-website.vercel.app/",
+        projectTools: ["Next.js", "Tailwind CSS", "TypeScript", "React Icons"],
+    },
+
+    {
+        id: 3,
+        title: "E-Commerce Website",
+        description:
+            "I developed a responsive single-page e-commerce website featuring a modern UI, smooth navigation, dark mode support, and a user-friendly shopping experience. This project highlights my frontend development skills and ability to create visually engaging interfaces.",
+        categoryType: "e-commerce",
+        imageUrl: dummy,
+        alt: "E-Commerce Website",
+        href: "/",
+        projectTools: [
+            "Next.js",
+            "Tailwind CSS",
+            "JavaScript",
+            "React Icons",
+            "Swiper.js",
+        ],
+    },
+
+    {
+        id: 4,
+        title: "Factora Website",
+        description:
+            "I built a clean and responsive website with a strong focus on simplicity, usability, and smooth user experience. This project showcases my ability to create functional and visually appealing web interfaces with modern frontend technologies.",
+        categoryType: "ui-ux",
+        imageUrl: dummy,
+        alt: "Factora Website",
+        href: "/",
+        projectTools: [
+            "Next.js",
+            "Tailwind CSS",
+            "GSAP",
+            "Lenis",
+            "JavaScript",
+            "React Icons",
+        ],
+    },
+];
+
+// resume data
 export type ResumeSectionTimelineItem = {
     id: number;
     period: string;
