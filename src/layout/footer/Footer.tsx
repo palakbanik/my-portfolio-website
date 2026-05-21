@@ -41,7 +41,7 @@ export default function FooterSection() {
                             href={"/"}
                             className="font-medium text-base text-pb-white hover:text-pb-theme-primary duration-500 transition-colors"
                         >
-                            PalakBanik
+                            PolokBanik
                         </Link>
                     </p>
                 </div>

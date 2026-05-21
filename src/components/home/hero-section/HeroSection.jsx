@@ -15,9 +15,12 @@ import { Typewriter } from "react-simple-typewriter";
 
 export default function HeroSection() {
     return (
-        <section className="min-h-screen bg-pb-theme-accent-1 relative overflow-x-hidden">
+        <section
+            aria-label="Hero Section"
+            className="min-h-screen bg-pb-theme-accent-1 relative overflow-x-hidden"
+        >
             {/* hi text */}
-            <motion.h1
+            <motion.span
                 animate={{ scale: [1, 1.04, 1] }}
                 transition={{
                     duration: 2,
@@ -25,10 +28,11 @@ export default function HeroSection() {
                     repeatType: "loop",
                     ease: "easeInOut",
                 }}
+                aria-hidden="true"
                 className="hidden md:block text-outline font-russo-one text-[200px] lg:text-[350px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             >
                 HI
-            </motion.h1>
+            </motion.span>
 
             {/* blob */}
             <div className="w-[322px] h-[308px] bg-pb-theme-primary/50 rounded-full blur-[150px] absolute -right-20 -top-20 animate-pulse" />
@@ -43,9 +47,9 @@ export default function HeroSection() {
                         <div className="space-y-8 sm:space-y-5 md:space-y-3">
                             {/* header text */}
                             <div className="space-y-1 lg:space-y-3">
-                                <h3 className="text-[22px] sm:text-[25px] lg:text-4xl font-semibold">
-                                    I am Palak
-                                </h3>
+                                <h1 className="text-[22px] sm:text-[25px] lg:text-4xl font-semibold">
+                                    I am Polok
+                                </h1>
                                 <h2 className="text-gradient text-[35px] sm:text-[38px] lg:text-[65px] font-bold leading-none capitalize ">
                                     front End web{" "}
                                     <span className="inline-block min-w-[320px]">
@@ -68,7 +72,7 @@ export default function HeroSection() {
                                 <div className="relative border-2 border-pb-theme-primary/50 hover:border-pb-theme-primary duration-300 inline-block rounded-4xl overflow-hidden transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
                                     <Image
                                         src={polokbanik}
-                                        alt="palak's profile"
+                                        alt="Polok Banik — Frontend Web Developer"
                                         width={1000}
                                         height={1000}
                                         priority
@@ -95,6 +99,8 @@ export default function HeroSection() {
                                 href={"/cv/polok-banik-frontend-intern.pdf"}
                                 download
                                 target="_blank"
+                                aria-label="Download Polok Banik's CV"
+                                rel="noopener noreferrer"
                             >
                                 <Button
                                     variant="outline"
@@ -115,6 +121,8 @@ export default function HeroSection() {
                                             key={id}
                                             className="group relative"
                                             target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label={`Visit ${socialLink.name}`}
                                         >
                                             <li className="border border-pb-theme-primary text-pb-theme-primary hover:text-pb-white p-2.5 rounded-full group-hover:-translate-y-1 overflow-hidden transition-all duration-300 ease-in-out">
                                                 <span className="w-full h-full absolute inset-0 scale-0 group-hover:scale-100 bg-pb-theme-primary  rounded-full transition-all duration-300 ease-in-out" />
@@ -131,7 +139,7 @@ export default function HeroSection() {
                     <div className="hidden relative border-2 border-pb-theme-primary/50 hover:border-2 hover:border-pb-theme-primary duration-300 sm:inline-block rounded-4xl transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
                         <Image
                             src={polokbanik}
-                            alt="palak's profile"
+                            alt="Polok Banik — Frontend Web Developer"
                             width={1000}
                             height={1000}
                             priority
@@ -140,7 +148,7 @@ export default function HeroSection() {
                     </div>
                 </div>
 
-                {/* services */}
+                {/* stats */}
                 <StatsSection />
             </Container>
         </section>
