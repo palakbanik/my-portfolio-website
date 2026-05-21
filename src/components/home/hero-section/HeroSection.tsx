@@ -6,11 +6,11 @@ import Button from "@/components/ui/Button";
 import { HiOutlineDownload } from "react-icons/hi";
 import Image from "next/image";
 import polokbanik from "@/assets/polok-profile.png";
-import { socialLinks } from "@/data/data";
+import { socialLinks, statsData } from "@/data/data";
 import Link from "next/link";
 import ArticleText from "@/components/shared/texts-type/ArticleText";
 import StatsSection from "../stats-section/StatsSection";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
 export default function HeroSection() {
@@ -151,7 +151,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* stats */}
-                <StatsSection />
+                <StatsSection data={statsData} />
             </Container>
         </section>
     );

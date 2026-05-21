@@ -1,14 +1,21 @@
 import React from "react";
-import { statsData } from "@/data/data";
 import ParaText from "@/components/shared/texts-type/ParaText";
 
-export default function StatsSection() {
+interface StatsSectionProps {
+    data: {
+        id: number;
+        value: string;
+        title: string;
+    }[];
+}
+
+export default function StatsSection({ data }: StatsSectionProps) {
     return (
         <div
             aria-label="Stats Overview"
             className="grid grid-cols-2 md:grid-cols-4 items-center justify-between  gap-6 py-14 lg:py-20"
         >
-            {statsData.map((stat) => (
+            {data.map((stat) => (
                 <div
                     key={stat.id}
                     className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-start text-pb-white/90 gap-3 lg:gap-[15px]"
