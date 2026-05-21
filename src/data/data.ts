@@ -58,21 +58,25 @@ export const socialLinks = [
         id: 1,
         icon: FaLinkedinIn,
         href: "https://www.linkedin.com/in/polok-banik-184121308/",
+        name: "LinkedIn",
     },
     {
         id: 2,
         icon: FaGithub,
         href: "https://github.com/palakbanik",
+        name: "GitHub",
     },
     {
         id: 3,
         icon: FaFacebookF,
         href: "https://facebook.com/",
+        name: "Facebook",
     },
     {
         id: 4,
         icon: FaInstagram,
         href: "https://instagram.com/",
+        name: "Instagram",
     },
 ];
 

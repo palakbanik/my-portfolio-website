@@ -10,10 +10,12 @@ import { socialLinks } from "@/data/data";
 import Link from "next/link";
 import ArticleText from "@/components/shared/texts-type/ArticleText";
 import StatsSection from "../stats-section/StatsSection";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
 export default function HeroSection() {
+    // fade in animation variant
+
     return (
         <section
             aria-label="Hero Section"
@@ -26,7 +28,7 @@ export default function HeroSection() {
                     duration: 2,
                     repeat: Infinity,
                     repeatType: "loop",
-                    ease: "easeInOut",
+                    ease: "easeOut" as const,
                 }}
                 aria-hidden="true"
                 className="hidden md:block text-outline font-russo-one text-[200px] lg:text-[350px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -112,7 +114,7 @@ export default function HeroSection() {
 
                             <ul className="flex items-center gap-4 lg:gap-6">
                                 {socialLinks.map((socialLink) => {
-                                    const { id, href, icon } = socialLink;
+                                    const { id, href, icon, name } = socialLink;
                                     const Icon = icon;
 
                                     return (
@@ -122,7 +124,7 @@ export default function HeroSection() {
                                             className="group relative"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            aria-label={`Visit ${socialLink.name}`}
+                                            aria-label={`Visit ${name}`}
                                         >
                                             <li className="border border-pb-theme-primary text-pb-theme-primary hover:text-pb-white p-2.5 rounded-full group-hover:-translate-y-1 overflow-hidden transition-all duration-300 ease-in-out">
                                                 <span className="w-full h-full absolute inset-0 scale-0 group-hover:scale-100 bg-pb-theme-primary  rounded-full transition-all duration-300 ease-in-out" />
