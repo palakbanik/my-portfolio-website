@@ -1,21 +1,34 @@
+"use client";
+
 import React from "react";
 import Container from "@/components/shared/Container";
 import Button from "@/components/ui/Button";
 import { HiOutlineDownload } from "react-icons/hi";
 import Image from "next/image";
-import palakProfile from "@/assets/palak-profile.png";
+import polokbanik from "@/assets/polok-profile.png";
 import { socialLinks } from "@/data/data";
 import Link from "next/link";
 import ArticleText from "@/components/shared/texts-type/ArticleText";
 import StatsSection from "../stats-section/StatsSection";
+import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function HeroSection() {
     return (
         <section className="min-h-screen bg-pb-theme-accent-1 relative overflow-x-hidden">
             {/* hi text */}
-            <h1 className="hidden md:block text-outline font-russo-one text-[200px] lg:text-[350px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse">
+            <motion.h1
+                animate={{ scale: [1, 1.04, 1] }}
+                transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "easeInOut",
+                }}
+                className="hidden md:block text-outline font-russo-one text-[200px] lg:text-[350px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
                 HI
-            </h1>
+            </motion.h1>
 
             {/* blob */}
             <div className="w-[322px] h-[308px] bg-pb-theme-primary/50 rounded-full blur-[150px] absolute -right-20 -top-20 animate-pulse" />
@@ -34,7 +47,19 @@ export default function HeroSection() {
                                     I am Palak
                                 </h3>
                                 <h2 className="text-gradient text-[35px] sm:text-[38px] lg:text-[65px] font-bold leading-none capitalize ">
-                                    frontend web developer.
+                                    front End web{" "}
+                                    <span className="inline-block min-w-[320px]">
+                                        <Typewriter
+                                            words={["developer.", "designer."]}
+                                            loop={0}
+                                            delaySpeed={1000}
+                                            typeSpeed={80}
+                                            deleteSpeed={80}
+                                            cursor
+                                            cursorStyle="_"
+                                            cursorBlinking
+                                        />
+                                    </span>
                                 </h2>
                             </div>
 
@@ -42,7 +67,7 @@ export default function HeroSection() {
                             <div className="sm:hidden flex items-center justify-center">
                                 <div className="relative border-2 border-pb-theme-primary/50 hover:border-pb-theme-primary duration-300 inline-block rounded-4xl overflow-hidden transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
                                     <Image
-                                        src={palakProfile}
+                                        src={polokbanik}
                                         alt="palak's profile"
                                         width={1000}
                                         height={1000}
@@ -103,9 +128,9 @@ export default function HeroSection() {
                     </div>
 
                     {/* desktop right img content */}
-                    <div className="hidden relative border-2 border-pb-theme-primary/50 hover:border-pb-theme-primary duration-300 sm:inline-block rounded-4xl transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
+                    <div className="hidden relative border-2 border-pb-theme-primary/50 hover:border-2 hover:border-pb-theme-primary duration-300 sm:inline-block rounded-4xl transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
                         <Image
-                            src={palakProfile}
+                            src={polokbanik}
                             alt="palak's profile"
                             width={1000}
                             height={1000}
