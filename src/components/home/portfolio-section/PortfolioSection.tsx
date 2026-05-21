@@ -6,27 +6,32 @@ import SectionTitle from "@/components/shared/SectionTitle";
 import ParaText from "@/components/shared/texts-type/ParaText";
 import PortfolioCard from "./components/shared/PortfolioCard";
 import PortfolioCategories from "./components/shared/PortfolioCategories";
+import { StaticImageData } from "next/image";
 
-const portfolioCategories = [
-    {
-        id: 1,
-        name: "All",
-    },
-    {
-        id: 2,
-        name: "UX/UI",
-    },
-    {
-        id: 3,
-        name: "Branding",
-    },
-    {
-        id: 4,
-        name: "Apps",
-    },
-];
+export interface PortfolioProps {
+    id: number;
+    title: string;
+    description: string;
+    categoryType: string;
+    imageUrl: StaticImageData | string;
+    href: string;
+    projectTools: string[];
+}
 
-export default function PortfolioSection() {
+interface PortfolioSectionProps {
+    portfolioCategoriesData: {
+        id: number;
+        categoryName: string;
+        categoryType: string;
+    }[];
+
+    portfolioData: PortfolioProps[];
+}
+
+export default function PortfolioSection({
+    portfolioCategoriesData,
+    portfolioData,
+}: PortfolioSectionProps) {
     const [activeCategory, setActiveCategory] = useState("All");
 
     return (
@@ -37,19 +42,22 @@ export default function PortfolioSection() {
             {/* main content */}
             <Container className="py-12 md:py-20 lg:py-26">
                 <div>
-                    {/* section header content */}
-                    <div className="text-center space-y-1 sm:space-y-2">
+                    {/* header content */}
+                    <div className="text-center space-y-1 sm:space-y-2 max-w-[675px] mx-auto ">
                         <SectionTitle text="My Recent Works" />
                         <ParaText>
-                            Some of the noteworthy projects I have built:
+                            A collection of projects that highlight my passion
+                            for frontend development, combining modern design,
+                            smooth interactions, and responsive user
+                            experiences.
                         </ParaText>
                     </div>
 
                     {/* show project */}
                     <div className="mt-10">
                         {/* category filters */}
-                        <div className="flex items-center justify-between bg-pb-body w-full max-w-[400px] mx-auto rounded-full overflow-hidden duration-500 transition-all">
-                            {portfolioCategories.map((category) => (
+                        <div className="flex items-center justify-between bg-pb-body w-full max-w-[480px] mx-auto rounded-full overflow-hidden duration-500 transition-all">
+                            {portfolioCategoriesData.map((category) => (
                                 <PortfolioCategories
                                     key={category.id}
                                     category={category}
@@ -62,10 +70,12 @@ export default function PortfolioSection() {
                         {/* portfolio cards */}
                         <div className="mt-10">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-                                <PortfolioCard />
-                                <PortfolioCard />
-                                <PortfolioCard />
-                                <PortfolioCard />
+                                {portfolioData.map((project) => (
+                                    <PortfolioCard
+                                        key={project.id}
+                                        project={project}
+                                    />
+                                ))}
                             </div>
                         </div>
                     </div>

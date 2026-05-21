@@ -6,15 +6,35 @@ import SkillsSections from "@/components/home/skills-section/Skills";
 import HeroSection from "@/components/home/hero-section/HeroSection";
 import ServicesSection from "@/components/home/services-section/ServicesSection";
 import PortfolioSection from "@/components/home/portfolio-section/PortfolioSection";
+import {
+    portfolioCategories,
+    portfolioData,
+    resumeSectionData,
+    serviceSectionData,
+} from "@/data/data";
 
 export default function Home() {
     return (
         <>
+            {/* hero section */}
             <HeroSection />
-            <ServicesSection />
-            <PortfolioSection />
-            <ResumeSection />
+
+            {/* services section */}
+            <ServicesSection serviceData={serviceSectionData} />
+
+            {/* portfolio section */}
+            <PortfolioSection
+                portfolioCategoriesData={portfolioCategories}
+                portfolioData={portfolioData}
+            />
+
+            {/* resume section */}
+            <ResumeSection resumeData={resumeSectionData} />
+
+            {/* skills section */}
             <SkillsSections />
+
+            {/* contact section */}
             <ContactSection />
         </>
     );

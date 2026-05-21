@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 interface PortfolioCategoriesProps {
     category: {
         id: number;
-        name: string;
+        categoryName: string;
+        categoryType: string;
     };
     activeCategory: string;
     setActiveCategory: (category: string) => void;
@@ -17,17 +18,17 @@ export default function PortfolioCategories({
     activeCategory,
     setActiveCategory,
 }: PortfolioCategoriesProps) {
-    const { name } = category;
+    const { categoryName } = category;
 
     return (
         <button
             type="button"
-            onClick={() => setActiveCategory(name)}
+            onClick={() => setActiveCategory(categoryName)}
             className={`relative z-10 flex-1 lg:text-[16px] font-normal lg:leading-[24px] px-[26px] py-[14px] rounded-full cursor-pointer`}
         >
-            {name}
+            {categoryName}
 
-            {activeCategory === name && (
+            {activeCategory === categoryName && (
                 <motion.div
                     layoutId="active-pill"
                     className="absolute inset-0 background-gradient rounded-full -z-10 outline-none"
