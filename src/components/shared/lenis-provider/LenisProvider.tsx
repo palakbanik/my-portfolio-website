@@ -10,11 +10,11 @@ export default function LenisProvider({ children }: { children: ReactNode }) {
     useEffect(() => {
         const lenis = new Lenis({
             lerp: 0.05,
-            duration: 2,
+            duration: 1.4,
             smoothWheel: true,
             autoResize: true,
             syncTouch: true,
-            touchMultiplier: 1,
+            touchMultiplier: 5,
         });
 
         lenis.scrollTo(0, { immediate: true });
