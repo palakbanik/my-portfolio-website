@@ -1,4 +1,3 @@
-// skills data
 import javascript from "@/assets/skills-logo/javascript-icon.svg";
 import typescript from "@/assets/skills-logo/typescript-icon.svg";
 import react from "@/assets/skills-logo/react-icon.svg";
@@ -12,14 +11,20 @@ import figma from "@/assets/skills-logo/figma-icon.svg";
 import adobeXd from "@/assets/skills-logo/adobe-xd-icon.svg";
 import html from "@/assets/skills-logo/html-icon.svg";
 import css from "@/assets/skills-logo/css-icon.svg";
-
-// contact section dropdown data
+import agencyWebsite from "@/assets/portfolio-projects/agency-website-project.png";
+import insuranceWebsite from "@/assets/portfolio-projects/insurance-company-website-project.png";
+import beyoundCode from "@/assets/portfolio-projects/beyondCodeTwo-website-project.png";
+import eComWebsite from "@/assets/portfolio-projects/ecom-website-two-project.png";
+import factoraWebsite from "@/assets/portfolio-projects/factora-website-project.png";
+import videoWebsite from "@/assets/portfolio-projects/video-website-project.png";
 import { PiPhoneCallLight } from "react-icons/pi";
 import { IoMailUnreadOutline } from "react-icons/io5";
 import { CiLocationOn } from "react-icons/ci";
-
-// resume data
-import type { IconType } from "react-icons";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+import { SiOpenbadges } from "react-icons/si";
 import { SlGraduation } from "react-icons/sl";
 
 // header data
@@ -47,12 +52,6 @@ export const navLinks = [
 ];
 
 // main page hero section data
-import { FaInstagram } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa6";
-import { FaGithub } from "react-icons/fa";
-import { SiOpenbadges } from "react-icons/si";
-
 export const socialLinks = [
     {
         id: 1,
@@ -69,7 +68,7 @@ export const socialLinks = [
     {
         id: 3,
         icon: FaFacebookF,
-        href: "https://facebook.com/",
+        href: "https://www.facebook.com/polok.banik.02",
         name: "Facebook",
     },
     {
@@ -157,14 +156,6 @@ export const portfolioCategories = [
 ];
 
 // portfolio section portfolio data
-
-import agencyWebsite from "@/assets/portfolio-projects/agency-website-project.png";
-import insuranceWebsite from "@/assets/portfolio-projects/insurance-company-website-project.png";
-import beyoundCode from "@/assets/portfolio-projects/beyondCodeTwo-website-project.png";
-import eComWebsite from "@/assets/portfolio-projects/ecom-website-two-project.png";
-import factoraWebsite from "@/assets/portfolio-projects/factora-website-project.png";
-import videoWebsite from "@/assets/portfolio-projects/video-website-project.png";
-
 export const portfolioData = [
     {
         id: 1,
@@ -272,7 +263,6 @@ export const portfolioData = [
 ];
 
 // resume data
-
 export const resumeSectionData = [
     {
         id: 1,
@@ -327,7 +317,6 @@ export const resumeSectionData = [
 ];
 
 // skills data
-
 export const skillsData = [
     {
         id: 1,
@@ -443,7 +432,6 @@ export const contactSectionPersonalContacts = [
 ];
 
 // footer links
-
 export const footerLinks = [
     {
         id: 1,
