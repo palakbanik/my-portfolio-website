@@ -174,7 +174,7 @@ export const portfolioData = [
         categoryType: "animated",
         imageUrl: agencyWebsite,
         alt: "Agency Company Website",
-        href: "https://animated-agency-website-sigma.vercel.app/",
+        href: "https://animated-agency-web.vercel.app/",
         projectTools: [
             "Next.js",
             "Tailwind CSS",
@@ -205,7 +205,7 @@ export const portfolioData = [
         categoryType: "e-commerce",
         imageUrl: eComWebsite,
         alt: "E-Commerce Website",
-        href: "/",
+        href: "https://ecommercae-website.netlify.app/",
         projectTools: [
             "Next.js",
             "Tailwind CSS",
@@ -223,7 +223,7 @@ export const portfolioData = [
         categoryType: "ui-ux",
         imageUrl: beyoundCode,
         alt: "Beyond Code Website",
-        href: "/",
+        href: "https://beyondcode-website.netlify.app/",
         projectTools: [
             "Next.js",
             "Tailwind CSS",
@@ -241,7 +241,7 @@ export const portfolioData = [
         categoryType: "ui-ux",
         imageUrl: factoraWebsite,
         alt: "Factora Website",
-        href: "/",
+        href: "https://factora-website.netlify.app/",
         projectTools: [
             "Next.js",
             "Tailwind CSS",
@@ -258,8 +258,8 @@ export const portfolioData = [
             "I built a clean and responsive website with a strong focus on simplicity, usability, and smooth user experience. This project showcases my ability to create functional and visually appealing web interfaces with modern frontend technologies.",
         categoryType: "ui-ux",
         imageUrl: videoWebsite,
-        alt: "Video Website",
-        href: "/",
+        alt: "Video Create Website",
+        href: "https://videocreatewebsite.netlify.app/",
         projectTools: [
             "Next.js",
             "Tailwind CSS",
