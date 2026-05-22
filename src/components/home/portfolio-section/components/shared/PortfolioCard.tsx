@@ -18,7 +18,7 @@ export default function PortfolioCard({
             <div className="relative h-full w-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
                 {/* front side */}
                 <div className="backface-hidden bg-pb-theme-accent-2 rounded-[10px] overflow-hidden backdrop-blur-2xl">
-                    <div className="bg-pb-theme-accent-2 px-[36px] pt-[36px] ">
+                    <div className="bg-pb-theme-accent-2 px-3.5 pt-3.5 sm:px-6 sm:pt-6 md:px-[36px] md:pt-[36px] grid place-items-center">
                         <Image
                             src={imageUrl}
                             alt="Dummy Image"
@@ -28,7 +28,7 @@ export default function PortfolioCard({
                     </div>
 
                     <a href={href} target="_blank" rel="noopener noreferrer">
-                        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 w-[92%] min-h-20 rounded-xl background-gradient flex items-center justify-between px-6">
+                        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 w-[92%] min-h-20 rounded-xl background-gradient flex items-center justify-between px-3 md:px-6">
                             <SubText className="lg:text-2xl">{title}</SubText>
 
                             <IoArrowRedoOutline className="w-6 h-6" />

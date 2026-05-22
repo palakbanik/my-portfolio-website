@@ -16,7 +16,7 @@ export default function ContactSection() {
     return (
         <section className="relative ">
             <Container className="py-10 md:py-20 lg:py-26">
-                <div className="relative grid items-center gap-10 md:grid-cols-[500px_1fr] lg:grid-cols-[620px_1fr] lg:gap-28">
+                <div className="relative grid items-center gap-10 lg:grid-cols-[500px_1fr] lg:grid-cols-[620px_1fr] lg:gap-28">
                     {/* left form */}
                     <div className="order-2 md:order-1 rounded-2xl border border-pb-white/5 bg-pb-theme-accent-2 px-2 py-6 sm:p-10">
                         {/* text content */}

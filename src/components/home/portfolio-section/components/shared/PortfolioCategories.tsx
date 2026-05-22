@@ -24,7 +24,7 @@ export default function PortfolioCategories({
         <button
             type="button"
             onClick={() => setActiveCategory(categoryName)}
-            className={`relative z-10 flex-1 lg:text-[16px] font-normal lg:leading-[24px] px-[26px] py-[14px] rounded-full cursor-pointer`}
+            className={`relative z-10 flex-1 text-[13px] sm:text-[16px] font-normal lg:leading-[24px] px-3 py-3 sm:px-[26px] sm:py-[14px] rounded-full cursor-pointer`}
         >
             {categoryName}
 

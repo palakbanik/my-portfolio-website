@@ -75,7 +75,7 @@ export default function PortfolioSection({
 
                         {/* portfolio cards */}
                         <div className="mt-10">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-6 md:gap-10">
                                 {filteredProjects.map((project) => (
                                     <PortfolioCard
                                         key={project.id}
