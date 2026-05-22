@@ -1,12 +1,19 @@
+"use client";
+
 import React from "react";
 import Container from "@/components/shared/Container";
 import { footerLinks } from "@/data/data";
 import Link from "next/link";
 import ParaText from "@/components/shared/texts-type/ParaText";
+import { usePathname } from "next/navigation";
 
 export default function FooterSection() {
+    const pathname = usePathname();
+    console.log(pathname);
     return (
-        <footer className="w-full bg-pb-theme-accent-1">
+        <footer
+            className={`w-full ${pathname === "/" ? "bg-pb-theme-accent-1" : "bg-pb-theme-secondary"}`}
+        >
             <Container className="pt-12 sm:pt-14 pb-6 ">
                 <div className="flex flex-col items-center justify-center gap-3 lg:gap-5">
                     {/* logo */}
