@@ -305,13 +305,13 @@ export const resumeSectionData = [
             {
                 id: 2,
                 period: "2019 - 2021",
-                title: "HSC",
+                title: "HIGHER SECONDARY",
                 subtitle: "Gridakalindia Hazera Hasmat University College",
             },
             {
                 id: 3,
                 period: "2017 - 2019",
-                title: "SSC",
+                title: "SECONDARY SCHOOL",
                 subtitle: "Ramganj M.U Govt. High School",
             },
         ],
@@ -437,18 +437,18 @@ export const contactSectionPersonalContacts = [
 export const footerLinks = [
     {
         id: 1,
+        title: "Home",
+        href: "/",
+    },
+    {
+        id: 2,
         title: "About",
         href: "/about",
     },
     {
-        id: 2,
-        title: "Projects",
-        href: "/projects",
-    },
-    {
         id: 3,
-        title: "Testimonial",
-        href: "/testimonial",
+        title: "Portfolio",
+        href: "/portfolio",
     },
     {
         id: 4,
