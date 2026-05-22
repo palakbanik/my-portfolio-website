@@ -158,7 +158,13 @@ export const portfolioCategories = [
 
 // portfolio section portfolio data
 
-import dummy from "@/assets/portfolio-projects/dummy.jpg";
+import agencyWebsite from "@/assets/portfolio-projects/agency-website-project.png";
+import insuranceWebsite from "@/assets/portfolio-projects/insurance-company-website-project.png";
+import beyoundCode from "@/assets/portfolio-projects/beyondCodeTwo-website-project.png";
+import eComWebsite from "@/assets/portfolio-projects/ecom-website-two-project.png";
+import factoraWebsite from "@/assets/portfolio-projects/factora-website-project.png";
+import videoWebsite from "@/assets/portfolio-projects/video-website-project.png";
+
 export const portfolioData = [
     {
         id: 1,
@@ -166,7 +172,7 @@ export const portfolioData = [
         description:
             "I designed and developed a modern multi-page agency website with a strong focus on smooth user experience and engaging interactions. This project showcases my ability to build scalable and responsive layouts using Next.js and Tailwind CSS, while implementing smooth scroll-based animations with GSAP and Lenis. The final result is a visually appealing, highly interactive, and performance-optimized website.",
         categoryType: "animated",
-        imageUrl: dummy,
+        imageUrl: agencyWebsite,
         alt: "Agency Company Website",
         href: "https://animated-agency-website-sigma.vercel.app/",
         projectTools: [
@@ -185,7 +191,7 @@ export const portfolioData = [
         description:
             "I designed and developed a multi-page insurance company website focusing on a clean UI, intuitive navigation, and responsive layouts. This project demonstrates my skills in building structured multi-page applications with modern web technologies while ensuring a smooth and user-friendly experience. The final result is a visually appealing and responsive insurance company website that effectively showcases the company's services.",
         categoryType: "ui-ux",
-        imageUrl: dummy,
+        imageUrl: insuranceWebsite,
         alt: "Insurance Company Website",
         href: "https://amynta-insurance-company-website.vercel.app/",
         projectTools: ["Next.js", "Tailwind CSS", "TypeScript", "React Icons"],
@@ -197,7 +203,7 @@ export const portfolioData = [
         description:
             "I developed a responsive single-page e-commerce website featuring a modern UI, smooth navigation, dark mode support, and a user-friendly shopping experience. This project highlights my frontend development skills and ability to create visually engaging interfaces.",
         categoryType: "e-commerce",
-        imageUrl: dummy,
+        imageUrl: eComWebsite,
         alt: "E-Commerce Website",
         href: "/",
         projectTools: [
@@ -211,12 +217,48 @@ export const portfolioData = [
 
     {
         id: 4,
+        title: "Beyond Code Website",
+        description:
+            "I built a clean and responsive website with a strong focus on simplicity, usability, and smooth user experience. This project showcases my ability to create functional and visually appealing web interfaces with modern frontend technologies.",
+        categoryType: "ui-ux",
+        imageUrl: beyoundCode,
+        alt: "Beyond Code Website",
+        href: "/",
+        projectTools: [
+            "Next.js",
+            "Tailwind CSS",
+            "GSAP",
+            "Lenis",
+            "JavaScript",
+            "React Icons",
+        ],
+    },
+    {
+        id: 5,
         title: "Factora Website",
         description:
             "I built a clean and responsive website with a strong focus on simplicity, usability, and smooth user experience. This project showcases my ability to create functional and visually appealing web interfaces with modern frontend technologies.",
         categoryType: "ui-ux",
-        imageUrl: dummy,
+        imageUrl: factoraWebsite,
         alt: "Factora Website",
+        href: "/",
+        projectTools: [
+            "Next.js",
+            "Tailwind CSS",
+            "GSAP",
+            "Lenis",
+            "JavaScript",
+            "React Icons",
+        ],
+    },
+    {
+        id: 6,
+        title: "Video Website",
+        description:
+            "I built a clean and responsive website with a strong focus on simplicity, usability, and smooth user experience. This project showcases my ability to create functional and visually appealing web interfaces with modern frontend technologies.",
+        categoryType: "ui-ux",
+        imageUrl: videoWebsite,
+        alt: "Video Website",
         href: "/",
         projectTools: [
             "Next.js",

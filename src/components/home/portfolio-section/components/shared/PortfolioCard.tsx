@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import dummy from "@/assets/portfolio-projects/dummy.jpg";
 import SubText from "@/components/shared/texts-type/SubText";
 import ParaText from "@/components/shared/texts-type/ParaText";
 import { IoArrowRedoOutline } from "react-icons/io5";
@@ -23,7 +22,7 @@ export default function PortfolioCard({
                             src={imageUrl}
                             alt="Dummy Image"
                             priority
-                            className="w-full max-w-[550px] h-auto object-cover object-center select-none rounded-[10px]"
+                            className="w-full max-w-[550px] h-auto object-cover object-center select-none rounded-tr-[10px] rounded-tl-[10px]"
                         />
                     </div>
 
