@@ -57,25 +57,25 @@ export const socialLinks = [
         id: 1,
         icon: FaLinkedinIn,
         href: "https://www.linkedin.com/in/polok-banik-184121308/",
-        name: "LinkedIn",
+        name: "Polok Banik LinkedIn",
     },
     {
         id: 2,
         icon: FaGithub,
         href: "https://github.com/palakbanik",
-        name: "GitHub",
+        name: "Polok Banik GitHub",
     },
     {
         id: 3,
         icon: FaFacebookF,
         href: "https://www.facebook.com/polok.banik.02",
-        name: "Facebook",
+        name: "Polok Banik Facebook",
     },
     {
         id: 4,
         icon: FaInstagram,
-        href: "https://instagram.com/",
-        name: "Instagram",
+        href: "https://www.instagram.com/p_o__l__o_k/",
+        name: "Polok Banik Instagram",
     },
 ];
 
@@ -141,7 +141,7 @@ export const portfolioCategories = [
     {
         id: 2,
         categoryName: "UX/UI",
-        categoryType: "ux-ui",
+        categoryType: "ui-ux",
     },
     {
         id: 3,
@@ -161,7 +161,7 @@ export const portfolioData = [
         id: 1,
         title: "Agency Company Website",
         description:
-            "I designed and developed a modern multi-page agency website with a strong focus on smooth user experience and engaging interactions. This project showcases my ability to build scalable and responsive layouts using Next.js and Tailwind CSS, while implementing smooth scroll-based animations with GSAP and Lenis. The final result is a visually appealing, highly interactive, and performance-optimized website.",
+            "Designed and developed a modern multi-page agency website with smooth animations, responsive layouts, and an engaging user experience using Next.js, Tailwind CSS, GSAP, and Lenis.",
         categoryType: "animated",
         imageUrl: agencyWebsite,
         alt: "Agency Company Website",
@@ -180,7 +180,7 @@ export const portfolioData = [
         id: 2,
         title: "Insurance Company Website",
         description:
-            "I designed and developed a multi-page insurance company website focusing on a clean UI, intuitive navigation, and responsive layouts. This project demonstrates my skills in building structured multi-page applications with modern web technologies while ensuring a smooth and user-friendly experience. The final result is a visually appealing and responsive insurance company website that effectively showcases the company's services.",
+            "Built a responsive multi-page insurance company website with a clean UI, structured layouts, and smooth user experience using modern frontend technologies.",
         categoryType: "ui-ux",
         imageUrl: insuranceWebsite,
         alt: "Insurance Company Website",
@@ -192,13 +192,13 @@ export const portfolioData = [
         id: 3,
         title: "E-Commerce Website",
         description:
-            "I developed a responsive single-page e-commerce website featuring a modern UI, smooth navigation, dark mode support, and a user-friendly shopping experience. This project highlights my frontend development skills and ability to create visually engaging interfaces.",
+            "Developed a responsive e-commerce website featuring modern UI design, smooth navigation, dark mode support, and an interactive shopping experience.",
         categoryType: "e-commerce",
         imageUrl: eComWebsite,
         alt: "E-Commerce Website",
         href: "https://ecommercae-website.netlify.app/",
         projectTools: [
-            "Next.js",
+            "ReactJS",
             "Tailwind CSS",
             "JavaScript",
             "React Icons",
@@ -210,7 +210,7 @@ export const portfolioData = [
         id: 4,
         title: "Beyond Code Website",
         description:
-            "I built a clean and responsive website with a strong focus on simplicity, usability, and smooth user experience. This project showcases my ability to create functional and visually appealing web interfaces with modern frontend technologies.",
+            "Created a clean and responsive website focused on simplicity, usability, and smooth user experience with modern frontend technologies.",
         categoryType: "ui-ux",
         imageUrl: beyoundCode,
         alt: "Beyond Code Website",
@@ -224,11 +224,12 @@ export const portfolioData = [
             "React Icons",
         ],
     },
+
     {
         id: 5,
         title: "Factora Website",
         description:
-            "I built a clean and responsive website with a strong focus on simplicity, usability, and smooth user experience. This project showcases my ability to create functional and visually appealing web interfaces with modern frontend technologies.",
+            "Designed and developed a responsive website with modern UI design, smooth interactions, and a user-friendly browsing experience.",
         categoryType: "ui-ux",
         imageUrl: factoraWebsite,
         alt: "Factora Website",
@@ -242,11 +243,12 @@ export const portfolioData = [
             "React Icons",
         ],
     },
+
     {
         id: 6,
         title: "Video Website",
         description:
-            "I built a clean and responsive website with a strong focus on simplicity, usability, and smooth user experience. This project showcases my ability to create functional and visually appealing web interfaces with modern frontend technologies.",
+            "Built a modern and responsive video-focused website with smooth animations, clean layouts, and an engaging user experience.",
         categoryType: "ui-ux",
         imageUrl: videoWebsite,
         alt: "Video Create Website",
@@ -303,13 +305,13 @@ export const resumeSectionData = [
             {
                 id: 2,
                 period: "2019 - 2021",
-                title: "HSC",
+                title: "HIGHER SECONDARY",
                 subtitle: "Gridakalindia Hazera Hasmat University College",
             },
             {
                 id: 3,
                 period: "2017 - 2019",
-                title: "SSC",
+                title: "SECONDARY SCHOOL",
                 subtitle: "Ramganj M.U Govt. High School",
             },
         ],
@@ -435,18 +437,18 @@ export const contactSectionPersonalContacts = [
 export const footerLinks = [
     {
         id: 1,
+        title: "Home",
+        href: "/",
+    },
+    {
+        id: 2,
         title: "About",
         href: "/about",
     },
     {
-        id: 2,
-        title: "Projects",
-        href: "/projects",
-    },
-    {
         id: 3,
-        title: "Testimonial",
-        href: "/testimonial",
+        title: "Portfolio",
+        href: "/portfolio",
     },
     {
         id: 4,

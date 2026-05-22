@@ -8,6 +8,7 @@ import PortfolioCard from "./components/shared/PortfolioCard";
 import PortfolioCategories from "./components/shared/PortfolioCategories";
 import { StaticImageData } from "next/image";
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
 
 export interface PortfolioProps {
     id: number;
@@ -33,12 +34,20 @@ export default function PortfolioSection({
     portfolioCategoriesData,
     portfolioData,
 }: PortfolioSectionProps) {
-    const [activeCategory, setActiveCategory] = useState("All");
-
+    const [activeCategory, setActiveCategory] = useState("all");
     const pathname = usePathname();
 
-    const filteredProjects =
+    // display projects
+    const displayProjects =
         pathname === "/" ? portfolioData.slice(0, 4) : portfolioData;
+
+    // filter projects
+    const filteredProjects =
+        activeCategory === "all"
+            ? displayProjects
+            : displayProjects.filter(
+                  (project) => project.categoryType === activeCategory,
+              );
 
     return (
         <section className="bg-pb-theme-accent-1 w-full min-h-[70vh] relative overflow-hidden">
@@ -75,14 +84,37 @@ export default function PortfolioSection({
 
                         {/* portfolio cards */}
                         <div className="mt-10">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-6 md:gap-10">
-                                {filteredProjects.map((project) => (
-                                    <PortfolioCard
-                                        key={project.id}
-                                        project={project}
-                                    />
-                                ))}
-                            </div>
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    layout
+                                    className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-6 md:gap-10"
+                                >
+                                    {filteredProjects.map((project) => (
+                                        <motion.div
+                                            key={project.id}
+                                            layout
+                                            initial={{
+                                                opacity: 0,
+                                                scale: 0.85,
+                                            }}
+                                            animate={{
+                                                opacity: 1,
+                                                scale: 1,
+                                            }}
+                                            exit={{
+                                                opacity: 0,
+                                                scale: 0.85,
+                                            }}
+                                            transition={{
+                                                duration: 0.4,
+                                                ease: "easeInOut",
+                                            }}
+                                        >
+                                            <PortfolioCard project={project} />
+                                        </motion.div>
+                                    ))}
+                                </motion.div>
+                            </AnimatePresence>
                         </div>
                     </div>
                 </div>
