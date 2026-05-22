@@ -7,6 +7,7 @@ import ParaText from "@/components/shared/texts-type/ParaText";
 import PortfolioCard from "./components/shared/PortfolioCard";
 import PortfolioCategories from "./components/shared/PortfolioCategories";
 import { StaticImageData } from "next/image";
+import { usePathname } from "next/navigation";
 
 export interface PortfolioProps {
     id: number;
@@ -33,6 +34,11 @@ export default function PortfolioSection({
     portfolioData,
 }: PortfolioSectionProps) {
     const [activeCategory, setActiveCategory] = useState("All");
+
+    const pathname = usePathname();
+
+    const filteredProjects =
+        pathname === "/" ? portfolioData.slice(0, 4) : portfolioData;
 
     return (
         <section className="bg-pb-theme-accent-1 w-full min-h-[70vh] relative overflow-hidden">
@@ -70,7 +76,7 @@ export default function PortfolioSection({
                         {/* portfolio cards */}
                         <div className="mt-10">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-                                {portfolioData.map((project) => (
+                                {filteredProjects.map((project) => (
                                     <PortfolioCard
                                         key={project.id}
                                         project={project}

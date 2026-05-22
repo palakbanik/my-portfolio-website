@@ -1,32 +1,38 @@
 "use client";
 
 import Lenis from "lenis";
+import { usePathname } from "next/navigation";
 import React, { ReactNode, useEffect } from "react";
 
 export default function LenisProvider({ children }: { children: ReactNode }) {
+    const pathname = usePathname();
+
     useEffect(() => {
         const lenis = new Lenis({
             lerp: 0.05,
-            duration: 2, // animation duration
+            duration: 2,
             smoothWheel: true,
-            infinite: false, // disable infinite scroll
-            autoResize: true, // auto resize on window resize
-            syncTouch: true, // better for performance on mobile
-            touchMultiplier: 1, // touch sensitive
+            autoResize: true,
+            syncTouch: true,
+            touchMultiplier: 1,
         });
+
+        lenis.scrollTo(0, { immediate: true });
+
+        let rafId: number;
 
         function raf(time: number) {
             lenis.raf(time);
-
-            requestAnimationFrame(raf);
+            rafId = requestAnimationFrame(raf);
         }
 
-        requestAnimationFrame(raf);
+        rafId = requestAnimationFrame(raf);
 
         return () => {
+            cancelAnimationFrame(rafId);
             lenis.destroy();
         };
-    }, []);
+    }, [pathname]);
 
     return <>{children}</>;
 }

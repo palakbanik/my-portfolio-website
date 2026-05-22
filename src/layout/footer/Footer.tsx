@@ -9,7 +9,6 @@ import { usePathname } from "next/navigation";
 
 export default function FooterSection() {
     const pathname = usePathname();
-    console.log(pathname);
     return (
         <footer
             className={`w-full ${pathname === "/" ? "bg-pb-theme-accent-1" : "bg-pb-theme-secondary"}`}
