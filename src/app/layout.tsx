@@ -1,9 +1,10 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Sora, Russo_One, Luckiest_Guy } from "next/font/google";
-import "./globals.css";
 import HeaderSection from "@/layout/header/Header";
 import FooterSection from "@/layout/footer/Footer";
 import LenisProvider from "@/components/shared/lenis-provider/LenisProvider";
+import Breadcrumb from "@/components/shared/breadcrumb/Breadcrumb";
 
 const sora = Sora({
     variable: "--font-sora",
@@ -38,11 +39,14 @@ export default function RootLayout({
             className={`${sora.variable} ${russoOne.variable} ${luckiestGuy.variable} h-full antialiased`}
         >
             <body className="min-h-full flex flex-col">
-                <HeaderSection />
-                <main>
-                    <LenisProvider>{children}</LenisProvider>
-                </main>
-                <FooterSection />
+                <LenisProvider>
+                    <HeaderSection />
+                    <main>
+                        <Breadcrumb />
+                        {children}
+                    </main>
+                    <FooterSection />
+                </LenisProvider>
             </body>
         </html>
     );
