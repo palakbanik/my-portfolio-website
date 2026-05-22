@@ -118,7 +118,7 @@ export default function HeroSection() {
                                     const Icon = icon;
 
                                     return (
-                                        <Link
+                                        <a
                                             href={href}
                                             key={id}
                                             className="group relative"
@@ -130,7 +130,7 @@ export default function HeroSection() {
                                                 <span className="w-full h-full absolute inset-0 scale-0 group-hover:scale-100 bg-pb-theme-primary  rounded-full transition-all duration-300 ease-in-out" />
                                                 <Icon className="relative z-10" />
                                             </li>
-                                        </Link>
+                                        </a>
                                     );
                                 })}
                             </ul>

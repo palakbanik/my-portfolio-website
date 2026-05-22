@@ -33,12 +33,20 @@ export default function PortfolioSection({
     portfolioCategoriesData,
     portfolioData,
 }: PortfolioSectionProps) {
-    const [activeCategory, setActiveCategory] = useState("All");
-
+    const [activeCategory, setActiveCategory] = useState("all");
     const pathname = usePathname();
 
-    const filteredProjects =
+    // display projects
+    const displayProjects =
         pathname === "/" ? portfolioData.slice(0, 4) : portfolioData;
+
+    // filter projects
+    const filteredProjects =
+        activeCategory === "all"
+            ? displayProjects
+            : displayProjects.filter(
+                  (project) => project.categoryType === activeCategory,
+              );
 
     return (
         <section className="bg-pb-theme-accent-1 w-full min-h-[70vh] relative overflow-hidden">
