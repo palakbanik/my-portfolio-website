@@ -286,7 +286,7 @@ export const resumeSectionData = [
             {
                 id: 3,
                 period: "2020 - 2021",
-                title: "WEB DESIGN COURSE",
+                title: "WEB DEVELOPMENT COURSE",
                 subtitle: "Self Learning",
             },
         ],
