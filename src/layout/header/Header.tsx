@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import { TbMenu3 } from "react-icons/tb";
 import { MdOutlineCloseFullscreen } from "react-icons/md";
 import { motion } from "framer-motion";
+import { fadeScale, fadeUp } from "@/animation/animations";
 
 export default function HeaderSection() {
     const pathname = usePathname();
@@ -50,11 +51,10 @@ export default function HeaderSection() {
                         <div className="font-luckiest-guy select-none">
                             <Link href={"/"}>
                                 <motion.h1
-                                    initial={{ scale: 0.7, opacity: 0 }}
-                                    animate={{ scale: 1, opacity: 1 }}
-                                    transition={{
-                                        duration: 0.3,
-                                    }}
+                                    variants={fadeScale}
+                                    initial="hidden"
+                                    animate="visible"
+                                    viewport={{ once: true }}
                                     className="leading-normal tracking-wider text-[36px] md:text-4xl"
                                 >
                                     {"<PB/>"}
@@ -71,24 +71,11 @@ export default function HeaderSection() {
                                     return (
                                         <motion.li
                                             key={id}
-                                            initial={{ opacity: 0, y: 10 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            whileTap={{ scale: 0.8 }}
-                                            transition={{
-                                                opacity: {
-                                                    duration: 0.5,
-                                                    delay: idx * 0.1,
-                                                },
-                                                y: {
-                                                    duration: 0.5,
-                                                    delay: idx * 0.1,
-                                                },
-                                                scale: {
-                                                    type: "spring",
-                                                    stiffness: 400,
-                                                    damping: 18,
-                                                },
-                                            }}
+                                            variants={fadeUp}
+                                            initial="hidden"
+                                            whileInView="visible"
+                                            custom={idx * 0.2}
+                                            viewport={{ once: true }}
                                             className={`relative capitalize text-sm nav-link ${isActive ? "nav-link-active" : ""}`}
                                         >
                                             <Link href={href}>{title}</Link>
@@ -100,11 +87,10 @@ export default function HeaderSection() {
                             {/* button */}
                             <Link href={"/"}>
                                 <motion.div
-                                    initial={{ scale: 0.7, opacity: 0 }}
-                                    animate={{ scale: 1, opacity: 1 }}
-                                    transition={{
-                                        duration: 0.3,
-                                    }}
+                                    variants={fadeScale}
+                                    initial="hidden"
+                                    animate="visible"
+                                    viewport={{ once: true }}
                                 >
                                     <Button className="lg:px-8 lg:py-3">
                                         hire me!
@@ -113,9 +99,13 @@ export default function HeaderSection() {
                             </Link>
 
                             {/* hamburger button */}
-                            <button
+                            <motion.button
                                 type="button"
                                 onClick={() => setMenuOpen(!menuOpen)}
+                                variants={fadeScale}
+                                initial="hidden"
+                                animate="visible"
+                                viewport={{ once: true }}
                                 className="inline md:hidden"
                             >
                                 {menuOpen ? (
@@ -123,7 +113,7 @@ export default function HeaderSection() {
                                 ) : (
                                     <TbMenu3 size={34} />
                                 )}
-                            </button>
+                            </motion.button>
                         </div>
                     </div>
                     {/* mobile links */}
@@ -135,14 +125,13 @@ export default function HeaderSection() {
                                 const { id, href, title } = link;
                                 const isActive = pathname === href;
                                 return (
-                                    <Link
-                                        href={href}
+                                    <li
                                         key={id}
                                         onClick={() => setMenuOpen(false)}
                                         className={`relative uppercase nav-link text-base ${isActive ? "nav-link-active" : ""}`}
                                     >
-                                        <li>{title}</li>
-                                    </Link>
+                                        <Link href={href}>{title}</Link>
+                                    </li>
                                 );
                             })}
                         </ul>

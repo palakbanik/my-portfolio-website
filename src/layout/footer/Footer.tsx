@@ -2,10 +2,12 @@
 
 import React from "react";
 import Container from "@/components/shared/Container";
-import { footerLinks } from "@/data/data";
+import { navLinks } from "@/data/data";
 import Link from "next/link";
 import ParaText from "@/components/shared/texts-type/ParaText";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+import { fadeScale, fadeUp } from "@/animation/animations";
 
 export default function FooterSection() {
     const pathname = usePathname();
@@ -16,32 +18,52 @@ export default function FooterSection() {
             <Container className="pt-12 sm:pt-14 pb-6 ">
                 <div className="flex flex-col items-center justify-center gap-3 lg:gap-5">
                     {/* logo */}
-                    <div className="font-luckiest-guy select-none">
+                    <motion.div
+                        variants={fadeScale}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="font-luckiest-guy select-none"
+                    >
                         <Link href={"/"}>
                             <h1 className="leading-normal tracking-wider text-[36px] md:text-[44px]">
                                 {"<PB/>"}
                             </h1>
                         </Link>
-                    </div>
+                    </motion.div>
 
                     {/* links */}
                     <ul className="flex items-center gap-3 md:gap-6 xl:gap-8">
-                        {footerLinks.map((link) => (
-                            <Link
-                                href={link.href}
-                                key={link.id}
-                                className="relative capitalize text-sm nav-link"
-                            >
-                                <li>
-                                    <ParaText className="font-medium">
-                                        {link.title}
-                                    </ParaText>
-                                </li>
-                            </Link>
-                        ))}
+                        {navLinks.map((link, idx) => {
+                            const isActive = pathname === link.href;
+                            return (
+                                <motion.li
+                                    key={link.id}
+                                    variants={fadeUp}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    custom={idx * 0.2}
+                                    viewport={{ once: true }}
+                                    className={`relative capitalize text-sm nav-link ${isActive ? "nav-link-active" : ""}`}
+                                >
+                                    <Link href={link.href}>
+                                        <ParaText className="font-medium">
+                                            {link.title}
+                                        </ParaText>
+                                    </Link>
+                                </motion.li>
+                            );
+                        })}
                     </ul>
 
-                    <p className="font-light text-sm text-pb-white/40">
+                    <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.8,
+                        }}
+                        className="font-light text-sm text-pb-white/40"
+                    >
                         &copy; 2026 All rights reserved by{" "}
                         <Link
                             href={"/"}
@@ -49,7 +71,7 @@ export default function FooterSection() {
                         >
                             PolokBanik
                         </Link>
-                    </p>
+                    </motion.p>
                 </div>
             </Container>
         </footer>
