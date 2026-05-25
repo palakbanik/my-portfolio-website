@@ -8,6 +8,7 @@ import Button from "@/components/ui/Button";
 import { usePathname } from "next/navigation";
 import { TbMenu3 } from "react-icons/tb";
 import { MdOutlineCloseFullscreen } from "react-icons/md";
+import { motion } from "framer-motion";
 
 export default function HeaderSection() {
     const pathname = usePathname();
@@ -48,35 +49,67 @@ export default function HeaderSection() {
                         {/* logo */}
                         <div className="font-luckiest-guy select-none">
                             <Link href={"/"}>
-                                <h1 className="leading-normal tracking-wider text-[36px] md:text-4xl">
+                                <motion.h1
+                                    initial={{ scale: 0.7, opacity: 0 }}
+                                    animate={{ scale: 1, opacity: 1 }}
+                                    transition={{
+                                        duration: 0.3,
+                                    }}
+                                    className="leading-normal tracking-wider text-[36px] md:text-4xl"
+                                >
                                     {"<PB/>"}
-                                </h1>
+                                </motion.h1>
                             </Link>
                         </div>
 
                         {/* nav links */}
                         <div className="flex items-center gap-4 md:gap-10">
                             <ul className="hidden md:flex items-center md:gap-6 xl:gap-10">
-                                {navLinks.map((link) => {
+                                {navLinks.map((link, idx) => {
                                     const { id, href, title } = link;
                                     const isActive = pathname === href;
                                     return (
-                                        <Link
-                                            href={href}
+                                        <motion.li
                                             key={id}
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            whileTap={{ scale: 0.8 }}
+                                            transition={{
+                                                opacity: {
+                                                    duration: 0.5,
+                                                    delay: idx * 0.1,
+                                                },
+                                                y: {
+                                                    duration: 0.5,
+                                                    delay: idx * 0.1,
+                                                },
+                                                scale: {
+                                                    type: "spring",
+                                                    stiffness: 400,
+                                                    damping: 18,
+                                                },
+                                            }}
                                             className={`relative capitalize text-sm nav-link ${isActive ? "nav-link-active" : ""}`}
                                         >
-                                            <li>{title}</li>
-                                        </Link>
+                                            <Link href={href}>{title}</Link>
+                                        </motion.li>
                                     );
                                 })}
                             </ul>
 
                             {/* button */}
                             <Link href={"/"}>
-                                <Button className="lg:px-8 lg:py-3">
-                                    hire me!
-                                </Button>
+                                <motion.div
+                                    initial={{ scale: 0.7, opacity: 0 }}
+                                    animate={{ scale: 1, opacity: 1 }}
+                                    transition={{
+                                        duration: 0.3,
+                                    }}
+                                >
+                                    <Button className="lg:px-8 lg:py-3">
+                                        hire me!
+                                    </Button>
+                                </motion.div>
                             </Link>
 
                             {/* hamburger button */}

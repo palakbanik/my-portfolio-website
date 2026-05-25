@@ -9,14 +9,13 @@ export default function LenisProvider({ children }: { children: ReactNode }) {
 
     useEffect(() => {
         const lenis = new Lenis({
-            lerp: 0.05,
-            duration: 1.6,
+            duration: 1.4,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             smoothWheel: true,
             autoResize: true,
-            syncTouch: true,
-            touchMultiplier: 5,
+            touchMultiplier: 1.5,
+            syncTouch: false,
         });
-
         lenis.scrollTo(0, { immediate: true });
 
         let rafId: number;

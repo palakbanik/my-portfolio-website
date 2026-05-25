@@ -279,13 +279,13 @@ export const resumeSectionData = [
             },
             {
                 id: 2,
-                period: "2021 - 2022",
+                period: "2025 - Present",
                 title: "Front End COURSE",
                 subtitle: "Self Learning",
             },
             {
                 id: 3,
-                period: "2020 - 2021",
+                period: "2025 - Present",
                 title: "WEB DEVELOPMENT COURSE",
                 subtitle: "Self Learning",
             },

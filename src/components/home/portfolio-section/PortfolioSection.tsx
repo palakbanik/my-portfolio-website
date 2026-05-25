@@ -84,11 +84,11 @@ export default function PortfolioSection({
 
                         {/* portfolio cards */}
                         <div className="mt-10">
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    layout
-                                    className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-6 md:gap-10"
-                                >
+                            <motion.div
+                                layout
+                                className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-6 md:gap-10"
+                            >
+                                <AnimatePresence mode="popLayout">
                                     {filteredProjects.map((project) => (
                                         <motion.div
                                             key={project.id}
@@ -97,14 +97,8 @@ export default function PortfolioSection({
                                                 opacity: 0,
                                                 scale: 0.85,
                                             }}
-                                            animate={{
-                                                opacity: 1,
-                                                scale: 1,
-                                            }}
-                                            exit={{
-                                                opacity: 0,
-                                                scale: 0.85,
-                                            }}
+                                            animate={{ opacity: 1, scale: 1 }}
+                                            exit={{ opacity: 0, scale: 0.85 }}
                                             transition={{
                                                 duration: 0.4,
                                                 ease: "easeInOut",
@@ -113,8 +107,8 @@ export default function PortfolioSection({
                                             <PortfolioCard project={project} />
                                         </motion.div>
                                     ))}
-                                </motion.div>
-                            </AnimatePresence>
+                                </AnimatePresence>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
