@@ -73,6 +73,10 @@ export default function HeaderSection() {
                                             variants={fadeUp}
                                             initial="hidden"
                                             whileInView="visible"
+                                            viewport={{
+                                                once: true,
+                                                amount: 0.6,
+                                            }}
                                             custom={idx * 0.2}
                                             whileTap={{ scale: 0.8 }}
                                             transition={{

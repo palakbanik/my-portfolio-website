@@ -134,7 +134,7 @@ export default function PortfolioSection({
                                             }}
                                             viewport={{
                                                 once: true,
-                                                amount: 0.6,
+                                                amount: 0.2,
                                             }}
                                             key={project.id}
                                         >
