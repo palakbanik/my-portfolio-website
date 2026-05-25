@@ -38,7 +38,8 @@ export default function SkillsSections() {
                                 opacity: 1,
                                 y: 0,
                             }}
-                            transition={{ duration: 0.6, delay: idx * 0.2 }}
+                            transition={{ duration: 0.6, delay: idx * 0.16 }}
+                            viewport={{ once: true, amount: 0.6 }}
                         >
                             <SkillCard skill={skill} />
                         </motion.div>
