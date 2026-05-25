@@ -26,8 +26,8 @@ export default function SkillsSections() {
                 </motion.div>
 
                 <div className="mt-6 lg:mt-10 grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-5 items-center">
-                    {skillsData.map((skill) => (
-                        <SkillCard key={skill.id} skill={skill} />
+                    {skillsData.map((skill, idx) => (
+                        <div key={skill.id} ><SkillCard skill={skill} /></div>
                     ))}
                 </div>
             </Container>
