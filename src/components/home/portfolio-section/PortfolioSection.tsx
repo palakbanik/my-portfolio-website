@@ -63,6 +63,7 @@ export default function PortfolioSection({
                         variants={fadeScale}
                         initial="hidden"
                         whileInView="visible"
+                        viewport={{ once: true, amount: 0.8 }}
                         className="text-center space-y-1 sm:space-y-2 max-w-[675px] mx-auto "
                     >
                         <SectionTitle text="My Recent Works" />

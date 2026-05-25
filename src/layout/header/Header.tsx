@@ -76,6 +76,12 @@ export default function HeaderSection() {
                                             whileInView="visible"
                                             custom={idx * 0.2}
                                             viewport={{ once: true }}
+                                            whileTap={{ scale: 0.8 }}
+                                            transition={{
+                                                type: "spring",
+                                                stiffness: 300,
+                                                damping: 19,
+                                            }}
                                             className={`relative capitalize text-sm nav-link ${isActive ? "nav-link-active" : ""}`}
                                         >
                                             <Link href={href}>{title}</Link>

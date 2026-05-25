@@ -29,8 +29,8 @@ export const fadeScale = {
         scale: 1,
         transition: {
             type: "spring" as const,
-            stiffness: 400,
-            damping: 20,
+            duration: 1.2,
+            // ease: "easeInOut",
         },
     },
 };
