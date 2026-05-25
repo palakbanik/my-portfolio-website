@@ -22,6 +22,10 @@ export default function FooterSection() {
                         variants={fadeScale}
                         initial="hidden"
                         whileInView="visible"
+                        viewport={{
+                            once: true,
+                            amount: 0.6,
+                        }}
                         className="font-luckiest-guy select-none"
                     >
                         <Link href={"/"}>
@@ -41,6 +45,10 @@ export default function FooterSection() {
                                     variants={fadeUp}
                                     initial="hidden"
                                     whileInView="visible"
+                                    viewport={{
+                                        once: true,
+                                        amount: 0.6,
+                                    }}
                                     custom={idx * 0.2}
                                     className={`relative capitalize text-sm nav-link ${isActive ? "nav-link-active" : ""}`}
                                 >
@@ -57,6 +65,10 @@ export default function FooterSection() {
                     <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{
+                            once: true,
+                            amount: 0.6,
+                        }}
                         transition={{
                             duration: 0.8,
                         }}
