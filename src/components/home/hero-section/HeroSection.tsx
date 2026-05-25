@@ -11,7 +11,7 @@ import ArticleText from "@/components/shared/texts-type/ArticleText";
 import StatsSection from "../stats-section/StatsSection";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { fadeScaleHero } from "@/animation/animations";
+import { fadeScaleHero, fadeUp } from "@/animation/animations";
 
 export default function HeroSection() {
     // fade in animation variant
@@ -55,10 +55,9 @@ export default function HeroSection() {
                 <div className="flex items-center justify-between gap-10 lg:gap-30 xl:gap-40 relative z-10">
                     {/* left text content */}
                     <motion.div
-                        variants={fadeScaleHero}
+                        variants={fadeUp}
                         initial="hidden"
                         whileInView="visible"
-                        custom={0.3}
                         viewport={{ once: true }}
                         className="flex-1 w-full max-w-[580px]"
                     >
@@ -163,7 +162,7 @@ export default function HeroSection() {
 
                     {/* desktop right img content */}
                     <motion.div
-                        variants={fadeScaleHero}
+                        variants={fadeUp}
                         initial="hidden"
                         whileInView="visible"
                         custom={0.3}

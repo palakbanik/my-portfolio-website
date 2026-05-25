@@ -1,6 +1,6 @@
 // fade up animation
 export const fadeUp = {
-    hidden: { opacity: 0, y: 10 },
+    hidden: { opacity: 0, y: 20 },
     visible: (delay = 0) => ({
         opacity: 1,
         y: 0,
