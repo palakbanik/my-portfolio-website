@@ -16,7 +16,6 @@ export default function SkillsSections() {
                     variants={fadeScale}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.8 }}
                     className="space-y-2 sm:space-y-3"
                 >
                     <SectionTitle text="my skills" />
@@ -28,7 +27,20 @@ export default function SkillsSections() {
 
                 <div className="mt-6 lg:mt-10 grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-5 items-center">
                     {skillsData.map((skill, idx) => (
-                        <div key={skill.id} ><SkillCard skill={skill} /></div>
+                        <motion.div
+                            key={skill.id}
+                            initial={{
+                                opacity: 0,
+                                y: 20,
+                            }}
+                            whileInView={{
+                                opacity: 1,
+                                y: 0,
+                            }}
+                            transition={{ duration: 0.6, delay: idx * 0.2 }}
+                        >
+                            <SkillCard skill={skill} />
+                        </motion.div>
                     ))}
                 </div>
             </Container>

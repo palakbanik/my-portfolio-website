@@ -22,7 +22,6 @@ export default function FooterSection() {
                         variants={fadeScale}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true }}
                         className="font-luckiest-guy select-none"
                     >
                         <Link href={"/"}>
@@ -43,7 +42,6 @@ export default function FooterSection() {
                                     initial="hidden"
                                     whileInView="visible"
                                     custom={idx * 0.2}
-                                    viewport={{ once: true }}
                                     className={`relative capitalize text-sm nav-link ${isActive ? "nav-link-active" : ""}`}
                                 >
                                     <Link href={link.href}>
