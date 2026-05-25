@@ -3,8 +3,6 @@
 import React from "react";
 import ParaText from "@/components/shared/texts-type/ParaText";
 import { motion } from "framer-motion";
-import { fadeUp } from "@/animation/animations";
-
 interface StatsSectionProps {
     data: {
         id: number;
@@ -22,11 +20,16 @@ export default function StatsSection({ data }: StatsSectionProps) {
             {data.map((stat, idx) => (
                 <motion.div
                     key={stat.id}
-                    variants={fadeUp}
-                    initial="hidden"
-                    whileInView="visible"
-                    custom={idx * 0.2}
-                    viewport={{ once: true }}
+                    initial={{
+                        opacity: 0,
+                        y: 20,
+                    }}
+                    whileInView={{
+                        opacity: 1,
+                        y: 0,
+                        transition: { duration: 0.6, delay: idx * 0.2 },
+                    }}
+                    viewport={{ once: true, amount: 1 }}
                     className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-start text-pb-white/90 gap-3 lg:gap-[15px]"
                 >
                     <span className="text-[45px] sm:text-[55px] md:text-[64px] leading-normal font-medium">
