@@ -31,6 +31,7 @@ export default function HeroSection() {
                         type: "spring",
                         stiffness: 100,
                         damping: 10,
+                        delay: 1.2,
                     },
                     scale: {
                         duration: 2,

@@ -1,3 +1,5 @@
+"use client";
+
 import Container from "@/components/shared/Container";
 import SectionTitle from "@/components/shared/SectionTitle";
 import ParaText from "@/components/shared/texts-type/ParaText";
@@ -11,6 +13,7 @@ import {
 } from "@/data/data";
 import Link from "next/link";
 import SubText from "@/components/shared/texts-type/SubText";
+import { motion } from "framer-motion";
 
 export default function ContactSection() {
     return (
@@ -18,7 +21,25 @@ export default function ContactSection() {
             <Container className="py-10 md:py-20 lg:py-26">
                 <div className="relative grid items-center gap-10 lg:grid-cols-[500px_1fr] lg:grid-cols-[620px_1fr] lg:gap-28">
                     {/* left form */}
-                    <div className="order-2 md:order-1 rounded-2xl border border-pb-white/5 bg-pb-theme-accent-2 px-2 py-6 sm:p-10">
+                    <motion.div
+                        initial={{
+                            x: -20,
+                            opacity: 0,
+                        }}
+                        whileInView={{
+                            x: 0,
+                            opacity: 1,
+                        }}
+                        transition={{
+                            duration: 0.6,
+                            delay: 0.4,
+                        }}
+                        viewport={{
+                            once: true,
+                            amount: 0.4,
+                        }}
+                        className="order-2 md:order-1 rounded-2xl border border-pb-white/5 bg-pb-theme-accent-2 px-2 py-6 sm:p-10"
+                    >
                         {/* text content */}
                         <div className="space-y-2">
                             <SectionTitle
@@ -67,10 +88,28 @@ export default function ContactSection() {
                                 <Button type="submit">Send Message</Button>
                             </form>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* right contact info */}
-                    <div className="order-1 md:order-2 space-y-8">
+                    <motion.div
+                        initial={{
+                            x: 20,
+                            opacity: 0,
+                        }}
+                        whileInView={{
+                            x: 0,
+                            opacity: 1,
+                        }}
+                        transition={{
+                            duration: 0.6,
+                            delay: 0.4,
+                        }}
+                        viewport={{
+                            once: true,
+                            amount: 0.4,
+                        }}
+                        className="order-1 md:order-2 space-y-8"
+                    >
                         {contactSectionPersonalContacts.map((info) => {
                             const Icon = info.icon;
                             return (
@@ -97,7 +136,7 @@ export default function ContactSection() {
                                 </div>
                             );
                         })}
-                    </div>
+                    </motion.div>
                 </div>
             </Container>
         </section>
