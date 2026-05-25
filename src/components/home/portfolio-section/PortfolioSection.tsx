@@ -9,6 +9,7 @@ import PortfolioCategories from "./components/shared/PortfolioCategories";
 import { StaticImageData } from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import { fadeScale } from "@/animation/animations";
 
 export interface PortfolioProps {
     id: number;
@@ -58,7 +59,12 @@ export default function PortfolioSection({
             <Container className="py-12 md:py-20 lg:py-26">
                 <div>
                     {/* header content */}
-                    <div className="text-center space-y-1 sm:space-y-2 max-w-[675px] mx-auto ">
+                    <motion.div
+                        variants={fadeScale}
+                        initial="hidden"
+                        whileInView="visible"
+                        className="text-center space-y-1 sm:space-y-2 max-w-[675px] mx-auto "
+                    >
                         <SectionTitle text="My Recent Works" />
                         <ParaText>
                             A collection of projects that highlight my passion
@@ -66,7 +72,7 @@ export default function PortfolioSection({
                             smooth interactions, and responsive user
                             experiences.
                         </ParaText>
-                    </div>
+                    </motion.div>
 
                     {/* show project */}
                     <div className="mt-10">
