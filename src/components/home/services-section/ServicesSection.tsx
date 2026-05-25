@@ -8,6 +8,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import SubText from "@/components/shared/texts-type/SubText";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { fadeScale } from "@/animation/animations";
 interface ServiceSectionProps {
     serviceData: {
         id: number;
@@ -23,13 +24,18 @@ export default function ServicesSection({ serviceData }: ServiceSectionProps) {
         <section aria-label="Services Section">
             <Container className="py-12 md:py-20 lg:py-26">
                 {/* section heading */}
-                <div className="space-y-2">
+                <motion.div
+                    variants={fadeScale}
+                    initial="hidden"
+                    whileInView="visible"
+                    className="space-y-2"
+                >
                     <SectionTitle text="My Quality Services" />
                     <ParaText className="max-w-150 mx-auto text-center">
                         I put your ideas and thus your wishes in the form of a A
                         unique web project that inspires you and your customers.
                     </ParaText>
-                </div>
+                </motion.div>
 
                 {/* services content */}
                 <div className="mt-4 lg:mt-8">

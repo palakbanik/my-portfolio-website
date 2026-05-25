@@ -7,11 +7,11 @@ import { HiOutlineDownload } from "react-icons/hi";
 import Image from "next/image";
 import polokbanik from "@/assets/polok-profile.png";
 import { socialLinks, statsData } from "@/data/data";
-import Link from "next/link";
 import ArticleText from "@/components/shared/texts-type/ArticleText";
 import StatsSection from "../stats-section/StatsSection";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import { fadeScaleHero } from "@/animation/animations";
 
 export default function HeroSection() {
     // fade in animation variant
@@ -23,12 +23,21 @@ export default function HeroSection() {
         >
             {/* hi text */}
             <motion.span
-                animate={{ scale: [1, 1.04, 1] }}
+                initial={{ opacity: 0, scale: 0.1 }}
+                animate={{ opacity: 1, scale: [1, 1.04, 1] }}
                 transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    ease: "easeOut" as const,
+                    opacity: {
+                        duration: 0.3,
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 10,
+                    },
+                    scale: {
+                        duration: 2,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        ease: "easeOut" as const,
+                    },
                 }}
                 aria-hidden="true"
                 className="hidden md:block text-outline font-russo-one text-[200px] lg:text-[350px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -45,7 +54,14 @@ export default function HeroSection() {
                 {/* main content */}
                 <div className="flex items-center justify-between gap-10 lg:gap-30 xl:gap-40 relative z-10">
                     {/* left text content */}
-                    <div className="flex-1 w-full max-w-[580px]">
+                    <motion.div
+                        variants={fadeScaleHero}
+                        initial="hidden"
+                        whileInView="visible"
+                        custom={0.3}
+                        viewport={{ once: true }}
+                        className="flex-1 w-full max-w-[580px]"
+                    >
                         <div className="space-y-8 sm:space-y-5 md:space-y-3">
                             {/* header text */}
                             <div className="space-y-1 lg:space-y-3">
@@ -70,7 +86,13 @@ export default function HeroSection() {
                             </div>
 
                             {/* mobile img content */}
-                            <div className="sm:hidden flex items-center justify-center">
+                            <motion.div
+                                variants={fadeScaleHero}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                className="sm:hidden flex items-center justify-center"
+                            >
                                 <div className="relative border-2 border-pb-theme-primary/50 hover:border-pb-theme-primary duration-300 inline-block rounded-4xl overflow-hidden transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
                                     <Image
                                         src={polokbanik}
@@ -81,7 +103,7 @@ export default function HeroSection() {
                                         className="object-cover w-[300px] h-[370px]"
                                     />
                                 </div>
-                            </div>
+                            </motion.div>
 
                             <ArticleText>
                                 I&apos;m a passionate Frontend Development
@@ -118,36 +140,46 @@ export default function HeroSection() {
                                     const Icon = icon;
 
                                     return (
-                                        <a
-                                            href={href}
+                                        <li
                                             key={id}
-                                            className="group relative"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            aria-label={`Visit ${name}`}
+                                            className="group relative border border-pb-theme-primary text-pb-theme-primary hover:text-pb-white p-2.5 rounded-full group-hover:-translate-y-1 overflow-hidden transition-all duration-300 ease-in-out"
                                         >
-                                            <li className="border border-pb-theme-primary text-pb-theme-primary hover:text-pb-white p-2.5 rounded-full group-hover:-translate-y-1 overflow-hidden transition-all duration-300 ease-in-out">
+                                            <a
+                                                href={href}
+                                                className=""
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label={`Visit ${name}`}
+                                            >
                                                 <span className="w-full h-full absolute inset-0 scale-0 group-hover:scale-100 bg-pb-theme-primary  rounded-full transition-all duration-300 ease-in-out" />
                                                 <Icon className="relative z-10" />
-                                            </li>
-                                        </a>
+                                            </a>
+                                        </li>
                                     );
                                 })}
                             </ul>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* desktop right img content */}
-                    <div className="hidden relative border-2 border-pb-theme-primary/50 hover:border-2 hover:border-pb-theme-primary duration-300 sm:inline-block rounded-4xl transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
-                        <Image
-                            src={polokbanik}
-                            alt="Polok Banik — Frontend Web Developer"
-                            width={1000}
-                            height={1000}
-                            priority
-                            className="object-cover w-[300px] h-[390px] md:w-[380px] md:h-[440px] xl:w-[437px] xl:h-[500px] rounded-4xl"
-                        />
-                    </div>
+                    <motion.div
+                        variants={fadeScaleHero}
+                        initial="hidden"
+                        whileInView="visible"
+                        custom={0.3}
+                        viewport={{ once: true }}
+                    >
+                        <div className="hidden relative border-2 border-pb-theme-primary/50 hover:border-2 hover:border-pb-theme-primary duration-300 sm:inline-block rounded-4xl overflow-hidden transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
+                            <Image
+                                src={polokbanik}
+                                alt="Polok Banik — Frontend Web Developer"
+                                width={1000}
+                                height={1000}
+                                priority
+                                className="object-cover w-[300px] h-[390px] md:w-[380px] md:h-[440px] xl:w-[437px] xl:h-[500px] rounded-4xl"
+                            />
+                        </div>
+                    </motion.div>
                 </div>
 
                 {/* stats */}

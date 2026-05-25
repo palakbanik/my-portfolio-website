@@ -121,17 +121,22 @@ export default function HeaderSection() {
                         className={`md:hidden min-h-[60vh] w-full bg-pb-theme-secondary/30 backdrop-blur-2xl rounded-lg fixed top-20 ${menuOpen ? "left-0" : "left-[-120%]"} duration-500 transition-all`}
                     >
                         <ul className="md:hidden flex flex-col items-start gap-6 px-7 py-10">
-                            {navLinks.map((link) => {
+                            {navLinks.map((link, idx) => {
                                 const { id, href, title } = link;
                                 const isActive = pathname === href;
                                 return (
-                                    <li
+                                    <motion.li
                                         key={id}
+                                        variants={fadeUp}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        custom={idx * 0.2}
+                                        viewport={{ once: true }}
                                         onClick={() => setMenuOpen(false)}
                                         className={`relative uppercase nav-link text-base ${isActive ? "nav-link-active" : ""}`}
                                     >
                                         <Link href={href}>{title}</Link>
-                                    </li>
+                                    </motion.li>
                                 );
                             })}
                         </ul>
