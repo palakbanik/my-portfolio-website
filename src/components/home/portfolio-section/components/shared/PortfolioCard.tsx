@@ -14,7 +14,7 @@ export default function PortfolioCard({
     const { imageUrl, title, description, href, projectTools } = project;
     return (
         <div className="group perspective-[1000px]">
-            <div className="relative h-full w-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+            <div className="relative h-full w-full duration-1000 transform-style-preserve-3d group-hover:rotate-y-180">
                 {/* front side */}
                 <div className="backface-hidden bg-pb-theme-accent-2 rounded-[10px] overflow-hidden backdrop-blur-2xl">
                     <div className="bg-pb-theme-accent-2 px-3.5 pt-3.5 sm:px-6 sm:pt-6 md:px-[36px] md:pt-[36px] grid place-items-center">

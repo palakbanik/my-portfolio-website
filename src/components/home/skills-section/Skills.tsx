@@ -16,6 +16,7 @@ export default function SkillsSections() {
                     variants={fadeScale}
                     initial="hidden"
                     whileInView="visible"
+                    viewport={{ once: true, amount: 0.8 }}
                     className="space-y-2 sm:space-y-3"
                 >
                     <SectionTitle text="my skills" />
