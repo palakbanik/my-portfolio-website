@@ -1,8 +1,17 @@
-import React from "react";
+"use client";
+
 import Container from "@/components/shared/Container";
 import ParaText from "@/components/shared/texts-type/ParaText";
 import SubText from "@/components/shared/texts-type/SubText";
 import { IconType } from "react-icons";
+import { SiOpenbadges } from "react-icons/si";
+import { SlGraduation } from "react-icons/sl";
+import { motion } from "framer-motion";
+
+const icon: Record<string, IconType> = {
+    SiOpenbadges,
+    SlGraduation,
+};
 
 interface ResumeItemProps {
     id: number;
@@ -15,7 +24,7 @@ interface ResumeItemProps {
 interface ResumeSectionProps {
     resumeData: {
         id: number;
-        icon: IconType;
+        icon: string;
         heading: string;
         items: ResumeItemProps[];
     }[];
@@ -26,10 +35,28 @@ export default function ResumeSection({ resumeData }: ResumeSectionProps) {
         <section>
             <Container className="py-12 md:py-20 lg:py-26">
                 <div className="grid gap-10 sm:grid-cols-2 lg:gap-16">
-                    {resumeData.map((col) => {
-                        const Icon = col.icon;
+                    {resumeData.map((col, idx) => {
+                        const Icon = icon[col.icon];
                         return (
-                            <div key={col.id}>
+                            <motion.div
+                                initial={{
+                                    y: 20,
+                                    opacity: 0,
+                                }}
+                                whileInView={{
+                                    y: 0,
+                                    opacity: 1,
+                                }}
+                                transition={{
+                                    duration: 0.6,
+                                    delay: idx * 0.4,
+                                }}
+                                viewport={{
+                                    once: true,
+                                    amount: 0.2,
+                                }}
+                                key={col.id}
+                            >
                                 {/* title */}
                                 <div className="flex items-center gap-[15px]">
                                     <Icon className="text-[30px] md:text-[45px] text-pb-theme-primary" />
@@ -60,7 +87,7 @@ export default function ResumeSection({ resumeData }: ResumeSectionProps) {
                                         </div>
                                     ))}
                                 </div>
-                            </div>
+                            </motion.div>
                         );
                     })}
                 </div>

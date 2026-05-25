@@ -268,7 +268,7 @@ export const portfolioData = [
 export const resumeSectionData = [
     {
         id: 1,
-        icon: SiOpenbadges,
+        icon: "SiOpenbadges",
         heading: "My Experience",
         items: [
             {
@@ -293,7 +293,7 @@ export const resumeSectionData = [
     },
     {
         id: 2,
-        icon: SlGraduation,
+        icon: "SlGraduation",
         heading: "My Education",
         items: [
             {
