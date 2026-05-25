@@ -1,6 +1,9 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import React, { ReactNode } from "react";
 import { IconType } from "react-icons";
+import { motion } from "framer-motion";
 
 type BtnType = "button" | "reset" | "submit";
 type BtnVariant = "default" | "outline";
@@ -31,8 +34,10 @@ export default function Button({
     iconClassName = "",
 }: ButtonProps) {
     return (
-        <button
+        <motion.button
             type={type}
+            whileTap={{ scale: 0.8 }}
+            transition={{ type: "spring", stiffness: 300, damping: 19 }}
             className={cn(
                 "group relative overflow-hidden rounded-full font-bold text-sm leading-normal tracking-wide capitalize cursor-pointer duration-500 px-7 py-2.5 sm:py-3 inline-flex items-center justify-center gap-2",
                 btnVariants[variant],
@@ -50,6 +55,6 @@ export default function Button({
                     <Icon size={18} />
                 </span>
             )}
-        </button>
+        </motion.button>
     );
 }

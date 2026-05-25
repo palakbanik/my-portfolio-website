@@ -69,32 +69,47 @@ export default function HeaderSection() {
                                     const { id, href, title } = link;
                                     const isActive = pathname === href;
                                     return (
-                                        <Link
-                                            href={href}
+                                        <motion.li
                                             key={id}
-                                            
-                                        >
-                                            <motion.li
-                                                initial={{ opacity: 0, y: 10 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                transition={{
-                                                    duration: 0.3,
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            whileTap={{ scale: 0.8 }}
+                                            transition={{
+                                                opacity: {
+                                                    duration: 0.5,
                                                     delay: idx * 0.1,
-                                                }}
-                                                className={`relative capitalize text-sm nav-link ${isActive ? "nav-link-active" : ""}`}
-                                            >
-                                                {title}
-                                            </motion.li>
-                                        </Link>
+                                                },
+                                                y: {
+                                                    duration: 0.5,
+                                                    delay: idx * 0.1,
+                                                },
+                                                scale: {
+                                                    type: "spring",
+                                                    stiffness: 400,
+                                                    damping: 18,
+                                                },
+                                            }}
+                                            className={`relative capitalize text-sm nav-link ${isActive ? "nav-link-active" : ""}`}
+                                        >
+                                            <Link href={href}>{title}</Link>
+                                        </motion.li>
                                     );
                                 })}
                             </ul>
 
                             {/* button */}
                             <Link href={"/"}>
-                                <Button className="lg:px-8 lg:py-3">
-                                    hire me!
-                                </Button>
+                                <motion.div
+                                    initial={{ scale: 0.7, opacity: 0 }}
+                                    animate={{ scale: 1, opacity: 1 }}
+                                    transition={{
+                                        duration: 0.3,
+                                    }}
+                                >
+                                    <Button className="lg:px-8 lg:py-3">
+                                        hire me!
+                                    </Button>
+                                </motion.div>
                             </Link>
 
                             {/* hamburger button */}
