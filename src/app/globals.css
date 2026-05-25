@@ -94,6 +94,20 @@ body {
     color: var(--pb-white);
 }
 
+@layer components {
+    .text-gradient {
+        background: linear-gradient(
+            to right,
+            var(--pb-theme-primary) 0%,
+            var(--pb-white) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
 @layer utilities {
     /* nav links underline */
     .nav-link::after {
@@ -105,8 +119,8 @@ body {
         width: 100%;
         background: linear-gradient(
             to right,
-            var(--color-pb-theme-primary),
-            var(--color-pb-theme-secondary)
+            var(--pb-theme-primary),
+            var(--pb-theme-secondary)
         );
         transform: scaleX(0);
         transform-origin: right;
@@ -121,18 +135,6 @@ body {
     .nav-link-active::after {
         transform: scaleX(1);
         transform-origin: left;
-    }
-
-    /* gradient text */
-    .text-gradient {
-        background: linear-gradient(
-            to right,
-            var(--pb-theme-primary) 0%,
-            var(--pb-white) 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
     }
 
     /* background gradient */

@@ -54,7 +54,6 @@ export default function HeaderSection() {
                                     variants={fadeScale}
                                     initial="hidden"
                                     animate="visible"
-                                    viewport={{ once: true }}
                                     className="leading-normal tracking-wider text-[36px] md:text-4xl"
                                 >
                                     {"<PB/>"}
@@ -74,8 +73,11 @@ export default function HeaderSection() {
                                             variants={fadeUp}
                                             initial="hidden"
                                             whileInView="visible"
+                                            viewport={{
+                                                once: true,
+                                                amount: 0.6,
+                                            }}
                                             custom={idx * 0.2}
-                                            viewport={{ once: true }}
                                             whileTap={{ scale: 0.8 }}
                                             transition={{
                                                 type: "spring",
@@ -96,7 +98,6 @@ export default function HeaderSection() {
                                     variants={fadeScale}
                                     initial="hidden"
                                     animate="visible"
-                                    viewport={{ once: true }}
                                 >
                                     <Button className="lg:px-8 lg:py-3">
                                         hire me!
@@ -111,7 +112,6 @@ export default function HeaderSection() {
                                 variants={fadeScale}
                                 initial="hidden"
                                 animate="visible"
-                                viewport={{ once: true }}
                                 className="inline md:hidden"
                             >
                                 {menuOpen ? (
@@ -137,7 +137,6 @@ export default function HeaderSection() {
                                         initial="hidden"
                                         whileInView="visible"
                                         custom={idx * 0.2}
-                                        viewport={{ once: true }}
                                         onClick={() => setMenuOpen(false)}
                                         className={`relative uppercase nav-link text-base ${isActive ? "nav-link-active" : ""}`}
                                     >
