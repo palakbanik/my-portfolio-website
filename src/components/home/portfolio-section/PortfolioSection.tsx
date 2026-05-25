@@ -63,6 +63,7 @@ export default function PortfolioSection({
                         variants={fadeScale}
                         initial="hidden"
                         whileInView="visible"
+                        viewport={{ once: true, amount: 0.8 }}
                         className="text-center space-y-1 sm:space-y-2 max-w-[675px] mx-auto "
                     >
                         <SectionTitle text="My Recent Works" />
@@ -77,7 +78,19 @@ export default function PortfolioSection({
                     {/* show project */}
                     <div className="mt-10">
                         {/* category filters */}
-                        <div className="flex items-center justify-between bg-pb-body w-full max-w-[480px] mx-auto rounded-full overflow-hidden duration-500 transition-all">
+                        <motion.div
+                            initial={{
+                                y: 20,
+                                opacity: 0,
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1,
+                            }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            viewport={{ once: true, amount: 0.8 }}
+                            className="flex items-center justify-between bg-pb-body w-full max-w-[480px] mx-auto rounded-full overflow-hidden duration-500 transition-all"
+                        >
                             {portfolioCategoriesData.map((category) => (
                                 <PortfolioCategories
                                     key={category.id}
@@ -86,7 +99,7 @@ export default function PortfolioSection({
                                     setActiveCategory={setActiveCategory}
                                 />
                             ))}
-                        </div>
+                        </motion.div>
 
                         {/* portfolio cards */}
                         <div className="mt-10">
@@ -106,7 +119,7 @@ export default function PortfolioSection({
                                             animate={{ opacity: 1, scale: 1 }}
                                             exit={{ opacity: 0, scale: 0.85 }}
                                             transition={{
-                                                duration: 0.4,
+                                                duration: 0.6,
                                                 ease: "easeInOut",
                                             }}
                                         >

@@ -6,6 +6,8 @@ import breadcrumbBg from "@/assets/breadcrumb-bg.jpg";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import ParaText from "../texts-type/ParaText";
+import { motion } from "framer-motion";
+import { fadeScale } from "@/animation/animations";
 
 export default function Breadcrumb() {
     const pathname = usePathname();
@@ -41,7 +43,12 @@ export default function Breadcrumb() {
             {/* overlay */}
             <div className="w-full h-full absolute inset-0 pointer-events-none bg-pb-theme-accent-2/70" />
 
-            <div className="relative z-10 text-center text-pb-white space-y-2 md:space-y-4 max-w-[675px] mx-auto top-1/2 -translate-y-1/2">
+            <motion.div
+                variants={fadeScale}
+                initial="hidden"
+                animate="visible"
+                className="relative z-10 text-center text-pb-white space-y-2 md:space-y-4 max-w-[675px] mx-auto top-1/2 -translate-y-1/2"
+            >
                 <h2 className="lg:text-[50px] leading-normal sm:leading-[1.2] font-bold">
                     {currentPage.label}
                 </h2>
@@ -76,7 +83,7 @@ export default function Breadcrumb() {
                         })}
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }
