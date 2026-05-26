@@ -20,6 +20,8 @@ export default function PortfolioCard({
                     <div className="bg-pb-theme-accent-2 px-3.5 pt-3.5 sm:px-6 sm:pt-6 md:px-[36px] md:pt-[36px] grid place-items-center">
                         <Image
                             src={imageUrl}
+                            width={550}
+                            height={550}
                             alt="Dummy Image"
                             priority
                             className="w-full max-w-[550px] h-auto object-cover object-center select-none rounded-tr-[10px] rounded-tl-[10px]"

@@ -2,12 +2,12 @@
 
 import React from "react";
 import Container from "@/components/shared/Container";
-import { navLinks } from "@/data/data";
 import Link from "next/link";
 import ParaText from "@/components/shared/texts-type/ParaText";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { fadeScale, fadeUp } from "@/animation/animations";
+import portfolioData from "@/data/portfolio-data.json";
 
 export default function FooterSection() {
     const pathname = usePathname();
@@ -37,7 +37,7 @@ export default function FooterSection() {
 
                     {/* links */}
                     <ul className="flex items-center gap-3 md:gap-6 xl:gap-8">
-                        {navLinks.map((link, idx) => {
+                        {portfolioData.navLinks.map((link, idx) => {
                             const isActive = pathname === link.href;
                             return (
                                 <motion.li
@@ -54,7 +54,7 @@ export default function FooterSection() {
                                 >
                                     <Link href={link.href}>
                                         <ParaText className="font-medium">
-                                            {link.title}
+                                            {link.label}
                                         </ParaText>
                                     </Link>
                                 </motion.li>

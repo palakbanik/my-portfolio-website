@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import Container from "@/components/shared/Container";
-import { navLinks } from "@/data/data";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { usePathname } from "next/navigation";
@@ -10,6 +9,7 @@ import { TbMenu3 } from "react-icons/tb";
 import { MdOutlineCloseFullscreen } from "react-icons/md";
 import { motion } from "framer-motion";
 import { fadeScale, fadeUp } from "@/animation/animations";
+import portfolioData from "@/data/portfolio-data.json";
 
 export default function HeaderSection() {
     const pathname = usePathname();
@@ -64,8 +64,8 @@ export default function HeaderSection() {
                         {/* nav links */}
                         <div className="flex items-center gap-4 md:gap-10">
                             <ul className="hidden md:flex items-center md:gap-6 xl:gap-10">
-                                {navLinks.map((link, idx) => {
-                                    const { id, href, title } = link;
+                                {portfolioData.navLinks.map((link, idx) => {
+                                    const { id, href, label } = link;
                                     const isActive = pathname === href;
                                     return (
                                         <motion.li
@@ -86,7 +86,7 @@ export default function HeaderSection() {
                                             }}
                                             className={`relative capitalize text-sm nav-link ${isActive ? "nav-link-active" : ""}`}
                                         >
-                                            <Link href={href}>{title}</Link>
+                                            <Link href={href}>{label}</Link>
                                         </motion.li>
                                     );
                                 })}
@@ -127,8 +127,8 @@ export default function HeaderSection() {
                         className={`md:hidden min-h-[60vh] w-full bg-pb-theme-secondary/30 backdrop-blur-2xl rounded-lg fixed top-20 ${menuOpen ? "left-0" : "left-[-120%]"} duration-500 transition-all`}
                     >
                         <ul className="md:hidden flex flex-col items-start gap-6 px-7 py-10">
-                            {navLinks.map((link, idx) => {
-                                const { id, href, title } = link;
+                            {portfolioData.navLinks.map((link, idx) => {
+                                const { id, href, label } = link;
                                 const isActive = pathname === href;
                                 return (
                                     <motion.li
@@ -140,7 +140,7 @@ export default function HeaderSection() {
                                         onClick={() => setMenuOpen(false)}
                                         className={`relative uppercase nav-link text-base ${isActive ? "nav-link-active" : ""}`}
                                     >
-                                        <Link href={href}>{title}</Link>
+                                        <Link href={href}>{label}</Link>
                                     </motion.li>
                                 );
                             })}

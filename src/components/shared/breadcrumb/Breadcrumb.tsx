@@ -2,7 +2,7 @@
 
 import React from "react";
 import { usePathname } from "next/navigation";
-import breadcrumbBg from "@/assets/breadcrumb-bg.jpg";
+import breadcrumbBg from "/breadcrumb-bg.jpg";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import ParaText from "../texts-type/ParaText";
@@ -33,7 +33,7 @@ export default function Breadcrumb() {
     return (
         <div
             style={{
-                backgroundImage: `url(${breadcrumbBg.src})`,
+                backgroundImage: `url('/breadcrumb-bg.jpg')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
