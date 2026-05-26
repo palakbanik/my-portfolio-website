@@ -11,6 +11,21 @@ import StatsSection from "../stats-section/StatsSection";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { fadeScaleHero, fadeUp } from "@/animation/animations";
+import portfolioData from "@/data/portfolio-data.json";
+import { IconType } from "react-icons";
+import {
+    FaFacebookF,
+    FaGithub,
+    FaInstagram,
+    FaLinkedinIn,
+} from "react-icons/fa";
+
+const socialIcons: Record<string, IconType> = {
+    FaLinkedinIn,
+    FaGithub,
+    FaFacebookF,
+    FaInstagram,
+};
 
 export default function HeroSection() {
     return (
@@ -138,9 +153,10 @@ export default function HeroSection() {
                             </a>
 
                             <ul className="flex items-center gap-4 lg:gap-6">
-                                {socialLinks.map((socialLink) => {
-                                    const { id, href, icon, name } = socialLink;
-                                    const Icon = icon;
+                                {portfolioData.socialLinks.map((socialLink) => {
+                                    const { id, href, iconName, name } =
+                                        socialLink;
+                                    const Icon = socialIcons[iconName];
 
                                     return (
                                         <li
