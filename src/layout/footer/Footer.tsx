@@ -22,7 +22,7 @@ export default function FooterSection() {
                         variants={springScaleUp}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true }}
+                        // viewport={{ once: true }}
                         className="font-luckiest-guy select-none"
                     >
                         <Link href={"/"}>
@@ -43,7 +43,7 @@ export default function FooterSection() {
                                     initial="hidden"
                                     whileInView="visible"
                                     custom={idx * 0.2}
-                                    viewport={{ once: true }}
+                                    // viewport={{ once: true }}
                                     whileTap={{ scale: 0.8 }}
                                     transition={{
                                         type: "spring",
@@ -66,7 +66,7 @@ export default function FooterSection() {
                         variants={fadeUp}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true }}
+                        // viewport={{ once: true }}
                         className="font-light text-sm text-pb-white/40"
                     >
                         &copy; 2026 All rights reserved by{" "}

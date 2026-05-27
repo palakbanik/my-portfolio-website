@@ -25,10 +25,10 @@ export default function StatsSection({ data }: StatsSectionProps) {
                     initial="hidden"
                     whileInView="visible"
                     custom={idx * 0.2}
-                    viewport={{
-                        once: true,
-                        amount: 0.6,
-                    }}
+                    // viewport={{
+                    //     once: true,
+                    //     amount: 0.6,
+                    // }}
                     className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-start text-pb-white/90 gap-3 lg:gap-[15px]"
                 >
                     <span className="text-[45px] sm:text-[55px] md:text-[64px] leading-normal font-medium">
