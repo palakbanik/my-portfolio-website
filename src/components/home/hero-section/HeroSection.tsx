@@ -102,7 +102,7 @@ export default function HeroSection() {
                                 </div>
                             </motion.div>
 
-                            <ArticleText>
+                            <ArticleText className="text-justify">
                                 I&apos;m a passionate Frontend Development
                                 currently working with (Next.js) to build
                                 modern, interactive, and user-friendly web

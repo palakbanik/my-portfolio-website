@@ -15,14 +15,14 @@ export default function FooterSection() {
         <footer
             className={`w-full ${pathname === "/" ? "bg-pb-theme-accent-1" : "bg-pb-theme-secondary"}`}
         >
-            <Container className="pt-12 sm:pt-14 pb-6 ">
+            <Container className="pt-12 sm:pt-14 pb-6 sm:pb-10">
                 <div className="flex flex-col items-center justify-center gap-3 lg:gap-5">
                     {/* logo */}
                     <motion.div
                         variants={springScaleUp}
                         initial="hidden"
                         whileInView="visible"
-                        // viewport={{ once: true }}
+                        viewport={{ once: true }}
                         className="font-luckiest-guy select-none"
                     >
                         <Link href={"/"}>
@@ -48,6 +48,7 @@ export default function FooterSection() {
                                         scale: 1,
                                     }}
                                     whileTap={{ scale: 0.8 }}
+                                    viewport={{ once: true }}
                                     transition={{
                                         type: "spring",
                                         stiffness: 300,
@@ -69,13 +70,13 @@ export default function FooterSection() {
                         variants={fadeUp}
                         initial="hidden"
                         whileInView="visible"
-                        // viewport={{ once: true }}
-                        className="font-light text-sm text-pb-white/40"
+                        viewport={{ once: true }}
+                        className="font-light text-xs sm:text-sm text-pb-white/40"
                     >
                         &copy; 2026 All rights reserved by{" "}
                         <Link
                             href={"/"}
-                            className="font-medium text-base text-pb-white hover:text-pb-theme-primary duration-500 transition-colors"
+                            className="font-medium text-sm sm:text-base text-pb-white hover:text-pb-theme-primary duration-500 transition-colors"
                         >
                             PolokBanik
                         </Link>

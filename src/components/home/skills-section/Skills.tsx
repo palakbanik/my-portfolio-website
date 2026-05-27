@@ -33,7 +33,8 @@ export default function SkillsSections() {
                             variants={springScaleUp}
                             initial="hidden"
                             whileInView="visible"
-                            custom={idx * 0.16}
+                            custom={idx * 0.18}
+                            viewport={{ once: true }}
                         >
                             <SkillCard skill={skill} />
                         </motion.div>

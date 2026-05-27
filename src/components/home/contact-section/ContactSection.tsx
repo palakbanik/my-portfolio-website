@@ -28,7 +28,7 @@ export default function ContactSection() {
                         whileInView="visible"
                         viewport={{
                             once: true,
-                            amount: 0.4,
+                            amount: 0.3,
                         }}
                         className="order-2 md:order-1 rounded-2xl border border-pb-white/5 bg-pb-theme-accent-2 px-2 py-6 sm:p-10"
                     >
@@ -110,11 +110,18 @@ export default function ContactSection() {
                                         <ParaText className="capitalize text-pb-white/70">
                                             {info.contactType}
                                         </ParaText>
-                                        <Link href={info.href}>
-                                            <SubText className="font-medium hover:text-pb-theme-primary duration-500 ease transition-colors">
+
+                                        {info.href ? (
+                                            <Link href={info.href}>
+                                                <SubText className="font-medium hover:text-pb-theme-primary duration-500 ease transition-colors cursor-pointer">
+                                                    {info.contactTypeValue}
+                                                </SubText>
+                                            </Link>
+                                        ) : (
+                                            <SubText className="font-medium hover:text-pb-theme-primary duration-500 ease transition-colors cursor-pointer">
                                                 {info.contactTypeValue}
                                             </SubText>
-                                        </Link>
+                                        )}
                                     </div>
                                 </div>
                             );
