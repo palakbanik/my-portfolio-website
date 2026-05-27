@@ -7,6 +7,7 @@ import ParaText from "@/components/shared/texts-type/ParaText";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { navLinks } from "@/data/data";
+import { fadeUp, springScaleUp } from "@/animation/animations";
 
 export default function FooterSection() {
     const pathname = usePathname();
@@ -18,23 +19,10 @@ export default function FooterSection() {
                 <div className="flex flex-col items-center justify-center gap-3 lg:gap-5">
                     {/* logo */}
                     <motion.div
-                        initial={{
-                            opacity: 0,
-                            scale: 0.6,
-                        }}
-                        whileInView={{
-                            opacity: 1,
-                            scale: 1,
-                            transition: {
-                                type: "spring" as const,
-                                duration: 1.2,
-                                ease: "easeInOut",
-                            },
-                        }}
-                        viewport={{
-                            once: true,
-                            amount: 0.6,
-                        }}
+                        variants={springScaleUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
                         className="font-luckiest-guy select-none"
                     >
                         <Link href={"/"}>
@@ -51,23 +39,17 @@ export default function FooterSection() {
                             return (
                                 <motion.li
                                     key={link.id}
-                                    initial={{
-                                        opacity: 0,
-                                        y: 20,
-                                    }}
-                                    whileInView={{
-                                        opacity: 1,
-                                        y: 0,
-                                        transition: {
-                                            duration: 0.6,
-                                            delay: 0.2,
-                                        },
-                                    }}
-                                    viewport={{
-                                        once: true,
-                                        amount: 0.6,
-                                    }}
+                                    variants={springScaleUp}
+                                    initial="hidden"
+                                    whileInView="visible"
                                     custom={idx * 0.2}
+                                    viewport={{ once: true }}
+                                    whileTap={{ scale: 0.8 }}
+                                    transition={{
+                                        type: "spring",
+                                        stiffness: 300,
+                                        damping: 19,
+                                    }}
                                     className={`relative capitalize text-sm nav-link ${isActive ? "nav-link-active" : ""}`}
                                 >
                                     <Link href={link.href}>
@@ -81,15 +63,10 @@ export default function FooterSection() {
                     </ul>
 
                     <motion.p
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{
-                            once: true,
-                            amount: 0.6,
-                        }}
-                        transition={{
-                            duration: 0.8,
-                        }}
+                        variants={fadeUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
                         className="font-light text-sm text-pb-white/40"
                     >
                         &copy; 2026 All rights reserved by{" "}

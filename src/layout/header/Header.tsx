@@ -84,6 +84,7 @@ export default function HeaderSection() {
                                             variants={springScaleUp}
                                             initial="hidden"
                                             whileInView="visible"
+                                            custom={idx * 0.2}
                                             viewport={{ once: true }}
                                             whileTap={{ scale: 0.8 }}
                                             transition={{
