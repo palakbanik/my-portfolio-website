@@ -25,23 +25,14 @@ export default function ServicesSection({ serviceData }: ServiceSectionProps) {
             <Container className="py-12 md:py-20 lg:py-26">
                 {/* section heading */}
                 <motion.div
-                    initial={{
-                        opacity: 0,
-                        scale: 0.6,
+                    initial={{ opacity: 0, scale: 0.6 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{
+                        type: "spring",
+                        duration: 1.2,
+                        ease: "easeInOut",
                     }}
-                    whileInView={{
-                        opacity: 1,
-                        scale: 1,
-                        transition: {
-                            type: "spring" as const,
-                            duration: 1.2,
-                            ease: "easeInOut",
-                        },
-                    }}
-                    viewport={{
-                        once: true,
-                        amount: 0.6,
-                    }}
+                    viewport={{ once: true, amount: 0.6 }}
                     className="space-y-2"
                 >
                     <SectionTitle text="My Quality Services" />
