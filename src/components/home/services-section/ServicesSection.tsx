@@ -29,10 +29,10 @@ export default function ServicesSection({ serviceData }: ServiceSectionProps) {
                     variants={springScaleUp}
                     initial="hidden"
                     whileInView="visible"
-                    // viewport={{
-                    //     once: true,
-                    //     amount: 0.6,
-                    // }}
+                    viewport={{
+                        once: true,
+                        amount: 0.6,
+                    }}
                     className="space-y-2"
                 >
                     <SectionTitle text="My Quality Services" />
@@ -53,10 +53,10 @@ export default function ServicesSection({ serviceData }: ServiceSectionProps) {
                                 variants={fadeUp}
                                 initial="hidden"
                                 whileInView="visible"
-                                // viewport={{
-                                //     once: true,
-                                //     amount: 0.6,
-                                // }}
+                                viewport={{
+                                    once: true,
+                                    amount: 0.6,
+                                }}
                                 key={service.id}
                                 onMouseEnter={() => setActiveService(idx)}
                                 className="flex flex-col sm:flex-row items-center md:justify-center p-4 md:py-6 border-b border-pb-theme-secondary cursor-default group relative overflow-hidden gap-3"

@@ -63,10 +63,10 @@ export default function PortfolioSection({
                         variants={springScaleUp}
                         initial="hidden"
                         whileInView="visible"
-                        // viewport={{
-                        //     once: true,
-                        //     amount: 0.6,
-                        // }}
+                        viewport={{
+                            once: true,
+                            amount: 0.6,
+                        }}
                         className="text-center space-y-1 sm:space-y-2 max-w-[675px] mx-auto "
                     >
                         <SectionTitle text="My Recent Works" />
@@ -88,10 +88,10 @@ export default function PortfolioSection({
                                     initial="hidden"
                                     whileInView="visible"
                                     custom={idx * 0.2}
-                                    // viewport={{
-                                    //     once: true,
-                                    //     amount: 0.6,
-                                    // }}
+                                    viewport={{
+                                        once: true,
+                                        amount: 0.6,
+                                    }}
                                     key={category.id}
                                 >
                                     <PortfolioCategories
@@ -117,10 +117,10 @@ export default function PortfolioSection({
                                             initial="hidden"
                                             whileInView="visible"
                                             custom={idx * 0.2}
-                                            // viewport={{
-                                            //     once: true,
-                                            //     amount: 0.6,
-                                            // }}
+                                            viewport={{
+                                                once: true,
+                                                amount: 0.6,
+                                            }}
                                         >
                                             <motion.div
                                                 layout

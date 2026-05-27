@@ -56,10 +56,7 @@ export default function HeroSection() {
                         variants={fadeUp}
                         initial="hidden"
                         whileInView="visible"
-                        // viewport={{
-                        //     once: true,
-                        //     amount: 0.6,
-                        // }}
+                        viewport={{ once: true }}
                         className="flex-1 w-full max-w-[580px]"
                     >
                         <div className="space-y-8 sm:space-y-5 md:space-y-3">
@@ -90,10 +87,7 @@ export default function HeroSection() {
                                 variants={springScaleUp}
                                 initial="hidden"
                                 whileInView="visible"
-                                viewport={{
-                                    once: true,
-                                    amount: 0.6,
-                                }}
+                                viewport={{ once: true }}
                                 className="sm:hidden flex items-center justify-center"
                             >
                                 <div className="relative border-2 border-pb-theme-primary/50 hover:border-pb-theme-primary duration-300 inline-block rounded-4xl overflow-hidden transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
@@ -108,7 +102,7 @@ export default function HeroSection() {
                                 </div>
                             </motion.div>
 
-                            <ArticleText>
+                            <ArticleText className="text-justify">
                                 I&apos;m a passionate Frontend Development
                                 currently working with (Next.js) to build
                                 modern, interactive, and user-friendly web
@@ -169,10 +163,8 @@ export default function HeroSection() {
                         variants={fadeUp}
                         initial="hidden"
                         whileInView="visible"
-                        // viewport={{
-                        //     once: true,
-                        //     amount: 0.6,
-                        // }}
+                        custom={0.2}
+                        viewport={{ once: true }}
                     >
                         <div className="hidden relative border-2 border-pb-theme-primary/50 hover:border-2 hover:border-pb-theme-primary duration-300 sm:inline-block rounded-4xl overflow-hidden transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
                             <Image
