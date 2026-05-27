@@ -7,7 +7,6 @@ import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import ParaText from "../texts-type/ParaText";
 import { motion } from "framer-motion";
-import { fadeScale } from "@/animation/animations";
 
 export default function Breadcrumb() {
     const pathname = usePathname();
@@ -44,9 +43,20 @@ export default function Breadcrumb() {
             <div className="w-full h-full absolute inset-0 pointer-events-none bg-pb-theme-accent-2/70" />
 
             <motion.div
-                variants={fadeScale}
-                initial="hidden"
-                animate="visible"
+                initial={{
+                    opacity: 0,
+                    scale: 0.6,
+                }}
+                whileInView={{
+                    opacity: 1,
+                    scale: 1,
+                    transition: {
+                        type: "spring" as const,
+                        duration: 1.2,
+                        ease: "easeInOut",
+                    },
+                }}
+                viewport={{ once: true, amount: 0.6 }}
                 className="relative z-10 text-center text-pb-white space-y-2 md:space-y-4 max-w-[675px] mx-auto top-1/2 -translate-y-1/2"
             >
                 <h2 className="lg:text-[50px] leading-normal sm:leading-[1.2] font-bold">

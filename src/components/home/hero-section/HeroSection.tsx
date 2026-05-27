@@ -10,6 +10,7 @@ import ArticleText from "@/components/shared/texts-type/ArticleText";
 import StatsSection from "../stats-section/StatsSection";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+<<<<<<< HEAD
 import { fadeScaleHero, fadeUp } from "@/animation/animations";
 import portfolioData from "@/data/portfolio-data.json";
 import { IconType } from "react-icons";
@@ -26,6 +27,8 @@ const socialIcons: Record<string, IconType> = {
     FaFacebookF,
     FaInstagram,
 };
+=======
+>>>>>>> 0ec03914e59e7aeefed2fb1e05e2121908c776f2
 
 export default function HeroSection() {
     return (
@@ -68,9 +71,15 @@ export default function HeroSection() {
                 <div className="flex items-center justify-between gap-10 lg:gap-30 xl:gap-40 relative z-10">
                     {/* left text content */}
                     <motion.div
-                        variants={fadeUp}
-                        initial="hidden"
-                        whileInView="visible"
+                        initial={{
+                            opacity: 0,
+                            y: 20,
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                            transition: { duration: 0.6, delay: 0.2 },
+                        }}
                         viewport={{
                             once: true,
                             amount: 0.6,
@@ -102,9 +111,19 @@ export default function HeroSection() {
 
                             {/* mobile img content */}
                             <motion.div
-                                variants={fadeScaleHero}
-                                initial="hidden"
-                                whileInView="visible"
+                                initial={{
+                                    opacity: 0,
+                                    scale: 0.6,
+                                }}
+                                whileInView={{
+                                    opacity: 1,
+                                    scale: 1,
+                                    transition: {
+                                        type: "spring" as const,
+                                        stiffness: 600,
+                                        damping: 14,
+                                    },
+                                }}
                                 viewport={{
                                     once: true,
                                     amount: 0.6,
@@ -182,9 +201,15 @@ export default function HeroSection() {
 
                     {/* desktop right img content */}
                     <motion.div
-                        variants={fadeUp}
-                        initial="hidden"
-                        whileInView="visible"
+                        initial={{
+                            opacity: 0,
+                            y: 20,
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                            transition: { duration: 0.6, delay: 0.2 },
+                        }}
                         viewport={{
                             once: true,
                             amount: 0.6,

@@ -9,7 +9,6 @@ import PortfolioCategories from "./components/shared/PortfolioCategories";
 import { StaticImageData } from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { fadeScale } from "@/animation/animations";
 
 export interface PortfolioProps {
     id: number;
@@ -60,9 +59,19 @@ export default function PortfolioSection({
                 <div>
                     {/* header content */}
                     <motion.div
-                        variants={fadeScale}
-                        initial="hidden"
-                        whileInView="visible"
+                        initial={{
+                            opacity: 0,
+                            scale: 0.6,
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            scale: 1,
+                            transition: {
+                                type: "spring" as const,
+                                duration: 1.2,
+                                ease: "easeInOut",
+                            },
+                        }}
                         viewport={{
                             once: true,
                             amount: 0.6,

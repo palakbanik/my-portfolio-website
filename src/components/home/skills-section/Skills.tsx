@@ -5,7 +5,6 @@ import { skillsData } from "@/data/data";
 import SkillCard from "./SkillCard";
 import Container from "@/components/shared/Container";
 import ParaText from "@/components/shared/texts-type/ParaText";
-import { fadeScale } from "@/animation/animations";
 import { motion } from "framer-motion";
 
 export default function SkillsSections() {
@@ -13,9 +12,19 @@ export default function SkillsSections() {
         <section className="w-full bg-pb-theme-accent-1">
             <Container className="py-12 md:py-20 lg:py-[120px]">
                 <motion.div
-                    variants={fadeScale}
-                    initial="hidden"
-                    whileInView="visible"
+                    initial={{
+                        opacity: 0,
+                        scale: 0.6,
+                    }}
+                    whileInView={{
+                        opacity: 1,
+                        scale: 1,
+                        transition: {
+                            type: "spring" as const,
+                            duration: 1.2,
+                            ease: "easeInOut",
+                        },
+                    }}
                     viewport={{ once: true, amount: 0.6 }}
                     className="space-y-2 sm:space-y-3"
                 >
