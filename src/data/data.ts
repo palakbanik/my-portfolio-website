@@ -138,25 +138,43 @@ export const portfolioCategories = [
 export const portfolioData = [
     {
         id: 1,
+        title: "Polok Banik Portfolio Website",
+        description:
+            "A personal portfolio website I designed and developed from scratch, showcasing my skills, projects, and experience as a Frontend Developer. Built with Next.js and TypeScript for a scalable structure, styled with Tailwind CSS, and brought to life with smooth scroll-driven animations using Framer Motion and Lenis.",
+        categoryType: "animated",
+        imageUrl: "/portfolio-projects/polokbanik-portfolio-website.png",
+        alt: "Polok Banik Portfolio Website",
+        href: "https://polokbanik.vercel.app/",
+        projectTools: [
+            "Next.js",
+            "TypeScript",
+            "Framer Motion",
+            "Tailwind CSS",
+            "Lenis",
+            "React Icons",
+        ],
+    },
+    {
+        id: 2,
         title: "Agency Company Website",
         description:
-            "Designed and developed a modern multi-page agency website with smooth animations, responsive layouts, and an engaging user experience using Next.js, Tailwind CSS, GSAP, and Lenis.",
+            "A fully responsive multi-page agency website I built from the ground up, featuring fluid scroll animations, dynamic layouts, and a polished user interface — crafted with Next.js, JavaScript, Tailwind CSS, GSAP, and Lenis.",
         categoryType: "animated",
         imageUrl: "/portfolio-projects/agency-website-project.png",
         alt: "Agency Company Website",
         href: "https://animated-agency-web.vercel.app/",
         projectTools: [
             "Next.js",
-            "Tailwind CSS",
+            "JavaScript",
             "GSAP",
             "Lenis",
-            "JavaScript",
+            "Tailwind CSS",
             "React Icons",
         ],
     },
 
     {
-        id: 2,
+        id: 3,
         title: "Insurance Company Website",
         description:
             "Built a responsive multi-page insurance company website with a clean UI, structured layouts, and smooth user experience using modern frontend technologies.",
@@ -168,7 +186,7 @@ export const portfolioData = [
     },
 
     {
-        id: 3,
+        id: 4,
         title: "E-Commerce Website",
         description:
             "Developed a responsive e-commerce website featuring modern UI design, smooth navigation, dark mode support, and an interactive shopping experience.",
@@ -186,7 +204,7 @@ export const portfolioData = [
     },
 
     {
-        id: 4,
+        id: 5,
         title: "Beyond Code Website",
         description:
             "Created a clean and responsive website focused on simplicity, usability, and smooth user experience with modern frontend technologies.",
@@ -205,7 +223,7 @@ export const portfolioData = [
     },
 
     {
-        id: 5,
+        id: 6,
         title: "Factora Website",
         description:
             "Designed and developed a responsive website with modern UI design, smooth interactions, and a user-friendly browsing experience.",
@@ -224,7 +242,7 @@ export const portfolioData = [
     },
 
     {
-        id: 6,
+        id: 7,
         title: "Video Website",
         description:
             "Built a modern and responsive video-focused website with smooth animations, clean layouts, and an engaging user experience.",
