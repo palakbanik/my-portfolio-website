@@ -2,7 +2,7 @@
 export const smoothScaleUp = {
     hidden: {
         opacity: 0,
-        scale: 0.6,
+        scale: 0.2,
     },
     visible: (custom: number) => ({
         opacity: 1,
