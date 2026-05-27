@@ -10,25 +10,6 @@ import ArticleText from "@/components/shared/texts-type/ArticleText";
 import StatsSection from "../stats-section/StatsSection";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-<<<<<<< HEAD
-import { fadeScaleHero, fadeUp } from "@/animation/animations";
-import portfolioData from "@/data/portfolio-data.json";
-import { IconType } from "react-icons";
-import {
-    FaFacebookF,
-    FaGithub,
-    FaInstagram,
-    FaLinkedinIn,
-} from "react-icons/fa";
-
-const socialIcons: Record<string, IconType> = {
-    FaLinkedinIn,
-    FaGithub,
-    FaFacebookF,
-    FaInstagram,
-};
-=======
->>>>>>> 0ec03914e59e7aeefed2fb1e05e2121908c776f2
 
 export default function HeroSection() {
     return (
@@ -172,10 +153,9 @@ export default function HeroSection() {
                             </a>
 
                             <ul className="flex items-center gap-4 lg:gap-6">
-                                {portfolioData.socialLinks.map((socialLink) => {
-                                    const { id, href, iconName, name } =
-                                        socialLink;
-                                    const Icon = socialIcons[iconName];
+                                {socialLinks.map((socialLink) => {
+                                    const { id, href, icon, name } = socialLink;
+                                    const Icon = icon;
 
                                     return (
                                         <li

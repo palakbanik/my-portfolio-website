@@ -6,6 +6,7 @@ import Link from "next/link";
 import ParaText from "@/components/shared/texts-type/ParaText";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { navLinks } from "@/data/data";
 
 export default function FooterSection() {
     const pathname = usePathname();
@@ -45,7 +46,7 @@ export default function FooterSection() {
 
                     {/* links */}
                     <ul className="flex items-center gap-3 md:gap-6 xl:gap-8">
-                        {portfolioData.navLinks.map((link, idx) => {
+                        {navLinks.map((link, idx) => {
                             const isActive = pathname === link.href;
                             return (
                                 <motion.li
@@ -71,7 +72,7 @@ export default function FooterSection() {
                                 >
                                     <Link href={link.href}>
                                         <ParaText className="font-medium">
-                                            {link.label}
+                                            {link.title}
                                         </ParaText>
                                     </Link>
                                 </motion.li>
