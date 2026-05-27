@@ -103,13 +103,13 @@ export default function HeroSection() {
                             </motion.div>
 
                             <ArticleText className="text-justify">
-                                I&apos;m a passionate Frontend Development
+                                I&apos;m a passionate Frontend Developer
                                 currently working with (Next.js) to build
                                 modern, interactive, and user-friendly web
                                 applications. While my primary focus right now
-                                is on mastering frontend development, I&apos;m
+                                is on mastering frontend development. I&apos;m
                                 also preparing myself to become a Full Stack
-                                Developer in the future. 😊
+                                Developer in the future.
                             </ArticleText>
                         </div>
 

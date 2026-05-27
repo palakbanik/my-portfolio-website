@@ -142,7 +142,7 @@ export const portfolioData = [
         description:
             "A personal portfolio website I designed and developed from scratch, showcasing my skills, projects, and experience as a Frontend Developer. Built with Next.js and TypeScript for a scalable structure, styled with Tailwind CSS, and brought to life with smooth scroll-driven animations using Framer Motion and Lenis.",
         categoryType: "animated",
-        imageUrl: "/portfolio-projects/polokbanik-portfolio-website.png",
+        imageUrl: "/portfolio-projects/polok-banik-portfolio.png",
         alt: "Polok Banik Portfolio Website",
         href: "https://polokbanik.vercel.app/",
         projectTools: [
@@ -177,7 +177,7 @@ export const portfolioData = [
         id: 3,
         title: "Insurance Company Website",
         description:
-            "Built a responsive multi-page insurance company website with a clean UI, structured layouts, and smooth user experience using modern frontend technologies.",
+            "Built a responsive multi-page insurance company website with a modern and clean UI, structured layouts, dynamic data rendering, reusable components, and a fully optimized user experience across desktop, tablet, and mobile devices.",
         categoryType: "ui-ux",
         imageUrl: "/portfolio-projects/insurance-company-website-project.png",
         alt: "Insurance Company Website",
@@ -207,38 +207,24 @@ export const portfolioData = [
         id: 5,
         title: "Beyond Code Website",
         description:
-            "Created a clean and responsive website focused on simplicity, usability, and smooth user experience with modern frontend technologies.",
+            "Developed a fully responsive single-page website with a clean and modern UI, focused on simplicity, usability. Built using reusable components, structured and maintainable code architecture, and dynamic data rendering to ensure scalability and performance across all devices.",
         categoryType: "ui-ux",
         imageUrl: "/portfolio-projects/beyondcode-website-project.png",
         alt: "Beyond Code Website",
         href: "https://beyondcode-website.netlify.app/",
-        projectTools: [
-            "Next.js",
-            "Tailwind CSS",
-            "GSAP",
-            "Lenis",
-            "JavaScript",
-            "React Icons",
-        ],
+        projectTools: ["Next.js", "Tailwind CSS", "TypeScript", "React Icons"],
     },
 
     {
         id: 6,
         title: "Factora Website",
         description:
-            "Designed and developed a responsive website with modern UI design, smooth interactions, and a user-friendly browsing experience.",
+            "Developed a fully responsive single-page website with a clean and modern UI. Built using reusable components, structured and maintainable code architecture, and dynamic data rendering to ensure scalability and performance across all devices.",
         categoryType: "ui-ux",
         imageUrl: "/portfolio-projects/factora-website-project.png",
         alt: "Factora Website",
         href: "https://factora-website.netlify.app/",
-        projectTools: [
-            "Next.js",
-            "Tailwind CSS",
-            "GSAP",
-            "Lenis",
-            "JavaScript",
-            "React Icons",
-        ],
+        projectTools: ["ReactJS", "Tailwind CSS", "JavaScript", "React Icons"],
     },
 
     {
@@ -250,14 +236,7 @@ export const portfolioData = [
         imageUrl: "/portfolio-projects/video-website-project.png",
         alt: "Video Create Website",
         href: "https://videocreatewebsite.netlify.app/",
-        projectTools: [
-            "Next.js",
-            "Tailwind CSS",
-            "GSAP",
-            "Lenis",
-            "JavaScript",
-            "React Icons",
-        ],
+        projectTools: ["ReactJS", "Tailwind CSS", "JavaScript", "React Icons"],
     },
 ];
 
@@ -277,7 +256,7 @@ export const resumeSectionData = [
             {
                 id: 2,
                 period: "2025 - Present",
-                title: "Front End COURSE",
+                title: "FRONTEND COURSE",
                 subtitle: "Self Learning",
             },
             {
@@ -397,15 +376,15 @@ export const contactSectionPersonalContacts = [
     {
         id: 1,
         contactType: "Phone",
-        contactTypeValue: "+880 1700 812 413",
+        contactTypeValue: "+880 1700-812413",
         href: "tel:+8801700812413",
         icon: PiPhoneCallLight,
     },
     {
         id: 2,
         contactType: "Email",
-        contactTypeValue: "polokbanik7@gmail.com",
-        href: "mailto:polokbanik7@gmail.com",
+        contactTypeValue: "polok.webdev@gmail.com",
+        href: "mailto:polok.webdev@gmail.com",
         icon: IoMailUnreadOutline,
     },
     {
