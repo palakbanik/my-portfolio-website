@@ -5,7 +5,6 @@ import Container from "@/components/shared/Container";
 import Button from "@/components/ui/Button";
 import { HiOutlineDownload } from "react-icons/hi";
 import Image from "next/image";
-import polokbanik from "@/assets/polok-profile.png";
 import { socialLinks, statsData } from "@/data/data";
 import ArticleText from "@/components/shared/texts-type/ArticleText";
 import StatsSection from "../stats-section/StatsSection";
@@ -114,7 +113,7 @@ export default function HeroSection() {
                             >
                                 <div className="relative border-2 border-pb-theme-primary/50 hover:border-pb-theme-primary duration-300 inline-block rounded-4xl overflow-hidden transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
                                     <Image
-                                        src={polokbanik}
+                                        src="/polok-profile.png"
                                         alt="Polok Banik — Frontend Web Developer"
                                         width={1000}
                                         height={1000}
@@ -198,7 +197,7 @@ export default function HeroSection() {
                     >
                         <div className="hidden relative border-2 border-pb-theme-primary/50 hover:border-2 hover:border-pb-theme-primary duration-300 sm:inline-block rounded-4xl overflow-hidden transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
                             <Image
-                                src={polokbanik}
+                                src="/polok-profile.png"
                                 alt="Polok Banik — Frontend Web Developer"
                                 width={1000}
                                 height={1000}

@@ -1,10 +1,9 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 interface SkillCardDataProps {
     id: number;
     title: string;
-    icon: StaticImageData;
-    percentage: string;
+    icon: string;
 }
 
 interface SkillCardProps {

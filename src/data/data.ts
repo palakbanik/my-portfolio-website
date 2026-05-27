@@ -1,22 +1,3 @@
-import javascript from "@/assets/skills-logo/javascript-icon.svg";
-import typescript from "@/assets/skills-logo/typescript-icon.svg";
-import react from "@/assets/skills-logo/react-icon.svg";
-import framerMotion from "@/assets/skills-logo/framer-motion-icon.png";
-import gsap from "@/assets/skills-logo/gsap-icon.jpg";
-import nextjs from "@/assets/skills-logo/nextjs-icon.svg";
-import git from "@/assets/skills-logo/git-icon.svg";
-import github from "@/assets/skills-logo/github-icon.png";
-import tailwindcss from "@/assets/skills-logo/tailwindcss-icon.svg";
-import figma from "@/assets/skills-logo/figma-icon.svg";
-import adobeXd from "@/assets/skills-logo/adobe-xd-icon.svg";
-import html from "@/assets/skills-logo/html-icon.svg";
-import css from "@/assets/skills-logo/css-icon.svg";
-import agencyWebsite from "@/assets/portfolio-projects/agency-website-project.png";
-import insuranceWebsite from "@/assets/portfolio-projects/insurance-company-website-project.png";
-import beyoundCode from "@/assets/portfolio-projects/beyondCodeTwo-website-project.png";
-import eComWebsite from "@/assets/portfolio-projects/ecom-website-two-project.png";
-import factoraWebsite from "@/assets/portfolio-projects/factora-website-project.png";
-import videoWebsite from "@/assets/portfolio-projects/video-website-project.png";
 import { PiPhoneCallLight } from "react-icons/pi";
 import { IoMailUnreadOutline } from "react-icons/io5";
 import { CiLocationOn } from "react-icons/ci";
@@ -24,8 +5,6 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
-import { SiOpenbadges } from "react-icons/si";
-import { SlGraduation } from "react-icons/sl";
 
 // header data
 export const navLinks = [
@@ -163,7 +142,7 @@ export const portfolioData = [
         description:
             "Designed and developed a modern multi-page agency website with smooth animations, responsive layouts, and an engaging user experience using Next.js, Tailwind CSS, GSAP, and Lenis.",
         categoryType: "animated",
-        imageUrl: agencyWebsite,
+        imageUrl: "/portfolio-projects/agency-website-project.png",
         alt: "Agency Company Website",
         href: "https://animated-agency-web.vercel.app/",
         projectTools: [
@@ -182,7 +161,7 @@ export const portfolioData = [
         description:
             "Built a responsive multi-page insurance company website with a clean UI, structured layouts, and smooth user experience using modern frontend technologies.",
         categoryType: "ui-ux",
-        imageUrl: insuranceWebsite,
+        imageUrl: "/portfolio-projects/insurance-company-website-project.png",
         alt: "Insurance Company Website",
         href: "https://amynta-insurance-company-website.vercel.app/",
         projectTools: ["Next.js", "Tailwind CSS", "TypeScript", "React Icons"],
@@ -194,7 +173,7 @@ export const portfolioData = [
         description:
             "Developed a responsive e-commerce website featuring modern UI design, smooth navigation, dark mode support, and an interactive shopping experience.",
         categoryType: "e-commerce",
-        imageUrl: eComWebsite,
+        imageUrl: "/portfolio-projects/ecom-website-two-project.png",
         alt: "E-Commerce Website",
         href: "https://ecommercae-website.netlify.app/",
         projectTools: [
@@ -212,7 +191,7 @@ export const portfolioData = [
         description:
             "Created a clean and responsive website focused on simplicity, usability, and smooth user experience with modern frontend technologies.",
         categoryType: "ui-ux",
-        imageUrl: beyoundCode,
+        imageUrl: "/portfolio-projects/beyondcode-website-project.png",
         alt: "Beyond Code Website",
         href: "https://beyondcode-website.netlify.app/",
         projectTools: [
@@ -231,7 +210,7 @@ export const portfolioData = [
         description:
             "Designed and developed a responsive website with modern UI design, smooth interactions, and a user-friendly browsing experience.",
         categoryType: "ui-ux",
-        imageUrl: factoraWebsite,
+        imageUrl: "/portfolio-projects/factora-website-project.png",
         alt: "Factora Website",
         href: "https://factora-website.netlify.app/",
         projectTools: [
@@ -250,7 +229,7 @@ export const portfolioData = [
         description:
             "Built a modern and responsive video-focused website with smooth animations, clean layouts, and an engaging user experience.",
         categoryType: "ui-ux",
-        imageUrl: videoWebsite,
+        imageUrl: "/portfolio-projects/video-website-project.png",
         alt: "Video Create Website",
         href: "https://videocreatewebsite.netlify.app/",
         projectTools: [
@@ -323,80 +302,67 @@ export const skillsData = [
     {
         id: 1,
         title: "JavaScript",
-        icon: javascript,
-        percentage: "70%",
+        icon: "/skills-logo/javascript-icon.svg",
     },
     {
         id: 2,
         title: "TypeScript",
-        icon: typescript,
-        percentage: "80%",
+        icon: "/skills-logo/typescript-icon.svg",
     },
     {
         id: 3,
         title: "React",
-        icon: react,
-        percentage: "70%",
+        icon: "/skills-logo/react-icon.svg",
     },
     {
         id: 4,
         title: "Next.js",
-        icon: nextjs,
-        percentage: "70%",
+        icon: "/skills-logo/nextjs-icon.svg",
     },
     {
         id: 5,
         title: "Framer Motion",
-        icon: framerMotion,
-        percentage: "70%",
+        icon: "/skills-logo/framer-motion-icon.png",
     },
     {
         id: 6,
         title: "GSAP",
-        icon: gsap,
-        percentage: "60%",
+        icon: "/skills-logo/gsap-icon.jpg",
     },
     {
         id: 7,
         title: "Git",
-        icon: git,
-        percentage: "70%",
+        icon: "/skills-logo/git-icon.svg",
     },
     {
         id: 8,
         title: "GitHub",
-        icon: github,
-        percentage: "70%",
+        icon: "/skills-logo/github-icon.png",
     },
     {
         id: 9,
         title: "Tailwind CSS",
-        icon: tailwindcss,
-        percentage: "90%",
+        icon: "/skills-logo/tailwindcss-icon.svg",
     },
     {
         id: 10,
         title: "Figma",
-        icon: figma,
-        percentage: "50%",
+        icon: "/skills-logo/figma-icon.svg",
     },
     {
         id: 11,
         title: "Adobe XD",
-        icon: adobeXd,
-        percentage: "50%",
+        icon: "/skills-logo/adobe-xd-icon.svg",
     },
     {
         id: 12,
         title: "HTML",
-        icon: html,
-        percentage: "90%",
+        icon: "/skills-logo/html-icon.svg",
     },
     {
         id: 13,
         title: "CSS",
-        icon: css,
-        percentage: "70%",
+        icon: "/skills-logo/css-icon.svg",
     },
 ];
 

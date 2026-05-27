@@ -2,11 +2,11 @@
 
 import React from "react";
 import Container from "@/components/shared/Container";
-import { navLinks } from "@/data/data";
 import Link from "next/link";
 import ParaText from "@/components/shared/texts-type/ParaText";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { navLinks } from "@/data/data";
 
 export default function FooterSection() {
     const pathname = usePathname();

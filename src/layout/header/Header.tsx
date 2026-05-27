@@ -2,13 +2,13 @@
 
 import React, { useEffect, useState } from "react";
 import Container from "@/components/shared/Container";
-import { navLinks } from "@/data/data";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { usePathname } from "next/navigation";
 import { TbMenu3 } from "react-icons/tb";
 import { MdOutlineCloseFullscreen } from "react-icons/md";
 import { motion } from "framer-motion";
+import { navLinks } from "@/data/data";
 
 export default function HeaderSection() {
     const pathname = usePathname();
