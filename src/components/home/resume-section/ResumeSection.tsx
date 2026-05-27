@@ -7,6 +7,7 @@ import { IconType } from "react-icons";
 import { SiOpenbadges } from "react-icons/si";
 import { SlGraduation } from "react-icons/sl";
 import { motion } from "framer-motion";
+import { fadeUp } from "@/animation/animations";
 
 const icon: Record<string, IconType> = {
     SiOpenbadges,
@@ -39,23 +40,15 @@ export default function ResumeSection({ resumeData }: ResumeSectionProps) {
                         const Icon = icon[col.icon];
                         return (
                             <motion.div
-                                initial={{
-                                    y: 20,
-                                    opacity: 0,
-                                }}
-                                whileInView={{
-                                    y: 0,
-                                    opacity: 1,
-                                }}
-                                transition={{
-                                    duration: 0.6,
-                                    delay: idx * 0.4,
-                                }}
-                                viewport={{
-                                    once: true,
-                                    amount: 0.2,
-                                }}
                                 key={col.id}
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="visible"
+                                custom={idx * 0.3}
+                                // viewport={{
+                                //     once: true,
+                                //     amount: 0.6,
+                                // }}
                             >
                                 {/* title */}
                                 <div className="flex items-center gap-[15px]">

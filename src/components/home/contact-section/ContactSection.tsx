@@ -14,6 +14,7 @@ import {
 import Link from "next/link";
 import SubText from "@/components/shared/texts-type/SubText";
 import { motion } from "framer-motion";
+import { fadeLeft, fadeRight } from "@/animation/animations";
 
 export default function ContactSection() {
     return (
@@ -22,22 +23,13 @@ export default function ContactSection() {
                 <div className="relative grid items-center gap-10 lg:grid-cols-[500px_1fr] lg:grid-cols-[620px_1fr] lg:gap-28">
                     {/* left form */}
                     <motion.div
-                        initial={{
-                            x: -20,
-                            opacity: 0,
-                        }}
-                        whileInView={{
-                            x: 0,
-                            opacity: 1,
-                        }}
-                        transition={{
-                            duration: 0.6,
-                            delay: 0.4,
-                        }}
-                        viewport={{
-                            once: true,
-                            amount: 0.4,
-                        }}
+                        variants={fadeLeft}
+                        initial="hidden"
+                        whileInView="visible"
+                        // viewport={{
+                        //     once: true,
+                        //     amount: 0.4,
+                        // }}
                         className="order-2 md:order-1 rounded-2xl border border-pb-white/5 bg-pb-theme-accent-2 px-2 py-6 sm:p-10"
                     >
                         {/* text content */}
@@ -92,22 +84,13 @@ export default function ContactSection() {
 
                     {/* right contact info */}
                     <motion.div
-                        initial={{
-                            x: 20,
-                            opacity: 0,
-                        }}
-                        whileInView={{
-                            x: 0,
-                            opacity: 1,
-                        }}
-                        transition={{
-                            duration: 0.6,
-                            delay: 0.4,
-                        }}
-                        viewport={{
-                            once: true,
-                            amount: 0.4,
-                        }}
+                        variants={fadeRight}
+                        initial="hidden"
+                        whileInView="visible"
+                        // viewport={{
+                        //     once: true,
+                        //     amount: 0.4,
+                        // }}
                         className="order-1 md:order-2 space-y-8"
                     >
                         {contactSectionPersonalContacts.map((info) => {

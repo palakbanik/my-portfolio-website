@@ -8,6 +8,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import SubText from "@/components/shared/texts-type/SubText";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { fadeUp, springScaleUp } from "@/animation/animations";
 
 interface ServiceSectionProps {
     serviceData: {
@@ -25,14 +26,13 @@ export default function ServicesSection({ serviceData }: ServiceSectionProps) {
             <Container className="py-12 md:py-20 lg:py-26">
                 {/* section heading */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.6 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{
-                        type: "spring",
-                        duration: 1.2,
-                        ease: "easeInOut",
-                    }}
-                    viewport={{ once: true, amount: 0.6 }}
+                    variants={springScaleUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    // viewport={{
+                    //     once: true,
+                    //     amount: 0.6,
+                    // }}
                     className="space-y-2"
                 >
                     <SectionTitle text="My Quality Services" />
@@ -50,19 +50,13 @@ export default function ServicesSection({ serviceData }: ServiceSectionProps) {
                         return (
                             <motion.div
                                 layout
-                                initial={{
-                                    opacity: 0,
-                                    y: 20,
-                                }}
-                                whileInView={{
-                                    opacity: 1,
-                                    y: 0,
-                                }}
-                                transition={{ duration: 0.6, delay: idx * 0.2 }}
-                                viewport={{
-                                    once: true,
-                                    amount: 0.6,
-                                }}
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="visible"
+                                // viewport={{
+                                //     once: true,
+                                //     amount: 0.6,
+                                // }}
                                 key={service.id}
                                 onMouseEnter={() => setActiveService(idx)}
                                 className="flex flex-col sm:flex-row items-center md:justify-center p-4 md:py-6 border-b border-pb-theme-secondary cursor-default group relative overflow-hidden gap-3"

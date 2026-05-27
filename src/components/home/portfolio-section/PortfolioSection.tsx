@@ -9,6 +9,7 @@ import PortfolioCategories from "./components/shared/PortfolioCategories";
 import { StaticImageData } from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import { smoothScaleUp, springScaleUp } from "@/animation/animations";
 
 export interface PortfolioProps {
     id: number;
@@ -59,23 +60,13 @@ export default function PortfolioSection({
                 <div>
                     {/* header content */}
                     <motion.div
-                        initial={{
-                            opacity: 0,
-                            scale: 0.6,
-                        }}
-                        whileInView={{
-                            opacity: 1,
-                            scale: 1,
-                            transition: {
-                                type: "spring" as const,
-                                duration: 1.2,
-                                ease: "easeInOut",
-                            },
-                        }}
-                        viewport={{
-                            once: true,
-                            amount: 0.6,
-                        }}
+                        variants={springScaleUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        // viewport={{
+                        //     once: true,
+                        //     amount: 0.6,
+                        // }}
                         className="text-center space-y-1 sm:space-y-2 max-w-[675px] mx-auto "
                     >
                         <SectionTitle text="My Recent Works" />
@@ -93,22 +84,14 @@ export default function PortfolioSection({
                         <div className="flex items-center justify-between bg-pb-body w-full max-w-[480px] mx-auto rounded-full overflow-hidden duration-500 transition-all">
                             {portfolioCategoriesData.map((category, idx) => (
                                 <motion.div
-                                    initial={{
-                                        y: 20,
-                                        opacity: 0,
-                                    }}
-                                    whileInView={{
-                                        y: 0,
-                                        opacity: 1,
-                                    }}
-                                    transition={{
-                                        duration: 0.6,
-                                        delay: idx * 0.2,
-                                    }}
-                                    viewport={{
-                                        once: true,
-                                        amount: 0.6,
-                                    }}
+                                    variants={smoothScaleUp}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    custom={idx * 0.2}
+                                    // viewport={{
+                                    //     once: true,
+                                    //     amount: 0.6,
+                                    // }}
                                     key={category.id}
                                 >
                                     <PortfolioCategories
@@ -129,23 +112,15 @@ export default function PortfolioSection({
                                 <AnimatePresence mode="popLayout">
                                     {filteredProjects.map((project, idx) => (
                                         <motion.div
-                                            initial={{
-                                                y: 20,
-                                                opacity: 0,
-                                            }}
-                                            whileInView={{
-                                                y: 0,
-                                                opacity: 1,
-                                            }}
-                                            transition={{
-                                                duration: 0.6,
-                                                delay: idx * 0.4,
-                                            }}
-                                            viewport={{
-                                                once: true,
-                                                amount: 0.2,
-                                            }}
                                             key={project.id}
+                                            variants={smoothScaleUp}
+                                            initial="hidden"
+                                            whileInView="visible"
+                                            custom={idx * 0.2}
+                                            // viewport={{
+                                            //     once: true,
+                                            //     amount: 0.6,
+                                            // }}
                                         >
                                             <motion.div
                                                 layout

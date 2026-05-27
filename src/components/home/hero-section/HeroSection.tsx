@@ -10,6 +10,7 @@ import ArticleText from "@/components/shared/texts-type/ArticleText";
 import StatsSection from "../stats-section/StatsSection";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import { fadeUp, springScaleUp } from "@/animation/animations";
 
 export default function HeroSection() {
     return (
@@ -52,19 +53,13 @@ export default function HeroSection() {
                 <div className="flex items-center justify-between gap-10 lg:gap-30 xl:gap-40 relative z-10">
                     {/* left text content */}
                     <motion.div
-                        initial={{
-                            opacity: 0,
-                            y: 20,
-                        }}
-                        whileInView={{
-                            opacity: 1,
-                            y: 0,
-                            transition: { duration: 0.6, delay: 0.2 },
-                        }}
-                        viewport={{
-                            once: true,
-                            amount: 0.6,
-                        }}
+                        variants={fadeUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        // viewport={{
+                        //     once: true,
+                        //     amount: 0.6,
+                        // }}
                         className="flex-1 w-full max-w-[580px]"
                     >
                         <div className="space-y-8 sm:space-y-5 md:space-y-3">
@@ -92,19 +87,9 @@ export default function HeroSection() {
 
                             {/* mobile img content */}
                             <motion.div
-                                initial={{
-                                    opacity: 0,
-                                    scale: 0.6,
-                                }}
-                                whileInView={{
-                                    opacity: 1,
-                                    scale: 1,
-                                    transition: {
-                                        type: "spring" as const,
-                                        stiffness: 600,
-                                        damping: 14,
-                                    },
-                                }}
+                                variants={springScaleUp}
+                                initial="hidden"
+                                whileInView="visible"
                                 viewport={{
                                     once: true,
                                     amount: 0.6,
@@ -181,19 +166,13 @@ export default function HeroSection() {
 
                     {/* desktop right img content */}
                     <motion.div
-                        initial={{
-                            opacity: 0,
-                            y: 20,
-                        }}
-                        whileInView={{
-                            opacity: 1,
-                            y: 0,
-                            transition: { duration: 0.6, delay: 0.2 },
-                        }}
-                        viewport={{
-                            once: true,
-                            amount: 0.6,
-                        }}
+                        variants={fadeUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        // viewport={{
+                        //     once: true,
+                        //     amount: 0.6,
+                        // }}
                     >
                         <div className="hidden relative border-2 border-pb-theme-primary/50 hover:border-2 hover:border-pb-theme-primary duration-300 sm:inline-block rounded-4xl overflow-hidden transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
                             <Image

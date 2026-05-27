@@ -9,6 +9,7 @@ import { TbMenu3 } from "react-icons/tb";
 import { MdOutlineCloseFullscreen } from "react-icons/md";
 import { motion } from "framer-motion";
 import { navLinks } from "@/data/data";
+import { fadeUp, smoothScaleUp, springScaleUp } from "@/animation/animations";
 
 export default function HeaderSection() {
     const pathname = usePathname();
@@ -82,28 +83,24 @@ export default function HeaderSection() {
                                             key={id}
                                             initial={{
                                                 opacity: 0,
-                                                y: 20,
+                                                scale: 0.6,
                                             }}
                                             whileInView={{
                                                 opacity: 1,
-                                                y: 0,
-                                                transition: {
-                                                    duration: 0.6,
-                                                    delay: 0.2,
-                                                },
+                                                scale: 1,
                                             }}
-                                            viewport={{
-                                                once: true,
-                                                amount: 0.6,
-                                            }}
-                                            custom={idx * 0.2}
+                                            viewport={{ once: true }}
                                             whileTap={{ scale: 0.8 }}
                                             transition={{
                                                 type: "spring",
                                                 stiffness: 300,
                                                 damping: 19,
                                             }}
-                                            className={`relative capitalize text-sm nav-link ${isActive ? "nav-link-active" : ""}`}
+                                            className={`relative capitalize text-sm nav-link ${
+                                                isActive
+                                                    ? "nav-link-active"
+                                                    : ""
+                                            }`}
                                         >
                                             <Link href={href}>{title}</Link>
                                         </motion.li>
