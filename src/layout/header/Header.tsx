@@ -179,7 +179,7 @@ export default function HeaderSection() {
                                             y: 0,
                                             transition: {
                                                 duration: 0.6,
-                                                delay: 0.2,
+                                                delay: idx * 0.2,
                                             },
                                         }}
                                         custom={idx * 0.2}
