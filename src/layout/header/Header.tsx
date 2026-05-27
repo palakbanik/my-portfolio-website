@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "@/components/shared/Container";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
@@ -9,7 +9,6 @@ import { TbMenu3 } from "react-icons/tb";
 import { MdOutlineCloseFullscreen } from "react-icons/md";
 import { motion } from "framer-motion";
 import { navLinks } from "@/data/data";
-import { fadeUp, smoothScaleUp, springScaleUp } from "@/animation/animations";
 
 export default function HeaderSection() {
     const pathname = usePathname();

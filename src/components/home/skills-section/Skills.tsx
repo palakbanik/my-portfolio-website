@@ -6,7 +6,7 @@ import SkillCard from "./SkillCard";
 import Container from "@/components/shared/Container";
 import ParaText from "@/components/shared/texts-type/ParaText";
 import { motion } from "framer-motion";
-import { smoothScaleUp, springScaleUp } from "@/animation/animations";
+import { springScaleUp } from "@/animation/animations";
 
 export default function SkillsSections() {
     return (
@@ -16,7 +16,7 @@ export default function SkillsSections() {
                     variants={springScaleUp}
                     initial="hidden"
                     whileInView="visible"
-                    // viewport={{ once: true, amount: 0.6 }}
+                    viewport={{ once: true, amount: 0.6 }}
                     className="space-y-2 sm:space-y-3"
                 >
                     <SectionTitle text="my skills" />
@@ -33,8 +33,7 @@ export default function SkillsSections() {
                             variants={springScaleUp}
                             initial="hidden"
                             whileInView="visible"
-                            custom={idx * 0.22}
-                            // viewport={{ once: true, amount: 0.6 }}
+                            custom={idx * 0.16}
                         >
                             <SkillCard skill={skill} />
                         </motion.div>

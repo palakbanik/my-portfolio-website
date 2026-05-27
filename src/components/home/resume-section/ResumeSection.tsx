@@ -45,10 +45,10 @@ export default function ResumeSection({ resumeData }: ResumeSectionProps) {
                                 initial="hidden"
                                 whileInView="visible"
                                 custom={idx * 0.3}
-                                // viewport={{
-                                //     once: true,
-                                //     amount: 0.6,
-                                // }}
+                                viewport={{
+                                    once: true,
+                                    amount: 0.2,
+                                }}
                             >
                                 {/* title */}
                                 <div className="flex items-center gap-[15px]">

@@ -39,11 +39,14 @@ export default function FooterSection() {
                             return (
                                 <motion.li
                                     key={link.id}
-                                    variants={springScaleUp}
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    custom={idx * 0.2}
-                                    // viewport={{ once: true }}
+                                    initial={{
+                                        opacity: 0,
+                                        scale: 0.6,
+                                    }}
+                                    whileInView={{
+                                        opacity: 1,
+                                        scale: 1,
+                                    }}
                                     whileTap={{ scale: 0.8 }}
                                     transition={{
                                         type: "spring",

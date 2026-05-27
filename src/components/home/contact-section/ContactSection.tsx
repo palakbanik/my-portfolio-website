@@ -26,10 +26,10 @@ export default function ContactSection() {
                         variants={fadeLeft}
                         initial="hidden"
                         whileInView="visible"
-                        // viewport={{
-                        //     once: true,
-                        //     amount: 0.4,
-                        // }}
+                        viewport={{
+                            once: true,
+                            amount: 0.4,
+                        }}
                         className="order-2 md:order-1 rounded-2xl border border-pb-white/5 bg-pb-theme-accent-2 px-2 py-6 sm:p-10"
                     >
                         {/* text content */}
@@ -87,10 +87,10 @@ export default function ContactSection() {
                         variants={fadeRight}
                         initial="hidden"
                         whileInView="visible"
-                        // viewport={{
-                        //     once: true,
-                        //     amount: 0.4,
-                        // }}
+                        viewport={{
+                            once: true,
+                            amount: 0.8,
+                        }}
                         className="order-1 md:order-2 space-y-8"
                     >
                         {contactSectionPersonalContacts.map((info) => {
