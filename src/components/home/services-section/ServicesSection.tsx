@@ -8,7 +8,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import SubText from "@/components/shared/texts-type/SubText";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { fadeScale } from "@/animation/animations";
+
 interface ServiceSectionProps {
     serviceData: {
         id: number;
@@ -25,9 +25,19 @@ export default function ServicesSection({ serviceData }: ServiceSectionProps) {
             <Container className="py-12 md:py-20 lg:py-26">
                 {/* section heading */}
                 <motion.div
-                    variants={fadeScale}
-                    initial="hidden"
-                    whileInView="visible"
+                    initial={{
+                        opacity: 0,
+                        scale: 0.6,
+                    }}
+                    whileInView={{
+                        opacity: 1,
+                        scale: 1,
+                        transition: {
+                            type: "spring" as const,
+                            duration: 1.2,
+                            ease: "easeInOut",
+                        },
+                    }}
                     viewport={{
                         once: true,
                         amount: 0.6,

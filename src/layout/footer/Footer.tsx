@@ -7,7 +7,6 @@ import Link from "next/link";
 import ParaText from "@/components/shared/texts-type/ParaText";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { fadeScale, fadeUp } from "@/animation/animations";
 
 export default function FooterSection() {
     const pathname = usePathname();
@@ -19,9 +18,19 @@ export default function FooterSection() {
                 <div className="flex flex-col items-center justify-center gap-3 lg:gap-5">
                     {/* logo */}
                     <motion.div
-                        variants={fadeScale}
-                        initial="hidden"
-                        whileInView="visible"
+                        initial={{
+                            opacity: 0,
+                            scale: 0.6,
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            scale: 1,
+                            transition: {
+                                type: "spring" as const,
+                                duration: 1.2,
+                                ease: "easeInOut",
+                            },
+                        }}
                         viewport={{
                             once: true,
                             amount: 0.6,
@@ -42,9 +51,18 @@ export default function FooterSection() {
                             return (
                                 <motion.li
                                     key={link.id}
-                                    variants={fadeUp}
-                                    initial="hidden"
-                                    whileInView="visible"
+                                    initial={{
+                                        opacity: 0,
+                                        y: 20,
+                                    }}
+                                    whileInView={{
+                                        opacity: 1,
+                                        y: 0,
+                                        transition: {
+                                            duration: 0.6,
+                                            delay: 0.2,
+                                        },
+                                    }}
                                     viewport={{
                                         once: true,
                                         amount: 0.6,

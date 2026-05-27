@@ -9,7 +9,6 @@ import { usePathname } from "next/navigation";
 import { TbMenu3 } from "react-icons/tb";
 import { MdOutlineCloseFullscreen } from "react-icons/md";
 import { motion } from "framer-motion";
-import { fadeScale, fadeUp } from "@/animation/animations";
 
 export default function HeaderSection() {
     const pathname = usePathname();
@@ -51,9 +50,20 @@ export default function HeaderSection() {
                         <div className="font-luckiest-guy select-none">
                             <Link href={"/"}>
                                 <motion.h1
-                                    variants={fadeScale}
-                                    initial="hidden"
-                                    animate="visible"
+                                    initial={{
+                                        opacity: 0,
+                                        scale: 0.6,
+                                    }}
+                                    whileInView={{
+                                        opacity: 1,
+                                        scale: 1,
+                                        transition: {
+                                            type: "spring" as const,
+                                            duration: 1.2,
+                                            ease: "easeInOut",
+                                        },
+                                    }}
+                                    viewport={{ once: true, amount: 0.6 }}
                                     className="leading-normal tracking-wider text-[36px] md:text-4xl"
                                 >
                                     {"<PB/>"}
@@ -70,9 +80,18 @@ export default function HeaderSection() {
                                     return (
                                         <motion.li
                                             key={id}
-                                            variants={fadeUp}
-                                            initial="hidden"
-                                            whileInView="visible"
+                                            initial={{
+                                                opacity: 0,
+                                                y: 20,
+                                            }}
+                                            whileInView={{
+                                                opacity: 1,
+                                                y: 0,
+                                                transition: {
+                                                    duration: 0.6,
+                                                    delay: 0.2,
+                                                },
+                                            }}
                                             viewport={{
                                                 once: true,
                                                 amount: 0.6,
@@ -95,9 +114,20 @@ export default function HeaderSection() {
                             {/* button */}
                             <Link href={"/"}>
                                 <motion.div
-                                    variants={fadeScale}
-                                    initial="hidden"
-                                    animate="visible"
+                                    initial={{
+                                        opacity: 0,
+                                        scale: 0.6,
+                                    }}
+                                    whileInView={{
+                                        opacity: 1,
+                                        scale: 1,
+                                        transition: {
+                                            type: "spring" as const,
+                                            duration: 1.2,
+                                            ease: "easeInOut",
+                                        },
+                                    }}
+                                    viewport={{ once: true, amount: 0.6 }}
                                 >
                                     <Button className="lg:px-8 lg:py-3">
                                         hire me!
@@ -109,9 +139,20 @@ export default function HeaderSection() {
                             <motion.button
                                 type="button"
                                 onClick={() => setMenuOpen(!menuOpen)}
-                                variants={fadeScale}
-                                initial="hidden"
-                                animate="visible"
+                                initial={{
+                                    opacity: 0,
+                                    scale: 0.6,
+                                }}
+                                whileInView={{
+                                    opacity: 1,
+                                    scale: 1,
+                                    transition: {
+                                        type: "spring" as const,
+                                        duration: 1.2,
+                                        ease: "easeInOut",
+                                    },
+                                }}
+                                viewport={{ once: true, amount: 0.6 }}
                                 className="inline md:hidden"
                             >
                                 {menuOpen ? (
@@ -133,9 +174,18 @@ export default function HeaderSection() {
                                 return (
                                     <motion.li
                                         key={id}
-                                        variants={fadeUp}
-                                        initial="hidden"
-                                        whileInView="visible"
+                                        initial={{
+                                            opacity: 0,
+                                            y: 20,
+                                        }}
+                                        whileInView={{
+                                            opacity: 1,
+                                            y: 0,
+                                            transition: {
+                                                duration: 0.6,
+                                                delay: 0.2,
+                                            },
+                                        }}
                                         custom={idx * 0.2}
                                         onClick={() => setMenuOpen(false)}
                                         className={`relative uppercase nav-link text-base ${isActive ? "nav-link-active" : ""}`}
