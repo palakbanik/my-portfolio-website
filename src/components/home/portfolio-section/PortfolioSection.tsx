@@ -116,6 +116,7 @@ export default function PortfolioSection({
                                             whileInView="visible"
                                             exit={{ opacity: 0, scale: 0.7 }}
                                             custom={idx * 0.2}
+                                            viewport={{ once: true }}
                                             transition={{
                                                 duration: 0.6,
                                                 ease: "easeInOut",
