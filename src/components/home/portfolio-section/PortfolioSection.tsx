@@ -105,50 +105,27 @@ export default function PortfolioSection({
 
                         {/* portfolio cards */}
                         <div className="mt-10">
-                            <motion.div
-                                layout
-                                className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-6 md:gap-10"
-                            >
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-6 md:gap-10">
                                 <AnimatePresence mode="popLayout">
                                     {filteredProjects.map((project, idx) => (
                                         <motion.div
                                             key={project.id}
+                                            layout
                                             variants={smoothScaleUp}
                                             initial="hidden"
                                             whileInView="visible"
+                                            exit={{ opacity: 0, scale: 0.7 }}
                                             custom={idx * 0.2}
-                                            viewport={{
-                                                once: true,
-                                                amount: 0.6,
+                                            transition={{
+                                                duration: 0.6,
+                                                ease: "easeInOut",
                                             }}
                                         >
-                                            <motion.div
-                                                layout
-                                                initial={{
-                                                    opacity: 0,
-                                                    scale: 0.85,
-                                                }}
-                                                animate={{
-                                                    opacity: 1,
-                                                    scale: 1,
-                                                }}
-                                                exit={{
-                                                    opacity: 0,
-                                                    scale: 0.85,
-                                                }}
-                                                transition={{
-                                                    duration: 0.6,
-                                                    ease: "easeInOut",
-                                                }}
-                                            >
-                                                <PortfolioCard
-                                                    project={project}
-                                                />
-                                            </motion.div>
+                                            <PortfolioCard project={project} />
                                         </motion.div>
                                     ))}
                                 </AnimatePresence>
-                            </motion.div>
+                            </div>
                         </div>
                     </div>
                 </div>
