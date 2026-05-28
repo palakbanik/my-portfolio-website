@@ -383,8 +383,8 @@ export const contactSectionPersonalContacts = [
     {
         id: 2,
         contactType: "Email",
-        contactTypeValue: "polok.webdev@gmail.com",
-        href: "mailto:polok.webdev@gmail.com",
+        contactTypeValue: "webdev.polok@gmail.com",
+        href: "mailto:webdev.polok@gmail.com",
         icon: IoMailUnreadOutline,
     },
     {
