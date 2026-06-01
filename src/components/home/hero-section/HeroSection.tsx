@@ -106,9 +106,9 @@ export default function HeroSection() {
                                 I&apos;m a passionate Frontend Developer
                                 currently working with (Next.js) to build
                                 modern, interactive, and user-friendly web
-                                applications. While my primary focus right now
-                                is on mastering frontend development. I&apos;m
-                                also preparing myself to become a Full Stack
+                                applications.While my primary focus is on
+                                mastering frontend development, I&apos;m also
+                                preparing myself to become a Full Stack
                                 Developer in the future.
                             </ArticleText>
                         </div>

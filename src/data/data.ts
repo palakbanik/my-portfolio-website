@@ -207,7 +207,7 @@ export const portfolioData = [
         id: 5,
         title: "Beyond Code Website",
         description:
-            "Developed a fully responsive single-page website with a clean and modern UI, focused on simplicity, usability. Built using reusable components, structured and maintainable code architecture, and dynamic data rendering to ensure scalability and performance across all devices.",
+            "Developed a fully responsive single-page website with a clean and modern UI, focused on simplicity, usability, and performance. Built using reusable components, structured and maintainable code architecture, and dynamic data rendering to ensure scalability and performance across all devices.",
         categoryType: "ui-ux",
         imageUrl: "/portfolio-projects/beyondcode-website-project.png",
         alt: "Beyond Code Website",
@@ -251,19 +251,19 @@ export const resumeSectionData = [
                 id: 1,
                 period: "2025 - Present",
                 title: "PROGRAMMING COURSE",
-                subtitle: "Self Learning",
+                subtitle: "Self-Taught",
             },
             {
                 id: 2,
                 period: "2025 - Present",
                 title: "FRONTEND COURSE",
-                subtitle: "Self Learning",
+                subtitle: "Self-Taught",
             },
             {
                 id: 3,
                 period: "2025 - Present",
                 title: "WEB DEVELOPMENT COURSE",
-                subtitle: "Self Learning",
+                subtitle: "Self-Taught",
             },
         ],
     },
@@ -383,8 +383,8 @@ export const contactSectionPersonalContacts = [
     {
         id: 2,
         contactType: "Email",
-        contactTypeValue: "webdev.polok@gmail.com",
-        href: "mailto:webdev.polok@gmail.com",
+        contactTypeValue: "polok.webdev@gmail.com",
+        href: "mailto:polok.webdev@gmail.com",
         icon: IoMailUnreadOutline,
     },
     {

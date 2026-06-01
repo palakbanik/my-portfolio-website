@@ -37,8 +37,8 @@ export default function ServicesSection({ serviceData }: ServiceSectionProps) {
                 >
                     <SectionTitle text="My Quality Services" />
                     <ParaText className="max-w-150 mx-auto text-center">
-                        I put your ideas and thus your wishes in the form of a A
-                        unique web project that inspires you and your customers.
+                        Bring your ideas and wishes to life in the form of a
+                        unique web project that inspires you & your customers.
                     </ParaText>
                 </motion.div>
 

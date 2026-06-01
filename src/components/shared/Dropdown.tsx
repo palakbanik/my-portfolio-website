@@ -31,12 +31,13 @@ export default function Dropdown({
             </button>
 
             <ul
-                className={`w-full max-w-50 h-auto py-1.5 bg-pb-white rounded-lg overflow-hidden text-pb-black absolute top-8 left-0 ${isOpen ? "opacity-100 translate-y-3" : "opacity-0"} duration-500 transition-all ease`}
+                className={`w-full max-w-50 h-auto py-1.5 bg-pb-white rounded-lg overflow-hidden text-pb-black absolute top-8 left-0 ${isOpen ? "opacity-100 translate-y-3 visible" : "opacity-0 invisible"} duration-500 transition-all ease`}
             >
                 {data.map((option, idx) => (
                     <li
                         key={idx}
-                        className={`px-3 py-1.5 bg-pb-white text-[14px] font-medium cursor-pointer`}
+                        onClick={() => setIsOpen(!isOpen)}
+                        className={`px-3 py-1.5 bg-pb-white text-[14px] font-medium cursor-pointer `}
                     >
                         {option}
                     </li>
