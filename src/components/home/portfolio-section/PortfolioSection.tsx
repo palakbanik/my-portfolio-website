@@ -3,13 +3,12 @@
 import React, { useState } from "react";
 import Container from "@/components/shared/Container";
 import SectionTitle from "@/components/shared/SectionTitle";
-import ParaText from "@/components/shared/texts-type/ParaText";
 import PortfolioCard from "./components/shared/PortfolioCard";
 import PortfolioCategories from "./components/shared/PortfolioCategories";
 import { StaticImageData } from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { smoothScaleUp, springScaleUp } from "@/animation/animations";
+import { smoothScaleUp } from "@/animation/animations";
 
 export interface PortfolioProps {
     id: number;
@@ -59,24 +58,10 @@ export default function PortfolioSection({
             <Container className="py-12 md:py-20 lg:py-26">
                 <div>
                     {/* header content */}
-                    <motion.div
-                        variants={springScaleUp}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{
-                            once: true,
-                            amount: 0.6,
-                        }}
-                        className="text-center space-y-1 sm:space-y-2 max-w-[675px] mx-auto "
-                    >
-                        <SectionTitle text="My Recent Works" />
-                        <ParaText>
-                            A collection of projects that highlight my passion
-                            for frontend development, combining modern design,
-                            smooth interactions, and responsive user
-                            experiences.
-                        </ParaText>
-                    </motion.div>
+                    <SectionTitle
+                        sectionBadge="portfolio"
+                        sectionTitle="my recent works"
+                    />
 
                     {/* show project */}
                     <div className="mt-10">

@@ -2,24 +2,14 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-
-interface PortfolioCategoriesData {
-    id: number;
-    categoryName: string;
-    categoryType: string;
-}
-interface PortfolioCategoriesProps {
-    category: PortfolioCategoriesData;
-    activeCategory: string;
-    setActiveCategory: (category: string) => void;
-}
+import { PortfolioCategoriesProps } from "@/types";
 
 export default function PortfolioCategories({
     category,
     activeCategory,
     setActiveCategory,
 }: PortfolioCategoriesProps) {
-    const { categoryName,categoryType } = category;
+    const { categoryName, categoryType } = category;
 
     return (
         <button

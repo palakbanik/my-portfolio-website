@@ -35,9 +35,10 @@ export default function ContactSection() {
                         {/* text content */}
                         <div className="space-y-2">
                             <SectionTitle
-                                className="text-start"
-                                text="Let's work together!"
+                                sectionTitle="Let's work together!"
+                                containerClassName="items-start"
                             />
+
                             <ParaText>
                                 I design and code beautifully simple things and
                                 i love what i do. Just simple like that!

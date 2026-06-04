@@ -1,12 +1,5 @@
 import { cn } from "@/lib/utils";
-import React, { InputHTMLAttributes } from "react";
-
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-    type?: string;
-    error?: string;
-    className?: string;
-    placeholder: string;
-}
+import { InputProps } from "@/types";
 
 export default function Input({
     type = "text",

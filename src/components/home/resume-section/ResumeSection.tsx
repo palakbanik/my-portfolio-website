@@ -8,28 +8,12 @@ import { SiOpenbadges } from "react-icons/si";
 import { SlGraduation } from "react-icons/sl";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/animation/animations";
+import { ResumeSectionProps } from "@/types";
 
 const icon: Record<string, IconType> = {
     SiOpenbadges,
     SlGraduation,
 };
-
-interface ResumeItemProps {
-    id: number;
-    period: string;
-    title: string;
-    subtitle: string;
-    featured?: boolean;
-}
-
-interface ResumeSectionProps {
-    resumeData: {
-        id: number;
-        icon: string;
-        heading: string;
-        items: ResumeItemProps[];
-    }[];
-}
 
 export default function ResumeSection({ resumeData }: ResumeSectionProps) {
     return (
