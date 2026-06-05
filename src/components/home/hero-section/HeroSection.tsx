@@ -11,6 +11,7 @@ import StatsSection from "../stats-section/StatsSection";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { fadeUp, springScaleUp } from "@/animation/animations";
+import SocialLinks from "@/components/shared/SocialLinks";
 
 export default function HeroSection() {
     return (
@@ -131,30 +132,7 @@ export default function HeroSection() {
                                 </Button>
                             </a>
 
-                            <ul className="flex items-center gap-4 lg:gap-6">
-                                {socialLinks.map((socialLink) => {
-                                    const { id, href, icon, name } = socialLink;
-                                    const Icon = icon;
-
-                                    return (
-                                        <li
-                                            key={id}
-                                            className="group relative border border-pb-theme-primary text-pb-theme-primary hover:text-pb-white p-2.5 rounded-full group-hover:-translate-y-1 overflow-hidden transition-all duration-300 ease-in-out"
-                                        >
-                                            <a
-                                                href={href}
-                                                className=""
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                aria-label={`Visit ${name}`}
-                                            >
-                                                <span className="w-full h-full absolute inset-0 scale-0 group-hover:scale-100 bg-pb-theme-primary  rounded-full transition-all duration-300 ease-in-out" />
-                                                <Icon className="relative z-10" />
-                                            </a>
-                                        </li>
-                                    );
-                                })}
-                            </ul>
+                            <SocialLinks />
                         </div>
                     </motion.div>
 
