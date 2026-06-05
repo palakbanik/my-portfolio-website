@@ -4,13 +4,7 @@ import React from "react";
 import ParaText from "@/components/shared/texts-type/ParaText";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/animation/animations";
-interface StatsSectionProps {
-    data: {
-        id: number;
-        value: string;
-        title: string;
-    }[];
-}
+import { StatsSectionProps } from "@/types";
 
 export default function StatsSection({ data }: StatsSectionProps) {
     return (

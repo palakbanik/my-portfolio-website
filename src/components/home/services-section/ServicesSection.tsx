@@ -2,21 +2,15 @@
 
 import Container from "@/components/shared/Container";
 import SectionTitle from "@/components/shared/SectionTitle";
-import ParaText from "@/components/shared/texts-type/ParaText";
 import ArticleText from "@/components/shared/texts-type/ArticleText";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import SubText from "@/components/shared/texts-type/SubText";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { fadeUp, springScaleUp } from "@/animation/animations";
+import { fadeUp } from "@/animation/animations";
+import { ServiceSectionProps } from "@/types";
 
-interface ServiceSectionProps {
-    serviceData: {
-        id: number;
-        title: string;
-        description: string;
-    }[];
-}
+
 
 export default function ServicesSection({ serviceData }: ServiceSectionProps) {
     const [activeService, setActiveService] = useState(0);
@@ -25,22 +19,10 @@ export default function ServicesSection({ serviceData }: ServiceSectionProps) {
         <section aria-label="Services Section">
             <Container className="py-12 md:py-20 lg:py-26">
                 {/* section heading */}
-                <motion.div
-                    variants={springScaleUp}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{
-                        once: true,
-                        amount: 0.6,
-                    }}
-                    className="space-y-2"
-                >
-                    <SectionTitle text="My Quality Services" />
-                    <ParaText className="max-w-150 mx-auto text-center">
-                        Bring your ideas and wishes to life in the form of a
-                        unique web project that inspires you & your customers.
-                    </ParaText>
-                </motion.div>
+                <SectionTitle
+                    sectionBadge="services"
+                    sectionTitle="The services I provide"
+                />
 
                 {/* services content */}
                 <div className="mt-4 lg:mt-8">

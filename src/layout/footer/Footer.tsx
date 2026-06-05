@@ -11,6 +11,7 @@ import { fadeUp, springScaleUp } from "@/animation/animations";
 
 export default function FooterSection() {
     const pathname = usePathname();
+
     return (
         <footer
             className={`w-full ${pathname === "/" ? "bg-pb-theme-accent-1" : "bg-pb-theme-secondary"}`}
@@ -73,7 +74,7 @@ export default function FooterSection() {
                         viewport={{ once: true }}
                         className="font-light text-xs sm:text-sm text-pb-white/40"
                     >
-                        &copy; 2026 All rights reserved by{" "}
+                        &copy; {new Date().getFullYear()} All rights reserved by{" "}
                         <Link
                             href={"/"}
                             className="font-medium text-sm sm:text-base text-pb-white hover:text-pb-theme-primary duration-500 transition-colors"

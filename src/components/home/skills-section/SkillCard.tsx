@@ -1,14 +1,5 @@
+import { SkillCardProps } from "@/types";
 import Image from "next/image";
-
-interface SkillCardDataProps {
-    id: number;
-    title: string;
-    icon: string;
-}
-
-interface SkillCardProps {
-    skill: SkillCardDataProps;
-}
 
 export default function SkillCard({ skill }: SkillCardProps) {
     const { title, icon } = skill;

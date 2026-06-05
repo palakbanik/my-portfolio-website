@@ -3,8 +3,6 @@
 import Container from "@/components/shared/Container";
 import SectionTitle from "@/components/shared/SectionTitle";
 import ParaText from "@/components/shared/texts-type/ParaText";
-import Input from "@/components/shared/Input";
-import Textarea from "@/components/shared/Textarea";
 import Button from "@/components/ui/Button";
 import Dropdown from "@/components/shared/Dropdown";
 import {
@@ -15,6 +13,8 @@ import Link from "next/link";
 import SubText from "@/components/shared/texts-type/SubText";
 import { motion } from "framer-motion";
 import { fadeLeft, fadeRight } from "@/animation/animations";
+import Input from "@/components/shared/Input";
+import Textarea from "@/components/shared/Textarea";
 
 export default function ContactSection() {
     return (
@@ -35,9 +35,10 @@ export default function ContactSection() {
                         {/* text content */}
                         <div className="space-y-2">
                             <SectionTitle
-                                className="text-start"
-                                text="Let's work together!"
+                                sectionTitle="Let's work together!"
+                                containerClassName="items-start"
                             />
+
                             <ParaText>
                                 I design and code beautifully simple things and
                                 i love what i do. Just simple like that!

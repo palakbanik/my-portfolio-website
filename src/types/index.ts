@@ -1,3 +1,5 @@
+import { InputHTMLAttributes } from "react";
+
 export interface NavLink {
     id: number;
     title: string;
@@ -60,4 +62,65 @@ export interface ContactInfo {
     contactTypeValue: string;
     href: string;
     iconName: string;
+}
+
+interface ResumeItemProps {
+    id: number;
+    period: string;
+    title: string;
+    subtitle: string;
+    featured?: boolean;
+}
+
+export interface ResumeSectionProps {
+    resumeData: {
+        id: number;
+        icon: string;
+        heading: string;
+        items: ResumeItemProps[];
+    }[];
+}
+
+interface PortfolioCategoriesData {
+    id: number;
+    categoryName: string;
+    categoryType: string;
+}
+export interface PortfolioCategoriesProps {
+    category: PortfolioCategoriesData;
+    activeCategory: string;
+    setActiveCategory: (category: string) => void;
+}
+
+export interface ServiceSectionProps {
+    serviceData: {
+        id: number;
+        title: string;
+        description: string;
+    }[];
+}
+
+interface SkillCardDataProps {
+    id: number;
+    title: string;
+    icon: string;
+}
+
+export interface SkillCardProps {
+    skill: SkillCardDataProps;
+}
+
+export interface StatsSectionProps {
+    data: {
+        id: number;
+        value: string;
+        title: string;
+    }[];
+}
+
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+    type?: string;
+    error?: string;
+    className?: string;
+    placeholder: string;
 }
