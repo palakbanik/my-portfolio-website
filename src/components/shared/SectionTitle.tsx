@@ -28,7 +28,7 @@ export default function SectionTitle({
                 amount: 0.6,
             }}
             className={cn(
-                "space-y-1 sm:space-y-2 flex flex-col items-center",
+                "space-y-1 sm:space-y-2 flex flex-col items-center text-center",
                 containerClassName,
             )}
         >
