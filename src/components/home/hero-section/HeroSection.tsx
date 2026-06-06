@@ -118,7 +118,7 @@ export default function HeroSection() {
                         <div className="mt-6 lg:mt-10 flex flex-col lg:flex-row items-start lg:items-center gap-5 md:gap-6">
                             {/* my cv */}
                             <a
-                                href={"/cv/polok-banik-frontend-intern.pdf"}
+                                href={"/cv/polok-banik-web-dev.pdf"}
                                 download
                                 target="_blank"
                                 aria-label="Download Polok Banik's CV"
