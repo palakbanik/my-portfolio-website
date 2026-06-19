@@ -64,7 +64,7 @@ export default function HeroSection() {
                             {/* header text */}
                             <div className="space-y-1 lg:space-y-3">
                                 <h1 className="text-[22px] sm:text-[25px] lg:text-4xl font-semibold">
-                                    I am Polok
+                                    I am Palak
                                 </h1>
                                 <h2 className="text-gradient text-[35px] sm:text-[38px] lg:text-[65px] font-bold leading-none capitalize ">
                                     front End web{" "}

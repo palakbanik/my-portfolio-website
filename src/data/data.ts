@@ -35,26 +35,26 @@ export const socialLinks = [
     {
         id: 1,
         icon: FaLinkedinIn,
-        href: "https://www.linkedin.com/in/polok-banik-184121308/",
-        name: "Polok Banik LinkedIn",
+        href: "https://www.linkedin.com/in/palak-banik-184121308/",
+        name: "Palak Banik LinkedIn",
     },
     {
         id: 2,
         icon: FaGithub,
         href: "https://github.com/palakbanik",
-        name: "Polok Banik GitHub",
+        name: "Palak Banik GitHub",
     },
     {
         id: 3,
         icon: FaFacebookF,
-        href: "https://www.facebook.com/polok.banik.02",
-        name: "Polok Banik Facebook",
+        href: "https://www.facebook.com/palak.banik.2002",
+        name: "Palak Banik Facebook",
     },
     {
         id: 4,
         icon: FaInstagram,
         href: "https://www.instagram.com/p_o__l__o_k/",
-        name: "Polok Banik Instagram",
+        name: "Palak Banik Instagram",
     },
 ];
 
@@ -138,13 +138,13 @@ export const portfolioCategories = [
 export const portfolioData = [
     {
         id: 1,
-        title: "Polok Banik Portfolio Website",
+        title: "Palak Banik Portfolio Website",
         description:
             "A personal portfolio website I designed and developed from scratch, showcasing my skills, projects, and experience as a Frontend Developer. Built with Next.js and TypeScript for a scalable structure, styled with Tailwind CSS, and brought to life with smooth scroll-driven animations using Framer Motion and Lenis.",
         categoryType: "animated",
         imageUrl: "/portfolio-projects/polok-banik-portfolio.png",
-        alt: "Polok Banik Portfolio Website",
-        href: "https://polokbanik.vercel.app/",
+        alt: "Palak Banik Portfolio Website",
+        href: "https://palak-banik.vercel.app/",
         projectTools: [
             "Next.js",
             "TypeScript",
@@ -296,6 +296,7 @@ export const resumeSectionData = [
 
 // skills data
 export const skillsData = [
+    // ── Primary / Core Skills ──
     {
         id: 1,
         title: "JavaScript",
@@ -318,48 +319,90 @@ export const skillsData = [
     },
     {
         id: 5,
-        title: "Framer Motion",
-        icon: "/skills-logo/framer-motion-icon.png",
-    },
-    {
-        id: 6,
-        title: "GSAP",
-        icon: "/skills-logo/gsap-icon.jpg",
-    },
-    {
-        id: 7,
-        title: "Git",
-        icon: "/skills-logo/git-icon.svg",
-    },
-    {
-        id: 8,
-        title: "GitHub",
-        icon: "/skills-logo/github-icon.png",
-    },
-    {
-        id: 9,
-        title: "Tailwind CSS",
-        icon: "/skills-logo/tailwindcss-icon.svg",
-    },
-    {
-        id: 10,
-        title: "Figma",
-        icon: "/skills-logo/figma-icon.svg",
-    },
-    {
-        id: 11,
-        title: "Adobe XD",
-        icon: "/skills-logo/adobe-xd-icon.svg",
-    },
-    {
-        id: 12,
         title: "HTML",
         icon: "/skills-logo/html-icon.svg",
     },
     {
-        id: 13,
+        id: 6,
         title: "CSS",
         icon: "/skills-logo/css-icon.svg",
+    },
+    {
+        id: 7,
+        title: "Tailwind CSS",
+        icon: "/skills-logo/tailwindcss-icon.svg",
+    },
+    {
+        id: 15,
+        title: "Bootstrap",
+        icon: "/skills-logo/bootstrap-icon.svg",
+    },
+    {
+        id: 8,
+        title: "GSAP",
+        icon: "/skills-logo/gsap-icon.jpg",
+    },
+    {
+        id: 9,
+        title: "Framer Motion",
+        icon: "/skills-logo/framer-motion-icon.png",
+    },
+
+    // ── Version Control ──
+    {
+        id: 10,
+        title: "Git",
+        icon: "/skills-logo/git-icon.svg",
+    },
+    {
+        id: 11,
+        title: "GitHub",
+        icon: "/skills-logo/github-icon.png",
+    },
+
+    // ── Design Tools ──
+    {
+        id: 12,
+        title: "Figma",
+        icon: "/skills-logo/figma-icon.svg",
+    },
+    {
+        id: 13,
+        title: "Adobe XD",
+        icon: "/skills-logo/adobe-xd-icon.svg",
+    },
+
+    // ── Other Tools ──
+    {
+        id: 14,
+        title: "Vite",
+        icon: "/skills-logo/vite-icon.svg",
+    },
+
+    {
+        id: 16,
+        title: "NPM",
+        icon: "/skills-logo/npm-icon.svg",
+    },
+    {
+        id: 17,
+        title: "Yarn",
+        icon: "/skills-logo/yarn-logo-icon.png",
+    },
+    {
+        id: 18,
+        title: "Netlify",
+        icon: "/skills-logo/netlify-icon.svg",
+    },
+    {
+        id: 19,
+        title: "Notion",
+        icon: "/skills-logo/notion-icon.png",
+    },
+    {
+        id: 20,
+        title: "VS Code",
+        icon: "/skills-logo/vs-code-icon.svg",
     },
 ];
 
