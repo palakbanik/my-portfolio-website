@@ -50,27 +50,27 @@ export default function ContactSection() {
                             <form className="space-y-3 mt-6">
                                 <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3">
                                     <Input
-                                        placeholder="First name"
                                         type="text"
                                         name="first-name"
+                                        placeholder="First name"
                                     />
                                     <Input
-                                        placeholder="Last name"
                                         type="text"
                                         name="last-name"
+                                        placeholder="Last name"
                                     />
                                 </div>
 
                                 <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3">
                                     <Input
-                                        placeholder="Email address"
                                         type="email"
                                         name="email-address"
+                                        placeholder="Email address"
                                     />
                                     <Input
-                                        placeholder="Phone number"
-                                        type="text"
+                                        type="tel"
                                         name="phone-number"
+                                        placeholder="Phone number"
                                     />
                                 </div>
 
