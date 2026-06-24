@@ -108,7 +108,7 @@ export default function HeaderSection() {
                             </ul>
 
                             {/* button */}
-                            <Link href={"/"}>
+                            <Link href={"/contact"}>
                                 <motion.div
                                     initial={{
                                         opacity: 0,
