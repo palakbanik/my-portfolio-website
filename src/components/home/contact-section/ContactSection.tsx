@@ -15,8 +15,60 @@ import { motion } from "framer-motion";
 import { fadeLeft, fadeRight } from "@/animation/animations";
 import Input from "@/components/shared/Input";
 import Textarea from "@/components/shared/Textarea";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
+const initialContact = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    message: "",
+};
 
 export default function ContactSection() {
+    const [contact, setContact] = useState(initialContact);
+    const form = useRef<HTMLFormElement | null>(null);
+
+    const { firstName, lastName, email, phoneNumber, message } = contact;
+
+    const handleInputChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    ) => {
+        const { name, value } = e.target;
+
+        setContact((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+
+    const handleContactForm = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        if (!form.current) return;
+
+        await emailjs
+            .sendForm(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+                form.current,
+                {
+                    publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+                },
+            )
+            .then(
+                () => {
+                    console.log("SUCCESS!");
+                },
+                (error) => {
+                    console.log("FAILED...", error.text);
+                },
+            );
+
+        setContact(initialContact);
+    };
+
     return (
         <section className="relative ">
             <Container className="py-10 md:py-20 lg:py-26">
@@ -46,41 +98,54 @@ export default function ContactSection() {
                         </div>
 
                         {/* form */}
-                        <div>
-                            <form className="space-y-3 mt-6">
-                                <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3">
-                                    <Input
-                                        type="text"
-                                        name="first-name"
-                                        placeholder="First name"
-                                    />
-                                    <Input
-                                        type="text"
-                                        name="last-name"
-                                        placeholder="Last name"
-                                    />
-                                </div>
+                        <form
+                            ref={form}
+                            onSubmit={handleContactForm}
+                            className="space-y-3 mt-6"
+                        >
+                            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <Input
+                                    name="firstName"
+                                    placeholder="First name"
+                                    value={firstName}
+                                    onChange={handleInputChange}
+                                />
+                                <Input
+                                    name="lastName"
+                                    placeholder="Last name"
+                                    value={lastName}
+                                    onChange={handleInputChange}
+                                />
+                            </div>
 
-                                <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3">
-                                    <Input
-                                        type="email"
-                                        name="email-address"
-                                        placeholder="Email address"
-                                    />
-                                    <Input
-                                        type="tel"
-                                        name="phone-number"
-                                        placeholder="Phone number"
-                                    />
-                                </div>
+                            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <Input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Email address"
+                                    value={email}
+                                    onChange={handleInputChange}
+                                />
+                                <Input
+                                    type="tel"
+                                    name="phoneNumber"
+                                    placeholder="Phone number"
+                                    value={phoneNumber}
+                                    onChange={handleInputChange}
+                                />
+                            </div>
 
-                                <Dropdown data={contactDropdownOptions} />
+                            {/* <Dropdown data={contactDropdownOptions} /> */}
 
-                                <Textarea placeholder="Message" />
+                            <Textarea
+                                name="message"
+                                placeholder="Message"
+                                value={message}
+                                onChange={handleInputChange}
+                            />
 
-                                <Button type="submit">Send Message</Button>
-                            </form>
-                        </div>
+                            <Button type="submit">Send Message</Button>
+                        </form>
                     </motion.div>
 
                     {/* right contact info */}

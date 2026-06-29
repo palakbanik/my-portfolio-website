@@ -11,12 +11,14 @@ export default function Textarea({
     className,
     error,
     placeholder,
+    name = "message",
     ...props
 }: TextareaProps) {
     return (
         <div>
             <textarea
                 rows={7}
+                name={name}
                 placeholder={placeholder}
                 className={cn(
                     "w-full bg-pb-body rounded-lg px-[20px] py-[12px] text-[14px] sm:text-[16px] border border-pb-grey-2 outline-none resize-none focus:border-pb-theme-primary duration-500 ease transition-colors",
