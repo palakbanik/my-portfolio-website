@@ -3,15 +3,17 @@ import { InputProps } from "@/types";
 
 export default function Input({
     type = "text",
-    error,
+    name = "",
     placeholder,
     className,
+    error,
     ...props
 }: InputProps) {
     return (
         <div>
             <input
                 type={type}
+                name={name}
                 placeholder={placeholder}
                 required
                 autoComplete="off"
