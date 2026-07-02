@@ -48,25 +48,28 @@ export default function ContactSection() {
 
         if (!form.current) return;
 
-        await emailjs
-            .sendForm(
-                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        try {
+            await emailjs.sendForm(
+                "service_gelyb8q",
+                "template_fi17a5j",
                 form.current,
                 {
-                    publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-                },
-            )
-            .then(
-                () => {
-                    console.log("SUCCESS!");
-                },
-                (error) => {
-                    console.log("FAILED...", error.text);
+                    publicKey: "etHvymkF89Q1J7NEi",
                 },
             );
 
-        setContact(initialContact);
+            alert(
+                `Thank you ${firstName} ${lastName}! Your message has been sent successfully.`,
+            );
+            setContact(initialContact);
+            console.log("SUCCESS!");
+        } catch (error) {
+            console.log("FAILED...", error);
+
+            alert(
+                "Sorry! We couldn't send your message. Please try again later.",
+            );
+        }
     };
 
     return (
