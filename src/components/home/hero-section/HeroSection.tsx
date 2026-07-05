@@ -63,10 +63,10 @@ export default function HeroSection() {
                         <div className="space-y-8 sm:space-y-5 md:space-y-3">
                             {/* header text */}
                             <div className="space-y-1 lg:space-y-3">
-                                <h1 className="text-[22px] sm:text-[25px] lg:text-4xl font-semibold">
+                                <h4 className="text-[22px] sm:text-[25px] lg:text-4xl font-semibold">
                                     I am Palak
-                                </h1>
-                                <h2 className="text-gradient text-[35px] sm:text-[38px] lg:text-[65px] font-bold leading-none capitalize ">
+                                </h4>
+                                <h1 className="text-gradient text-[35px] sm:text-[38px] lg:text-[65px] font-bold leading-none capitalize ">
                                     front End web{" "}
                                     <span className="inline-block min-w-[320px]">
                                         <Typewriter
@@ -80,7 +80,7 @@ export default function HeroSection() {
                                             cursorBlinking
                                         />
                                     </span>
-                                </h2>
+                                </h1>
                             </div>
 
                             {/* mobile img content */}
@@ -93,8 +93,8 @@ export default function HeroSection() {
                             >
                                 <div className="relative border-2 border-pb-theme-primary/50 hover:border-pb-theme-primary duration-300 inline-block rounded-4xl overflow-hidden transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
                                     <Image
-                                        src="/polok-profile.png"
-                                        alt="Polok Banik — Frontend Web Developer"
+                                        src="/palak-profile.png"
+                                        alt="Palak Banik"
                                         width={1000}
                                         height={1000}
                                         priority
@@ -118,10 +118,10 @@ export default function HeroSection() {
                         <div className="mt-6 lg:mt-10 flex flex-col lg:flex-row items-start lg:items-center gap-5 md:gap-6">
                             {/* my cv */}
                             <a
-                                href={"/cv/polok-banik-web-dev.pdf"}
+                                href={"/cv/palak-banik-web-dev.pdf"}
                                 download
                                 target="_blank"
-                                aria-label="Download Polok Banik's CV"
+                                aria-label="Download Palak Banik's CV"
                                 rel="noopener noreferrer"
                             >
                                 <Button
@@ -146,8 +146,8 @@ export default function HeroSection() {
                     >
                         <div className="hidden relative border-2 border-pb-theme-primary/50 hover:border-2 hover:border-pb-theme-primary duration-300 sm:inline-block rounded-4xl overflow-hidden transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
                             <Image
-                                src="/polok-profile.png"
-                                alt="Polok Banik — Frontend Web Developer"
+                                src="/palak-profile.png"
+                                alt="Palak Banik — Frontend Web Developer"
                                 width={1000}
                                 height={1000}
                                 priority
