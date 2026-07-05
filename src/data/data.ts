@@ -142,7 +142,7 @@ export const portfolioData = [
         description:
             "A personal portfolio website I designed and developed from scratch, showcasing my skills, projects, and experience as a Frontend Developer. Built with Next.js and TypeScript for a scalable structure, styled with Tailwind CSS, and brought to life with smooth scroll-driven animations using Framer Motion and Lenis.",
         categoryType: "animated",
-        imageUrl: "/portfolio-projects/polok-banik-portfolio.png",
+        imageUrl: "/portfolio-projects/palak-banik-portfolio.png",
         alt: "Palak Banik Portfolio Website",
         href: "https://palak-banik.vercel.app/",
         projectTools: [
