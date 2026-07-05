@@ -140,7 +140,7 @@ export const portfolioData = [
         id: 1,
         title: "Palak Banik Portfolio Website",
         description:
-            "A personal portfolio website I designed and developed from scratch, showcasing my skills, projects, and experience as a Frontend Developer. Built with Next.js and TypeScript for a scalable structure, styled with Tailwind CSS, and brought to life with smooth scroll-driven animations using Framer Motion and Lenis.",
+            "Developed a modern portfolio website using Next.js, TypeScript, Tailwind CSS, Framer Motion and Lenis, implementing reusable animation patterns, client-side form validation, and EmailJS integration for seamless contact form submissions and real-time email delivery.",
         categoryType: "animated",
         imageUrl: "/portfolio-projects/palak-banik-portfolio.png",
         alt: "Palak Banik Portfolio Website",
