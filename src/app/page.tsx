@@ -1,5 +1,3 @@
-import React from "react";
-
 import ResumeSection from "@/components/home/resume-section/ResumeSection";
 import ContactSection from "@/components/home/contact-section/ContactSection";
 import SkillsSections from "@/components/home/skills-section/Skills";
