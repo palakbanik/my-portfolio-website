@@ -333,74 +333,78 @@ export const skillsData = [
         icon: "/skills-logo/tailwindcss-icon.svg",
     },
     {
-        id: 15,
+        id: 8,
+        title: "Sass",
+        icon: "/skills-logo/sass-icon.svg",
+    },
+    {
+        id: 9,
         title: "Bootstrap",
         icon: "/skills-logo/bootstrap-icon.svg",
     },
     {
-        id: 8,
+        id: 10,
         title: "GSAP",
         icon: "/skills-logo/gsap-icon.jpg",
     },
     {
-        id: 9,
+        id: 11,
         title: "Framer Motion",
         icon: "/skills-logo/framer-motion-icon.png",
     },
 
     // ── Version Control ──
     {
-        id: 10,
+        id: 12,
         title: "Git",
         icon: "/skills-logo/git-icon.svg",
     },
     {
-        id: 11,
+        id: 13,
         title: "GitHub",
         icon: "/skills-logo/github-icon.png",
     },
 
     // ── Design Tools ──
     {
-        id: 12,
+        id: 14,
         title: "Figma",
         icon: "/skills-logo/figma-icon.svg",
     },
     {
-        id: 13,
+        id: 15,
         title: "Adobe XD",
         icon: "/skills-logo/adobe-xd-icon.svg",
     },
 
     // ── Other Tools ──
     {
-        id: 14,
+        id: 16,
         title: "Vite",
         icon: "/skills-logo/vite-icon.svg",
     },
-
     {
-        id: 16,
+        id: 17,
         title: "NPM",
         icon: "/skills-logo/npm-icon.svg",
     },
     {
-        id: 17,
+        id: 18,
         title: "Yarn",
         icon: "/skills-logo/yarn-logo-icon.png",
     },
     {
-        id: 18,
+        id: 19,
         title: "Netlify",
         icon: "/skills-logo/netlify-icon.svg",
     },
     {
-        id: 19,
+        id: 20,
         title: "Notion",
         icon: "/skills-logo/notion-icon.png",
     },
     {
-        id: 20,
+        id: 21,
         title: "VS Code",
         icon: "/skills-logo/vs-code-icon.svg",
     },
