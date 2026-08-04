@@ -62,7 +62,7 @@ export const socialLinks = [
 export const statsData = [
     {
         id: 1,
-        value: "0.6",
+        value: "0.0",
         title: "Years of Experience",
     },
     {
@@ -72,12 +72,12 @@ export const statsData = [
     },
     {
         id: 3,
-        value: "05",
+        value: "00",
         title: "Happy Clients",
     },
     {
         id: 4,
-        value: "0.6",
+        value: "0.0",
         title: "Years of Experience",
     },
 ];
