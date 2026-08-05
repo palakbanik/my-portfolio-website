@@ -437,7 +437,7 @@ export const contactSectionPersonalContacts = [
     {
         id: 3,
         contactType: "Address",
-        contactTypeValue: "Mirpur,\nDhaka, Bangladesh",
+        contactTypeValue: "Dhaka, Bangladesh",
 
         icon: CiLocationOn,
     },
