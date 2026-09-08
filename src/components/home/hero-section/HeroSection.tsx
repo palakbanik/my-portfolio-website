@@ -93,7 +93,7 @@ export default function HeroSection() {
                             >
                                 <div className="relative border-2 border-pb-theme-primary/50 hover:border-pb-theme-primary duration-300 inline-block rounded-4xl overflow-hidden transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
                                     <Image
-                                        src="/palak-profile.png"
+                                        src="/palak-banik.jpg"
                                         alt="Palak Banik"
                                         width={1000}
                                         height={1000}
@@ -146,7 +146,7 @@ export default function HeroSection() {
                     >
                         <div className="hidden relative border-2 border-pb-theme-primary/50 hover:border-2 hover:border-pb-theme-primary duration-300 sm:inline-block rounded-4xl overflow-hidden transition-all rotate-6 hover:rotate-0 brightness-75 lg:mr-7">
                             <Image
-                                src="/palak-profile.png"
+                                src="/palak-banik.jpg"
                                 alt="Palak Banik — Frontend Web Developer"
                                 width={1000}
                                 height={1000}
